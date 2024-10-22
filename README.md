@@ -1,1 +1,0 @@
-# october-frontend-shopco-1
