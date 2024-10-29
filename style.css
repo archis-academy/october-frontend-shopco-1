@@ -120,5 +120,13 @@
     font-size: 28px;
   }
 }
+@media screen and (max-width: 620px) {
+  .nt-list {
+    display: none;
+  }
+  .nt-hamburger-menu {
+    display: inline-block;
+  }
+}
 
 /* nursahtuncel-OC-4-Desing-the-Header-Section end*/
