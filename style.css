@@ -4,11 +4,11 @@
   position: relative;
   display: flex;
   align-items: center;
-  width: 1440px;
+  max-width: 100%;
 }
 
 .hero-section-background-image {
-  max-width: 1440px;
+  max-width: 100%;
   position: relative;
 }
 
