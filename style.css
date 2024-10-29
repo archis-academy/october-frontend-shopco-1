@@ -2,11 +2,11 @@
 
 /* nursahtuncel-OC-4-Desing-the-Header-Section start */
 .nt-hero-section {
-  width: 1440px;
   width: 100%;
   margin-top: 24px;
   margin-bottom: 24px;
   padding: 0 20px;
+  display: flex;
 }
 .nt-hero-section-content {
   max-width: 1240px;
@@ -19,6 +19,7 @@
   align-items: center;
   white-space: nowrap;
 }
+
 .nt-hero-section-content-ul ul {
   margin: 0 15px;
   display: flex;
@@ -42,6 +43,33 @@
   line-height: 21.6px;
   text-align: left;
   color: var(--hdr-bg-clr);
+  position: relative;
+}
+
+.nt-list::before {
+  content: "";
+  position: absolute;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: black;
+  color: black;
+  left: 40%;
+  bottom: -10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nt-list:hover::before {
+  font-weight: bold;
+  opacity: 1;
+}
+.nt-list:hover {
+  font-weight: bold;
+  transition: 0.3s ease-out;
+}
+.nt-icons:hover {
+  cursor: pointer;
 }
 .nt-hero-section-search-box {
   display: flex;
@@ -80,4 +108,17 @@
 .nt-left-icon {
   padding-left: 10px;
 }
+
+@media screen and (max-width: 820px) {
+  .nt-search-icon {
+    display: inline-block;
+  }
+  .nt-hero-section-search-box {
+    display: none;
+  }
+  .nt-logo {
+    font-size: 28px;
+  }
+}
+
 /* nursahtuncel-OC-4-Desing-the-Header-Section end*/
