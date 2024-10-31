@@ -1,90 +1,129 @@
 @import url("./styles/styles.css");
 
+.hero-section {
+  background-color: var(--hdr-section-clr);
+}
+
 .hero-section-container {
+  padding-inline: 40px;
   position: relative;
   display: flex;
   align-items: center;
-  max-width: 100%;
+  max-width: 1440px;
 }
 
 .hero-section-background-image {
   max-width: 100%;
   position: relative;
+  display: block;
 }
 
 .hero-sectin-info {
+  order: -1;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 100px;
-  left: 100px;
-  max-width: 600px;
+  max-width: clamp(200px, 45vw, 600px);
+  gap: clamp(10px, 1.5vw, 32px);
 }
 
 .hero-sectin-info h1 {
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 64px;
+  font-size: clamp(30px, 5vw, 64px);
+  font-weight: 800;
+  line-height: clamp(26px, 4vw, 60px);
   font-family: var(--fnt-family-integral);
-  margin-bottom: 32px;
 }
 
 .hero-sectin-info p {
-  font-size: 16px;
+  font-size: clamp(12px, 1.4vw, 16px);
   color: black;
   opacity: 60%;
   font-family: var(--fnt-family-satoshi);
-  margin-bottom: 32px;
+  margin-bottom: 5px;
 }
 
 .hero-section-button {
-  width: 210px;
-  padding: 16px 54px;
+  width: clamp(120px, 20vw, 210px);
+  padding: 15px 35px;
   font-family: var(--fnt-family-satoshi);
+  font-weight: 500;
   background-color: black;
   color: white;
   border: none;
   border-radius: 62px;
-  font-size: 1em;
+  font-size: clamp(9px, 1.2vw, 16px);
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .hero-section-stats {
   display: flex;
-  gap: 30px;
-  margin-top: 30px;
+  margin-top: clamp(12px, 3.5vw, 60px);
+  justify-content: space-between;
   font-family: var(--fnt-family-satoshi);
 }
 
 .hero-section-stats h2 {
-  font-size: 40px;
+  font-size: clamp(16px, 3.5vw, 40px);
   font-weight: 700;
-  line-height: 54px;
+  line-height: clamp(25px, 4vw, 50px);
 }
 .hero-section-stats p {
-  font-size: 16px;
+  font-size: clamp(12px, 1.5vw, 16px);
   font-weight: 400;
-  line-height: 22px;
+  line-height: clamp(10px, 1.5vw, 20px);
   opacity: 60%;
 }
 .vertical-line {
   width: 1px;
-  height: 74px;
+  height: clamp(45px, 6vw, 74px);
   background-color: black;
   opacity: 10%;
 }
+
+.hero-section-image-container {
+  position: relative;
+}
+
 .star-left {
   position: absolute;
-  top: 297px;
-  left: 750px;
-  width: 56px;
-  height: 56px;
+  top: 40%;
+  left: 10%;
+  width: clamp(20px, 4vw, 56px);
 }
 
 .star-right {
   position: absolute;
-  top: 86px;
-  right: 81px;
-  width: 100px;
-  height: 100px;
+  top: 12%;
+  right: 12%;
+  width: clamp(45px, 8vw, 100px);
+}
+
+@media (max-width: 725px) {
+  .hero-section-container {
+    flex-direction: column;
+    padding-inline: 0px;
+  }
+
+  .hero-sectin-info {
+    max-width: 85%;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 425px) {
+  .hero-section-button {
+    width: unset;
+    padding: 10px 35px;
+    align-self: stretch;
+  }
+
+  .hero-section-stats {
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .line-right {
+    opacity: 0%;
+  }
 }
