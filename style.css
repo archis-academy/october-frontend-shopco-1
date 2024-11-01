@@ -1,15 +1,16 @@
 @import url("./styles/styles.css");
-
+/*------hero section burada başlıyor-----*/
 .hero-section {
   background-color: var(--hdr-section-clr);
+  margin:0 auto;
+  max-width: 1440px;
 }
 
 .hero-section-container {
   padding-inline: 40px;
-  position: relative;
   display: flex;
   align-items: center;
-  max-width: 1440px;
+  width:100%;
 }
 
 .hero-section-background-image {
@@ -127,3 +128,4 @@
     opacity: 0%;
   }
 }
+/*------hero section burada bitiyor-----*/
