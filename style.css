@@ -120,27 +120,19 @@
   display: flex;
   align-items: center;
 }
-.nt-hamburger-menu-2 {
-  opacity: 0;
-  position: relative;
-  top: 0;
-  background-color: #5c6a7930;
-  width: 100%;
-  height: 100%;
-  transition: all 250ms ease-in-out;
-}
+
 .nt-hamburger-menu-2.active {
   opacity: 1;
 }
 .navbar_items {
   opacity: 0;
-  padding-top: 100px;
+  margin-top: 100px;
   padding-bottom: 100px;
-  width: 100%;
+  width: 0;
   height: 100vh;
   background-color: white;
   position: relative;
-  transition: all 250ms ease-in;
+  transition: all 200ms ease-in-out;
 }
 .nt-hamburger-menu-2.active .navbar_items {
   width: 100%;
