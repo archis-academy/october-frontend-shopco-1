@@ -184,6 +184,7 @@
   border-radius: 62px;
   padding: 15px;
   transition: all 400ms ease-in-out;
+  z-index: 2;
 }
 .nt-secret-search-box.active {
   opacity: 1;
@@ -251,15 +252,15 @@
   flex-wrap: wrap;
   gap: 20px;
 }
-/* .nt-images-container-half-box {
-  max-width: 295px;
-} */
+
 .nt-images-container-half {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
-
+.nt-images-container-half-box {
+  cursor: pointer;
+}
 .nt-prgrp-bttm {
   padding-top: 16px;
   font-family: var(--fnt-family-satoshi);
@@ -284,6 +285,7 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 32.4px;
+  text-decoration: line-through;
 }
 .nt-new-price-old-price-2 {
   color: rgba(0, 0, 0, 0.4);

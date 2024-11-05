@@ -9,6 +9,3 @@ function toggleSearch() {
   searchBox.classList.toggle("active");
 }
 // nt-header-end............................
-
-/*............ nursahtuncel-OC-29-ımplement the you might also like section start......................*/
-/*.............. nursahtuncel-OC-29-ımplement the you might also like section end..................*/
