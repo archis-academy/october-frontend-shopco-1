@@ -1,1 +1,46 @@
 @import url("./styles/styles.css");
+
+
+.main-arrivals-conteiner{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 600px;
+    gap: 50px;
+    
+
+}
+
+.new-arrivals{
+    font-family: 'Integral CF' ,sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 48px;
+    font-weight: 1000;
+}
+
+.footages-container{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.btn-viewall{
+  padding: 16px 54px;
+
+  background-color: transparent;
+    border: 1px solid #0000001A;
+    border-radius: 62px;
+    width: 218px;
+    font-size: 16px;
+    font-family: 'Satoshi', sans-serif;
+}
+
+.btn-viewall:hover{
+    background-color: aliceblue;
+    border: 3px solid #0000001A;
+}
+
