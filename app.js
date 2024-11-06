@@ -9,3 +9,11 @@ function toggleSearch() {
   searchBox.classList.toggle("active");
 }
 // nt-header-end............................
+
+/*............ nursahtuncel-OC-29-ımplement the you might also like section start......................*/
+
+fetch("https://fakestoreapi.com/products")
+  .then((res) => res.json())
+  .then((json) => console.log(json));
+
+/*.............. nursahtuncel-OC-29-ımplement the you might also like section end..................*/
