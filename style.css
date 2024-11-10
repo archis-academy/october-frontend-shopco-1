@@ -125,6 +125,11 @@ footer {
   .footer-column {
     min-width: 90px;
   }
+  .footer-logo p,
+  .footer-bottom p,
+  .footer-column ul li a {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 750px) {
@@ -159,6 +164,14 @@ footer {
 
   .footer-separator {
     margin: 25px 0 15px;
+  }
+
+  .footer-logo h2 {
+    font-size: 25px;
+  }
+
+  .footer-column h4 {
+    font-size: 14px;
   }
 }
 
