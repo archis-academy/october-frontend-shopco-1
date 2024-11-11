@@ -241,13 +241,11 @@
 /* nursahtuncel-OC-4-Desing-the-Header-Section end*/
 /* BeyzanurMete-OC-20-Implement-the-Newsletter-Section start*/
 .newsletter-section {
+  margin: 0 auto;
   max-width: 1240px;
-  left: 100px;
   padding: 36px 64px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 0;
   background-color: #000000;
   border-radius: 20px;
   border: 1px solid #ccc;
@@ -255,7 +253,7 @@
   box-sizing: border-box;
 }
 .newsletter-title {
-  font-family: "Integral CF", sans-serif; /* Font family */
+  font-family: var(--fnt-family-integral)
   font-size: 40px;
   font-weight: 700;
   color: #ffffff;
