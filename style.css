@@ -253,7 +253,7 @@
   box-sizing: border-box;
 }
 .newsletter-title {
-  font-family: var(--fnt-family-integral)
+  font-family: var(--fnt-family-integral);
   font-size: 40px;
   font-weight: 700;
   color: #ffffff;
