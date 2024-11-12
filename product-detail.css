@@ -106,21 +106,24 @@
   width: 200px;
   max-height: 200px;
 }
-@media screen and (max-width: 1279px) {
-  .nt-images-container-half {
-    gap: 50px;
+@media screen and (max-width: 1474px) {
+  .nt-images-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width: 1090px) {
+  .nt-images-container {
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media screen and (max-width: 680px) {
+  .nt-images-container {
+    grid-template-columns: 1fr;
+  }
+
   .nt-title {
     padding-bottom: 10px;
     font-size: 24px;
-  }
-  .nt-images-container-half {
-    display: inline-block;
-  }
-  .nt-images-container-half-box {
-    padding-top: 20px;
   }
 }
 /* nursahtuncel-OC-29-ımplement the you might also like section end*/
