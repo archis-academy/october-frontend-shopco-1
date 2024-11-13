@@ -1,4 +1,4 @@
-// // nursahtuncel-OC-29-ımplement the you might also like section start
+// nursahtuncel-OC-29-ımplement the you might also like section start
 
 let List = [];
 
@@ -34,7 +34,9 @@ const getContainer = () => {
   
   <div class="nt-images-container-half-box">
   
+  <div class="nt-image-div">
   <img class="nt-product-image" src="${eleman.image}" alt="${eleman.title}" />
+  </div>
   <p class="nt-prgrp-bttm">${eleman.title}</p>
   <div class="nt-stars-and-puan">
   <div>
@@ -51,7 +53,7 @@ const getContainer = () => {
     container.innerHTML += itemHTML;
   });
 };
-console.log("kodum calısıyo");
+
 getProduct();
 
 // nursahtuncel-OC-29-ımplement the you might also like section end
