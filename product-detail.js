@@ -24,7 +24,7 @@ setRating = (rating) => {
 
 const getContainer = () => {
   const container = document.querySelector(".nt-images-container");
-  container.innerHTML;
+  container.innerHTML = " ";
 
   List.slice(0, 4).forEach((eleman) => {
     const itemHTML = `
