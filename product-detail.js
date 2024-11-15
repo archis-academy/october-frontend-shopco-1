@@ -1,5 +1,5 @@
 // nursahtuncel-OC-29-ımplement the you might also like section start
-
+let List = [];
 const getProduct = () => {
   fetch("https://fakestoreapi.com/products")
     .then((res) => res.json())
@@ -26,7 +26,7 @@ const getContainer = () => {
   const container = document.querySelector(".nt-images-container");
   container.innerHTML;
 
-  List.slice(0, 20).forEach((eleman) => {
+  List.slice(0, 4).forEach((eleman) => {
     const itemHTML = `
       <div class="nt-images-container-half-box">
         <div class="nt-image-div">
