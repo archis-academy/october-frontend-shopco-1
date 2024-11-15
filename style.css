@@ -236,7 +236,7 @@
 /*------hero section burada başlıyor-----*/
 .hero-section {
   background-color: var(--hdr-section-clr);
-  margin:0 auto;
+  margin: 0 auto;
   max-width: 1440px;
 }
 
@@ -244,7 +244,7 @@
   padding-inline: 40px;
   display: flex;
   align-items: center;
-  width:100%;
+  width: 100%;
 }
 
 .hero-section-background-image {
@@ -482,7 +482,6 @@
   position: relative;
 }
 .newsletter-input {
- 
   height: 48px;
   font-size: 16px;
   padding: 10px 10px 10px 50px;
@@ -497,7 +496,6 @@
   max-width: 24px;
 }
 .newsletter-button {
-  
   height: 48px;
   font-size: 16px;
   background-color: #f7f6f6;
@@ -508,7 +506,6 @@
 @media (max-width: 1000px) {
   .newsletter-section {
     flex-direction: column;
-   
   }
 }
 /* BeyzanurMete-OC-20-Implement-the-Newsletter-Section End*/
