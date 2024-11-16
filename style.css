@@ -106,11 +106,6 @@ footer {
   text-align: center;
 }
 
-.payment-icons img {
-  width: 40%; 
-  max-width: 46px;
-}
-
 /* melikeaksoy/OC-22-implement-the-footer end */
 
 /* melikeaksoy/OC-23-implement-the-footer start */
@@ -184,6 +179,11 @@ footer {
   .footer-column {
     max-width: 250px;
   }
+
+  .payment-icons img {
+    max-width: 46px;
+  }
+
 }
 
 /* melikeaksoy/OC-23-implement-the-footer end */
