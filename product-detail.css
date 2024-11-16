@@ -78,6 +78,7 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 32.4px;
+  text-decoration: none;
 }
 .nt-new-price-old-price-2 {
   text-decoration: line-through;
@@ -134,7 +135,9 @@
 .rating-value {
   margin-top: 10px;
 }
-
+.nt-new-price-old-price-1 {
+  text-decoration: none;
+}
 @media screen and (max-width: 1474px) {
   .nt-images-container {
     grid-template-columns: 1fr 1fr 1fr;
