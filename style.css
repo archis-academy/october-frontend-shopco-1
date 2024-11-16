@@ -2,12 +2,22 @@
 
 /* melikeaksoy/OC-22-implement-the-footer start */
 
+.newsletter-section {
+  margin-top: 80px;
+  position: relative;
+  z-index: 10;
+  margin-bottom: -90px;
+}
+
 footer {
   background-color: var(--ftr-imgs-bg-clr);
   padding: 50px 100px;
   font-family: var(--fnt-family-satoshi);
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 5;
+  padding-top: 140px;
 }
 
 .footer-wrapper {
@@ -182,6 +192,13 @@ footer {
 
   .payment-icons img {
     max-width: 46px;
+  }
+  .newsletter-section {
+    margin-bottom: -150px;
+  }
+
+  footer {
+    padding-top: 200px;
   }
 
 }
