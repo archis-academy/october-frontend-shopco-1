@@ -1,4 +1,168 @@
-@import url("./styles/styles.css");
+@import url("style.css");
+
+/* nursahtuncel-OC-29-ımplement the you might also like section start*/
+
+.nt-title {
+  font-family: var(--fnt-family-integral);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 57.6px;
+  text-align: center;
+  padding-top: 64px;
+  padding-bottom: 55px;
+  text-transform: uppercase;
+}
+.nt-images-container {
+  max-width: 1240px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 40px;
+  column-gap: 40px;
+}
+.nt-image-div {
+  width: 295px;
+  height: 298px;
+  padding: 45px;
+  background-color: #f0eeed;
+  border-radius: 24px;
+}
+.nt-product-image {
+  mix-blend-mode: multiply;
+  width: 100%;
+  height: 100%;
+}
+.nt-images-container-half {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.nt-images-container-half-box {
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nt-prgrp-bttm {
+  padding-top: 16px;
+  font-family: var(--fnt-family-satoshi);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 27px;
+  text-align: center;
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nt-stars-and-puan {
+  padding-top: 8px;
+  display: flex;
+  gap: 13px;
+}
+.nt-new-price-old-price {
+  padding-top: 8px;
+  display: flex;
+  gap: 10px;
+}
+.nt-new-price-old-price-1,
+.nt-new-price-old-price-2 {
+  font-family: var(--fnt-family-satoshi);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32.4px;
+}
+.nt-new-price-old-price-2 {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.4);
+}
+.nt-new-price-old-price-3 {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  color: rgba(255, 51, 51, 1);
+  font-family: var(--fnt-family-satoshi);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16.2px;
+  border: 0px solid rgba(255, 198, 51, 1);
+  background: rgba(0, 0, 0, 1);
+  background: rgba(0, 0, 0, 0.6);
+  background: rgba(255, 51, 51, 1);
+  background: rgba(255, 51, 51, 0.1);
+  padding: 5px 15px;
+  border-radius: 50px;
+}
+.stars {
+  display: inline-block;
+}
+.star {
+  width: 20px;
+  height: 20px;
+  background-color: gray;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  margin-right: 5px;
+  display: inline-block;
+}
+.star.full {
+  background-color: #ffc633;
+}
+.star.half {
+  background: linear-gradient(to right, #ffc633 50%, #dad0cc 50%);
+}
+.star.empty {
+  background-color: #dad0cc;
+}
+.rating-value {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 1474px) {
+  .nt-images-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width: 1090px) {
+  .nt-images-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .nt-prgrp-bttm {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .nt-images-container {
+    grid-template-columns: 1fr;
+  }
+
+  .nt-title {
+    font-weight: 800;
+    padding-bottom: 10px;
+    font-size: 30px;
+  }
+}
+/* nursahtuncel-OC-29-ımplement the you might also like section end*/
+
+/* emre-OC-25-product detail hero section start*/
 
 .pd-hs-product-container {
     display: flex;
@@ -85,7 +249,6 @@
     margin-bottom: 20px;
 }
 
-
 h3 {
     font-size: 16px;
     font-weight: bold;
@@ -165,3 +328,4 @@ h3 {
     cursor: pointer;
     font-family: var(--fnt-family-satoshi);
 }
+/* emre-OC-25-product detail hero section end*/
