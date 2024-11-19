@@ -5,6 +5,7 @@ const getProduct = () => {
     .then((res) => res.json())
     .then((list) => {
       List = list;
+      ProductDetails();
       getContainer();
     });
 };
@@ -53,3 +54,37 @@ const getContainer = () => {
 getProduct();
 
 // nursahtuncel-OC-29-ımplement the you might also like section end
+//emre-OC-25-Product detail hero section start 
+const urlParams = new URLSearchParams(window.location.search);
+const productId = urlParams.get("productId");
+
+function ProductDetails() {
+
+  const product = List.find((item) => item.id === parseInt(productId));
+
+  document.querySelector(".pd-hs-main-image").src = product.image;
+  document.getElementById("small-image1").src = product.image;
+  document.getElementById("small-image2").src = product.image;
+  document.getElementById("small-image3").src = product.image;
+  // document.querySelector(".pd-hs-main-image").style.opacity=1;
+  document.querySelector(".pd-hs-product-details h1").textContent = product.title;
+  document.querySelector(".pd-hs-description").textContent = product.description;
+
+  const discountPrice = product.price * 0.60;
+  document.querySelector(".pd-hs-rating-stars").innerHTML=setRating(product.rating.rate);
+  document.querySelector(".pd-hs-rating-number").textContent=product.rating.rate+"/5";
+  document.querySelector(".pd-hs-current-price").textContent =`$${discountPrice.toFixed(0)}` ;
+  document.querySelector(".pd-hs-original-price").textContent = "$"+`${product.price}`;
+}
+
+const buttons = document.querySelectorAll(".pd-hs-size-button");
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        buttons.forEach(btn => btn.classList.remove("pd-hs-selected"));
+        button.classList.add("pd-hs-selected");
+    });
+});
+
+
+
+//emre-OC-25-Product detail hero section end

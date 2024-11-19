@@ -178,7 +178,8 @@
 }
 
 .pd-hs-main-image {
-    width: 75%
+    width: 75%;
+    /* opacity: 0; */
 }
 .pd-hs-small-images {
     display: flex;
@@ -189,6 +190,9 @@
 
 .pd-hs-product-details {
     max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .pd-hs-product-details h1 {
@@ -207,9 +211,8 @@
 
 .pd-hs-price {
     display: flex;
-    align-items: baseline;
-    margin: 10px 0;
     font-family: var(--fnt-family-satoshi);
+    gap: 10px;
 
 }
 
@@ -218,7 +221,6 @@
     font-size: 32px;
     font-weight: 700;
     color: black;
-    margin-right: 10px;
 }
 
 .pd-hs-original-price {
@@ -233,7 +235,10 @@
 .pd-hs-discount {
     font-family: var(--fnt-family-satoshi);
     font-size: 16px;
-    color: #f00;
+    color: #FF3333;
+    border-radius: 62px;
+    background-color: #FF33331A;
+    padding: 10px 20px;
 }
 
 .pd-hs-description {
@@ -246,13 +251,13 @@
 
 .pd-hs-color-selection, .pd-hs-size-selection, .pd-hs-quantity {
     font-family: var(--fnt-family-satoshi);
-    margin-bottom: 20px;
 }
 
 h3 {
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 400;
     margin-bottom: 8px;
+    opacity: 60%;
     font-family: var(--fnt-family-satoshi);
 }
 
@@ -286,7 +291,7 @@ h3 {
     color: #F0F0F0;
 }
 
-.pd-hs-quantity-button {
+.pd-hs-quantity-button-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -295,6 +300,8 @@ h3 {
 
 .pd-hs-quantity {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     font-family: var(--fnt-family-satoshi);
     border-radius: 60px;
     width: 170px;
