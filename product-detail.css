@@ -16,12 +16,9 @@
   max-width: 1240px;
   margin: auto;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  row-gap: 40px;
-  column-gap: 40px;
+  /* flex-wrap: nowrap; */
+  justify-content: start;
+  overflow-x: hidden;
 }
 .nt-image-div {
   width: 295px;
@@ -37,7 +34,7 @@
 }
 .nt-images-container-half {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 20px;
 }
 .nt-images-container-half-box {
@@ -46,7 +43,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 .nt-prgrp-bttm {
@@ -59,18 +55,19 @@
   width: 300px;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .nt-stars-and-puan {
   padding-top: 8px;
   display: flex;
   gap: 13px;
+  justify-content: center;
 }
 .nt-new-price-old-price {
   padding-top: 8px;
   display: flex;
   gap: 10px;
+  justify-content: center;
 }
 .nt-new-price-old-price-1,
 .nt-new-price-old-price-2 {
@@ -138,25 +135,13 @@
 .nt-new-price-old-price-1 {
   text-decoration: none;
 }
-@media screen and (max-width: 1474px) {
-  .nt-images-container {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-@media screen and (max-width: 1090px) {
-  .nt-images-container {
-    grid-template-columns: 1fr 1fr;
-  }
 
+@media screen and (max-width: 1090px) {
   .nt-prgrp-bttm {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 680px) {
-  .nt-images-container {
-    grid-template-columns: 1fr;
-  }
-
   .nt-title {
     font-weight: 800;
     padding-bottom: 10px;

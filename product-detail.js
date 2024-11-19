@@ -26,7 +26,7 @@ const getContainer = () => {
   const container = document.querySelector(".nt-images-container");
   container.innerHTML = " ";
 
-  List.slice(0, 4).forEach((eleman) => {
+  List.slice(0, 10).forEach((eleman) => {
     const itemHTML = `
       <div class="nt-images-container-half-box">
         <div class="nt-image-div">
