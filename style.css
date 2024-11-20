@@ -461,7 +461,7 @@
 .browse-by-dress-background {
   display: flex;
   flex-direction: column;
-  background-color: #f0f0f0;
+  background-color: var(--ftr-imgs-bg-clr);
   max-width: 1240px;
   margin: 0px auto;
   padding: 30px 10px;
@@ -470,7 +470,7 @@
 
 .title-of-browse {
   text-align: center;
-  font-family: "Candal", sans-serif;
+  font-family: var(--fnt-family-integral);
   font-weight: 700;
   font-size: 48px;
   line-height: 57.6px;
@@ -488,14 +488,12 @@
   display: flex;
   justify-content: center;
   gap: 25px;
-  flex-wrap: wrap;
 }
 
 .second-container {
   display: flex;
   justify-content: center;
   gap: 25px;
-  flex-wrap: wrap;
 }
 
 .browse-option-text {
@@ -509,6 +507,7 @@
 .browse-picture {
   border-radius: 20px;
   width: 100%;
+  object-fit: cover;
 }
 
 .browse-first-form {
@@ -527,6 +526,31 @@
 /*Browse By Dress Stylee Section End*/
 
 /*Browse By Dress Stylee Section Responsiveness Start*/
+@media screen and (max-width: 1196px) {
+  .first-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  
+  .second-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .browse-first-form {
+    height: 290px;
+  }
+
+  .browse-second-form {
+    width: 407px;
+    height: 290px;
+  }  
+}
+
 @media screen and (max-width: 518px) {
   .title-of-browse {
     font-weight: 700;
@@ -539,5 +563,28 @@
     left: 10px;
     top: 10px;
   }
+
+  .browse-first-form {
+    width: 300px;
+    height: 290px;
+  }
+
+  .browse-second-form {
+    width: 300px;
+    height: 290px;
+  } 
+}
+
+@media screen and (max-width: 390px) {
+  
+  .browse-first-form {
+    width: 200px;
+    height: 200px;
+  }
+
+  .browse-second-form {
+    width: 200px;
+    height: 200px;
+  } 
 }
 /*Browse By Dress Stylee Section Responsiveness End*/
