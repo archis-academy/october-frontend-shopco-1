@@ -458,6 +458,10 @@
 /* nursahtuncel-OC-29-ımplement the you might also like section end*/
 
 /*Browse By Dress Stylee Section Start*/
+.browse{
+  margin: 30px;
+}
+
 .browse-by-dress-background {
   display: flex;
   flex-direction: column;
@@ -588,3 +592,57 @@
   } 
 }
 /*Browse By Dress Stylee Section Responsiveness End*/
+
+/* BeyzanurMete-OC-20-Implement-the-Newsletter-Section start*/
+.newsletter-section {
+  margin: 0 auto;
+  max-width: 1240px;
+  padding: 36px 64px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #000000;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  opacity: 1;
+  box-sizing: border-box;
+}
+.newsletter-title {
+  font-family: var(--fnt-family-integral);
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+.newsletter-input {
+  height: 48px;
+  font-size: 16px;
+  padding: 10px 10px 10px 50px;
+  box-sizing: border-box;
+  border-radius: 62px;
+  border: 1px solid #ccc;
+}
+.input-icon {
+  position: absolute;
+  top: 15px;
+  left: 16px;
+  max-width: 24px;
+}
+.newsletter-button {
+  height: 48px;
+  font-size: 16px;
+  background-color: #f7f6f6;
+  color: #000000;
+  border-radius: 62px;
+  line-height: 21.6px;
+}
+@media (max-width: 1000px) {
+  .newsletter-section {
+    flex-direction: column;
+  }
+}
+/* BeyzanurMete-OC-20-Implement-the-Newsletter-Section End*/
