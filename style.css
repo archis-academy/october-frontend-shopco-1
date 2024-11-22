@@ -547,6 +547,119 @@
 }
 /* nursahtuncel-OC-29-ımplement the you might also like section end*/
 
+/* esra/OC-12-the-new-arrivals-section-start */
+.the-new-arrivals-section {
+  width: 1240px;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 200px;
+}
+.the-new-arrivals-section-header {
+}
+.new-arrivals-header {
+  padding: 50px;
+  font-weight: bold;
+  font-family: var(--fnt-family-integral);
+  font-size: 48px;
+}
+.new-arrivals-product {
+}
+
+.new-arrivals-product {
+  display: flex;
+  justify-content: space-around;
+}
+
+.product {
+  width: 295px;
+  height: 298px;
+  background: #f0eeed;
+  border-radius: 20px;
+}
+
+.product:hover {
+  transform: translateY(-10px);
+}
+
+.product-image {
+  width: 100%;
+  max-width: 200px;
+  height: 250px;
+  padding-top: 45px;
+}
+
+.product-info {
+  margin-top: 10px;
+}
+
+.product-name {
+  font-family: var(--fnt-family-satoshi);
+  font-size: 20px;
+  line-height: 27px;
+  text-align: left;
+  padding-top: 40px;
+}
+
+.product-rating {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.stars {
+  color: gold;
+}
+
+.product-price {
+  font-family: var(--fnt-family-satoshi);
+  width: 200px;
+  height: 32px;
+  gap: 10px;
+  text-align: left;
+  font-size: 24px;
+}
+
+.current-price {
+  font-weight: bold;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.discount {
+  color: red;
+  padding: 6px 14px 6px 14px;
+  gap: 12px;
+  border-radius: 62px;
+  opacity: 50px;
+  background: #ff33331a;
+  font-size: 12px;
+}
+
+.view-toggle-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 200px;
+}
+
+#viewAllBtn {
+  color: rgb(136, 136, 136);
+  cursor: pointer;
+  background-color: white;
+  padding: 16px 54px 16px 54px;
+  border-radius: 62px 62px 62px 62px;
+  border: 1px solid #0000001a;
+  margin-top: 150px;
+}
+
+#viewAllBtn:hover {
+  background-color: hsl(20, 9%, 94%);
+}
+
+/* esra/OC-12-the-new-arrivals-section-end */
+
 /*Browse By Dress Stylee Section Start*/
 .browse-by-dress-background {
   display: flex;
@@ -623,7 +736,7 @@
     align-items: center;
     gap: 25px;
   }
-  
+
   .second-container {
     display: flex;
     flex-direction: column;
@@ -638,7 +751,7 @@
   .browse-second-form {
     width: 407px;
     height: 290px;
-  }  
+  }
 }
 
 @media screen and (max-width: 518px) {
@@ -662,11 +775,10 @@
   .browse-second-form {
     width: 300px;
     height: 290px;
-  } 
+  }
 }
 
 @media screen and (max-width: 390px) {
-  
   .browse-first-form {
     width: 200px;
     height: 200px;
@@ -675,7 +787,7 @@
   .browse-second-form {
     width: 200px;
     height: 200px;
-  } 
+  }
 }
 /*Browse By Dress Stylee Section Responsiveness End*/
 
