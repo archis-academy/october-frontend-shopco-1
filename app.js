@@ -9,3 +9,27 @@ function toggleSearch() {
   searchBox.classList.toggle("active");
 }
 // nt-header-end............................
+
+//ctt-slider-btn______________Start
+const prev = document.getElementById('prev');
+const next = document.getElementById('next');
+
+const slider = document.querySelector('.slider');
+
+const slide = document.querySelector('.slide');
+
+next.addEventListener('click', () => {
+
+  slider.scrollLeft += slide.scrollWidth +20
+  console.log(slider.scrollLeft)
+})
+
+prev.addEventListener('click', () => {
+
+  slider.scrollLeft -= slide.scrollWidth + 20
+  console.log(slider.scrollLeft)
+})
+
+
+
+//ctt-slider-btn______________End

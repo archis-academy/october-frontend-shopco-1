@@ -456,3 +456,110 @@
   }
 }
 /* nursahtuncel-OC-29-ımplement the you might also like section end*/
+
+/* Create the Testimonial Section Start*/
+
+.ctt-section{
+  margin: 50px;
+}
+
+.ctt-first-row {
+  display: flex;
+  max-width: 1240px;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.ctt-first-row div{
+  display: flex;
+}
+
+.ctt-first-row div h4{
+  font-family: var(--fnt-family-integral);
+  font-weight: 700;
+  font-size: 48px;
+  color: var(--hdr-bg-clr);
+}
+
+.ctt-arrows{
+  display: flex;
+  gap: 10px;
+}
+
+.ctt-arrows button{
+  display: flex;
+  align-items: end;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.ctt-second-row{
+  display: flex;
+  
+  
+  
+
+}
+
+.slider{
+  display: flex;
+  margin: auto;
+  max-width: 1240px;
+  gap: 20px;
+  overflow-x:auto;
+  scroll-behavior: smooth; 
+  box-sizing: border-box;
+
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+.slide{
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 10%);
+  border-radius: 28px;
+  padding: 28px 32px;
+  
+}
+
+.star-rate{
+
+}
+
+.user{
+  display: flex;
+  align-items: center;
+  padding: 15px 0px;
+}
+
+.user h4{
+  font-family: var(--fnt-family-satoshi);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--hdr-bg-clr);
+}
+
+.user img{
+  padding-left: 10px;
+}
+
+.review{
+
+}
+
+.review p{
+  font-family: --fnt-family-satoshi;
+  font-weight: 400;
+  font-size: 16px;
+  color: --hdr-bg-clr;
+  opacity: 60%;
+}
+
+/* Create the Testimonial Section End*/
