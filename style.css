@@ -458,15 +458,11 @@
 /* nursahtuncel-OC-29-ımplement the you might also like section end*/
 
 /*Browse By Dress Stylee Section Start*/
-.browse{
-  margin: 30px;
-}
-
 .browse-by-dress-background {
   display: flex;
   flex-direction: column;
   background-color: var(--ftr-imgs-bg-clr);
-  max-width: 1240px;
+  max-width: 90%;
   margin: 0px auto;
   padding: 30px 10px;
   border-radius: 40px;
