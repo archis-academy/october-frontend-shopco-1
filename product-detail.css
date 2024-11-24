@@ -4,7 +4,7 @@
 
 .nt-title {
   font-family: var(--fnt-family-integral);
-  font-size: 48px;
+  font-size: clamp(32px, 5vw, 48px);
   font-weight: 700;
   line-height: 57.6px;
   text-align: center;
@@ -13,12 +13,16 @@
   text-transform: uppercase;
 }
 .nt-images-container {
-  max-width: 1240px;
+  max-width: 1440px;
   margin: auto;
-  display: flex;
-  /* flex-wrap: nowrap; */
+  flex-wrap: nowrap;
   justify-content: start;
-  overflow-x: hidden;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.nt-images-container::-webkit-scrollbar {
+  display: none;
 }
 .nt-image-div {
   width: 295px;
@@ -32,19 +36,19 @@
   width: 100%;
   height: 100%;
 }
-.nt-images-container-half {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 20px;
-}
+
 .nt-images-container-half-box {
+  scroll-snap-align: start;
+  transition: transform 0.5s;
   padding: 20px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
+.nt-images-container-half-box:hover {
+  transform: scale(1.1);
+}
 .nt-prgrp-bttm {
   padding-top: 16px;
   font-family: var(--fnt-family-satoshi);
@@ -136,16 +140,4 @@
   text-decoration: none;
 }
 
-@media screen and (max-width: 1090px) {
-  .nt-prgrp-bttm {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 680px) {
-  .nt-title {
-    font-weight: 800;
-    padding-bottom: 10px;
-    font-size: 30px;
-  }
-}
 /* nursahtuncel-OC-29-ımplement the you might also like section end*/
