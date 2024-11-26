@@ -517,6 +517,7 @@
   position: relative;
   z-index: 10;
   margin-bottom: -90px;
+  width: 80%;
 }
 
 footer {
@@ -645,6 +646,18 @@ footer {
   .footer-column {
     min-width: 90px;
   }
+  .newsletter-section {
+    margin-bottom: -95px;
+  }
+  .newsletter-title {
+    font-size: 33.45px;
+  }
+}
+
+@media (max-width: 1130px) and (min-width: 1000px) {
+  .newsletter-section {
+    margin-bottom: -95px;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -686,6 +699,11 @@ footer {
     font-size: 25px;
   }
 
+  .newsletter-title {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
   .footer-column h4 {
     font-size: 14px;
   }
@@ -711,6 +729,33 @@ footer {
     padding-top: 200px;
   }
 
+  .newsletter-section {
+    margin-bottom: -160px;
+  }
 }
+
+@media (max-width: 1000px) and (min-width: 800px) {
+  .newsletter-section {
+    margin-bottom: -130px;
+  }
+}
+@media (max-width: 800px) and (min-width: 58px) {
+  .newsletter-section {
+    margin-bottom: -140px;
+  }
+}
+
+@media (max-width: 580px) and (min-width: 490px) {
+  .newsletter-section {
+    margin-bottom: -150px;
+  }
+}
+  @media (max-width: 490px) {
+    .newsletter-section {
+      margin-bottom: -170px;
+    }
+  }
+
+
 
 /* melikeaksoy/OC-23-implement-the-footer end */
