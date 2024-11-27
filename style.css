@@ -236,7 +236,7 @@
 /*------hero section burada başlıyor-----*/
 .hero-section {
   background-color: var(--hdr-section-clr);
-  margin:0 auto;
+  margin: 0 auto;
   max-width: 1440px;
 }
 
@@ -244,7 +244,7 @@
   padding-inline: 40px;
   display: flex;
   align-items: center;
-  width:100%;
+  width: 100%;
 }
 
 .hero-section-background-image {
@@ -363,6 +363,98 @@
   }
 }
 /*------hero section burada bitiyor-----*/
+
+/* melikeaksoy-OC-14-Create-the-Top-Selling-section start */
+
+.top-selling {
+  margin-top: 54px;
+  padding: 10px;
+  text-align: center;
+  font-family: var(--fnt-family-satoshi);
+}
+
+.top-selling h1 {
+  font-family: var(--fnt-family-integral);
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 55px;
+}
+
+.top-selling .products {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.top-selling .product {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.top-selling h2 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  margin-top: 16px;
+}
+
+.current-price,
+.original-price,
+.price {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32.4px;
+}
+
+.original-price {
+  color: rgba(0, 0, 0, 0.4);
+  text-decoration: line-through;
+}
+
+.view-all {
+  padding: 16px 54px;
+  border-radius: 62px;
+  font-size: 16px;
+  line-height: 21.6px;
+  margin-top: 36px;
+  border: 1px solid #f0eeed;
+  width: 218px;
+  height: 52px;
+}
+
+@media (max-width: 680px) {
+  .top-selling h1 {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+
+  .top-selling h2 {
+    font-size: 16px;
+    line-height: 21.6px;
+    margin-top: 10px;
+  }
+
+  .current-price,
+  .original-price,
+  .price {
+    font-size: 20px;
+    line-height: 27px;
+  }
+
+  .view-all {
+    width: 358px;
+    height: 46px;
+    font-size: 14px;
+    line-height: 18.9px;
+    margin-top: 24px;
+  }
+}
+
+/* melikeaksoy-OC-14-Create-the-Top-Selling-section end */
+
 /* nursahtuncel-OC-29-ımplement the you might also like section start*/
 
 .nt-title {
