@@ -22,6 +22,9 @@ setRating = (rating) => {
   return starsHTML;
 };
 
+const navigateDetail = (id) => {
+  window.location.href = `product-detail.html?ProductId=${id}`;
+};
 const getContainer = () => {
   const container = document.querySelector(".nt-images-container");
   container.innerHTML = "";
@@ -30,7 +33,7 @@ const getContainer = () => {
     const discount = eleman.price * 0.6;
     const itemHTML = `
       <div class="nt-images-container-half-box">
-        <div class="nt-image-div">
+        <div onclick="navigateDetail(${eleman.id})" class="nt-image-div">
           <img class="nt-product-image" src="${eleman.image}" alt="${
       eleman.title
     }" />
