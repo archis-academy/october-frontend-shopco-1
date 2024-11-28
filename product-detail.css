@@ -13,7 +13,8 @@
   text-transform: uppercase;
 }
 .nt-images-container {
-  max-width: 1440px;
+  max-width: 1270px;
+  padding-left: 20px;
   margin: auto;
   flex-wrap: nowrap;
   justify-content: start;
@@ -40,11 +41,12 @@
 .nt-images-container-half-box {
   scroll-snap-align: start;
   transition: transform 0.5s;
-  padding: 20px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 .nt-images-container-half-box:hover {
   transform: scale(1.1);
@@ -56,9 +58,10 @@
   font-weight: 700;
   line-height: 27px;
   text-align: center;
-  width: 300px;
+  width: 270px;
   white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .nt-stars-and-puan {

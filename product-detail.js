@@ -24,9 +24,10 @@ setRating = (rating) => {
 
 const getContainer = () => {
   const container = document.querySelector(".nt-images-container");
-  container.innerHTML;
+  container.innerHTML = "";
 
   List.slice(0, 20).forEach((eleman) => {
+    const discount = eleman.price * 0.6;
     const itemHTML = `
       <div class="nt-images-container-half-box">
         <div class="nt-image-div">
@@ -42,7 +43,9 @@ const getContainer = () => {
           <div id="stars">${eleman.rating.rate}</div>
         </div>
         <div class="nt-new-price-old-price">
-          <p class="nt-new-price-old-price-1">$${eleman.price}</p>
+          <p class="nt-new-price-old-price-1">$${discount.toFixed(2)}</p>
+             <p class="nt-new-price-old-price-2">$${eleman.price}</p>
+          <p class="nt-new-price-old-price-3">-40%</p>
         </div>
       </div>
     `;
