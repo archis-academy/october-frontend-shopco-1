@@ -99,6 +99,8 @@ buttons.forEach((button) => {
 const buttonColorBrown = document.querySelector(".red");
 const buttonColorGreen = document.querySelector(".green");
 const buttonColorBlue = document.querySelector(".blue");
+const buttonColorOriginal = document.querySelector(".originalColor");
+
 
 const mainImage = document.querySelector(".pd-hs-main-image-container");
 const smallImages = document.querySelectorAll(".pd-hs-small-image-container");
@@ -124,6 +126,14 @@ buttonColorBlue.addEventListener("click", () => {
 
   smallImages.forEach((image) => {
     image.style.backgroundColor = "blue";
+  });
+});
+
+buttonColorOriginal.addEventListener("click", () => {
+  mainImage.style.backgroundColor = "#f0eeed";
+
+  smallImages.forEach((image) => {
+    image.style.backgroundColor = "#f0eeed";
   });
 });
 

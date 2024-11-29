@@ -362,6 +362,10 @@
   background-color: blue;
 }
 
+.originalColor{
+  background-color: #f0eeed ;
+}
+
 .pd-hs-size-button {
   border-radius: 60px;
   background-color: #f0f0f0;
