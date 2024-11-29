@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const starRate = document.createElement('div');
         starRate.classList.add('star-rate');
 
-        for(let i=0; i<testimonial.starRate; i++){
+        for (let i = 0; i < testimonial.starRate; i++) {
           const starImage = document.createElement('img');
           starImage.src = './images/Create the Testimonial/Star.svg'
           starRate.appendChild(starImage)
@@ -56,27 +56,30 @@ document.addEventListener("DOMContentLoaded", function () {
       const prev = document.getElementById('prev');
       const next = document.getElementById('next');
 
-      const slider = document.querySelector('.slider');
-
-      const slide = document.querySelector('.slide');
-
       next.addEventListener('click', () => {
-
-        slider.scrollLeft += slide.scrollWidth + 20
-        console.log(slider.scrollLeft)
-      })
+        const slideWidth = document.querySelector('.slide').offsetWidth;
+        if (sliderContainer.scrollLeft + sliderContainer.offsetWidth >= sliderContainer.scrollWidth) {
+          sliderContainer.scrollLeft = 0;
+        } else {
+          sliderContainer.scrollLeft += slideWidth;
+        }
+        console.log(sliderContainer.scrollLeft);
+      });
 
       prev.addEventListener('click', () => {
-
-        slider.scrollLeft -= slide.scrollWidth + 20
-        console.log(slider.scrollLeft)
-      })
-
-        .catch(error => {
-          console.error('Error code: OC-18', error);
-        });
+        const slideWidth = document.querySelector('.slide').offsetWidth;
+        if (sliderContainer.scrollLeft <= 0) {
+          sliderContainer.scrollLeft = sliderContainer.scrollWidth - sliderContainer.offsetWidth;
+        } else {
+          sliderContainer.scrollLeft -= slideWidth;
+        }
+        console.log(sliderContainer.scrollLeft);
+      });
     })
 
+    .catch(error => {
+      console.error('Error code: OC-18', error);
+    });
 });
 
 //ctt-slider______________End
