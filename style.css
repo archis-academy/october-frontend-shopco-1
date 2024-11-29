@@ -550,10 +550,6 @@
   padding-left: 10px;
 }
 
-.review{
-
-}
-
 .review p{
   font-family: --fnt-family-satoshi;
   font-weight: 400;
@@ -563,3 +559,17 @@
 }
 
 /* Create the Testimonial Section End*/
+
+/* Create the Testimonial Section Responsiveness Start*/
+
+@media screen and (max-width: 1442px) {
+  .slider{
+    max-width: 840px;
+  }
+}
+@media screen and (max-width: 944px) {
+  .slider{
+    max-width: 420px;
+  }
+}
+/* Create the Testimonial Section Responsiveness End*/

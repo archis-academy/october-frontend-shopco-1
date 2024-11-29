@@ -6,7 +6,7 @@
     },
     {
         "starRate": "2",
-        "name": "Anne M.",
+        "user": "Anne M.",
         "review": "My order not look like the photos. I want to return it."
     },
     {
@@ -36,7 +36,7 @@
     },
     {
         "starRate": "4",
-        "name": "John N.",
+        "user": "John N.",
         "review": "It's good if you wear it downtown. But I will wear it in a village in the mountains. So it will not be for me."
     }
 ]
