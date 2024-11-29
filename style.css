@@ -458,11 +458,6 @@
 /* nursahtuncel-OC-29-ımplement the you might also like section end*/
 
 /* Create the Testimonial Section Start*/
-
-.ctt-section{
-  margin: 50px;
-}
-
 .ctt-first-row {
   display: flex;
   max-width: 1240px;
@@ -497,21 +492,44 @@
 
 .ctt-second-row{
   display: flex;
-  
-  
-  
+}
 
+.ctt-secodn-row-design{
+  background-color: aqua;
+  width: 100px;
+}
+
+.ctt-left-design{
+  background-color: rgb(255, 255, 255);
+  opacity: 85%;
+  filter: blur(8px);
+  width: 17.5%;
+  height: 206px;
+  position: absolute;
+  left: 0;
+}
+
+.ctt-right-design{
+  background-color: rgb(255, 255, 255);
+  opacity: 85%;
+  filter: blur(8px);
+  width: 17.5%;
+  height: 206px;
+  position: absolute;
+  right: 0;
+  z-index: 99;
 }
 
 .slider{
   display: flex;
   margin: auto;
-  max-width: 1240px;
+  max-width: 85%;
   gap: 20px;
   overflow-x:auto;
   scroll-behavior: smooth; 
   box-sizing: border-box;
-
+  position: relative;
+  z-index: -1;
 }
 
 ::-webkit-scrollbar{
@@ -530,7 +548,11 @@
 }
 
 .star-rate{
+  display: flex;
+}
 
+.star-rate img{
+  padding-right: 4px;
 }
 
 .user{

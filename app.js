@@ -25,6 +25,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const starRate = document.createElement('div');
         starRate.classList.add('star-rate');
 
+        for(let i=0; i<testimonial.starRate; i++){
+          const starImage = document.createElement('img');
+          starImage.src = './images/Create the Testimonial/Star.svg'
+          starRate.appendChild(starImage)
+        }
+
         const user = document.createElement('div');
         user.classList.add('user');
         const userName = document.createElement('h4');
