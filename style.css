@@ -453,99 +453,6 @@
   }
 }
 /*------hero section burada bitiyor-----*/
-/* nursahtuncel-OC-29-ımplement the you might also like section start*/
-
-.nt-title {
-  font-family: var(--fnt-family-integral);
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 57.6px;
-  text-align: center;
-  padding-top: 64px;
-  padding-bottom: 55px;
-  text-transform: uppercase;
-}
-.nt-images-container {
-  margin: 0 20px;
-  margin-bottom: 80px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.nt-images-container-half {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.nt-images-container-half-box {
-  cursor: pointer;
-}
-.nt-prgrp-bttm {
-  padding-top: 16px;
-  font-family: var(--fnt-family-satoshi);
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 27px;
-  text-align: left;
-}
-.nt-stars-and-puan {
-  padding-top: 8px;
-  display: flex;
-  gap: 13px;
-}
-.nt-new-price-old-price {
-  padding-top: 8px;
-  display: flex;
-  gap: 10px;
-}
-.nt-new-price-old-price-1,
-.nt-new-price-old-price-2 {
-  font-family: var(--fnt-family-satoshi);
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 32.4px;
-  text-decoration: line-through;
-}
-.nt-new-price-old-price-2 {
-  color: rgba(0, 0, 0, 0.4);
-}
-.nt-new-price-old-price-3 {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  color: rgba(255, 51, 51, 1);
-  font-family: var(--fnt-family-satoshi);
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 16.2px;
-  border: 0px solid rgba(255, 198, 51, 1);
-  background: rgba(0, 0, 0, 1);
-  background: rgba(0, 0, 0, 0.6);
-  background: rgba(255, 51, 51, 1);
-  background: rgba(255, 51, 51, 0.1);
-  padding: 5px 15px;
-  border-radius: 50px;
-}
-@media screen and (max-width: 1279px) {
-  .nt-images-container-half {
-    gap: 50px;
-  }
-}
-@media screen and (max-width: 680px) {
-  .nt-title {
-    padding-bottom: 10px;
-    font-size: 24px;
-  }
-  .nt-images-container-half {
-    display: inline-block;
-  }
-  .nt-images-container-half-box {
-    padding-top: 20px;
-  }
-}
-/* nursahtuncel-OC-29-ımplement the you might also like section end*/
 
 /*Browse By Dress Stylee Section Start*/
 .browse-by-dress-background {
@@ -580,6 +487,20 @@
   gap: 25px;
 }
 
+.first-container a {
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+}
+
+.second-container a {
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 .second-container {
   display: flex;
   justify-content: center;
@@ -612,6 +533,7 @@
   position: relative;
   border-radius: 20px;
   width: 684px;
+  height: 100%;
 }
 /*Browse By Dress Stylee Section End*/
 
@@ -623,7 +545,7 @@
     align-items: center;
     gap: 25px;
   }
-  
+
   .second-container {
     display: flex;
     flex-direction: column;
@@ -638,7 +560,7 @@
   .browse-second-form {
     width: 407px;
     height: 290px;
-  }  
+  }
 }
 
 @media screen and (max-width: 518px) {
@@ -662,11 +584,10 @@
   .browse-second-form {
     width: 300px;
     height: 290px;
-  } 
+  }
 }
 
 @media screen and (max-width: 390px) {
-  
   .browse-first-form {
     width: 200px;
     height: 200px;
@@ -675,10 +596,8 @@
   .browse-second-form {
     width: 200px;
     height: 200px;
-  } 
+  }
 }
-/*Browse By Dress Stylee Section Responsiveness End*/
-
 /* BeyzanurMete-OC-20-Implement-the-Newsletter-Section start*/
 .newsletter-section {
   margin: 0 auto;
@@ -732,3 +651,248 @@
   }
 }
 /* BeyzanurMete-OC-20-Implement-the-Newsletter-Section End*/
+
+/* melikeaksoy/OC-22-implement-the-footer start */
+
+.newsletter-section {
+  margin-top: 80px;
+  position: relative;
+  z-index: 10;
+  margin-bottom: -90px;
+  width: 80%;
+}
+
+footer {
+  background-color: var(--ftr-imgs-bg-clr);
+  padding: 50px 100px;
+  font-family: var(--fnt-family-satoshi);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+  padding-top: 140px;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1440px;
+  align-items: center;
+}
+
+.footer-logo h2 {
+  font-weight: 700;
+  font-family: var(--fnt-family-integral);
+  font-size: 33.45px;
+  line-height: 40.15px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(10px, 6vw, 113px);
+  width: 90%;
+  max-width: 1440px;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.footer-logo p {
+  max-width: 248px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.footer-column h4 {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: clamp(10px, 2vw, 40px);
+}
+
+.footer-right {
+  display: flex;
+  gap: clamp(10px, 6vw, 113px);
+}
+
+.footer-separator {
+  width: 90%;
+  max-width: 1440px;
+  border-top: 1px solid #ddd;
+  margin: 50px 0 25px;
+}
+
+.footer-bottom {
+  width: 90%;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 400;
+}
+
+.footer-column {
+  max-width: 149px;
+  min-width: 130px;
+}
+
+.footer-column ul li a {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--fnt-black);
+  margin-top: clamp(10px, 2vw, 25px);
+}
+
+.footer-column a:last-child {
+  margin-bottom: 0;
+}
+
+.payment-icons {
+  text-align: center;
+}
+
+/* melikeaksoy/OC-22-implement-the-footer end */
+
+/* melikeaksoy/OC-23-implement-the-footer start */
+
+@media (max-width: 1300px) and (min-width: 1000px) {
+  .footer-wrapper {
+    justify-content: center;
+    padding: 0 15px;
+  }
+  .footer-container {
+    gap: clamp(5px, 3vw, 50px);
+  }
+  .footer-right {
+    gap: clamp(5px, 3vw, 50px);
+  }
+  .footer-column {
+    min-width: 90px;
+  }
+  .newsletter-section {
+    margin-bottom: -95px;
+  }
+  .newsletter-title {
+    font-size: 33.45px;
+  }
+}
+
+@media (max-width: 1130px) and (min-width: 1000px) {
+  .newsletter-section {
+    margin-bottom: -95px;
+  }
+}
+
+@media (max-width: 1000px) {
+  footer {
+    padding: 10px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-right {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    align-items: center;
+  }
+
+  .footer-column {
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  .footer-separator {
+    margin: 25px 0 15px;
+  }
+
+  .footer-logo h2 {
+    font-size: 25px;
+  }
+
+  .newsletter-title {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  .footer-column h4 {
+    font-size: 14px;
+  }
+
+  .footer-logo p,
+  .footer-bottom p,
+  .footer-column ul li a {
+    font-size: 12px;
+  }
+
+  .footer-column {
+    max-width: 250px;
+  }
+
+  .payment-icons img {
+    max-width: 46px;
+  }
+  .newsletter-section {
+    margin-bottom: -150px;
+  }
+
+  footer {
+    padding-top: 200px;
+  }
+
+  .newsletter-section {
+    margin-bottom: -160px;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 800px) {
+  .newsletter-section {
+    margin-bottom: -130px;
+  }
+}
+@media (max-width: 800px) and (min-width: 58px) {
+  .newsletter-section {
+    margin-bottom: -140px;
+  }
+}
+
+@media (max-width: 580px) and (min-width: 490px) {
+  .newsletter-section {
+    margin-bottom: -150px;
+  }
+}
+@media (max-width: 490px) {
+  .newsletter-section {
+    margin-bottom: -170px;
+  }
+}
+/* melikeaksoy/OC-23-implement-the-footer end */

@@ -18,4 +18,8 @@ document
     document.querySelector(".implement-promo-banner").style.display = "none";
   });
 
+<<<<<<< HEAD
 // esra-OC-6-implement-promo-banner-end
+=======
+// esra-OC-6-implement-promo-banner-end
+>>>>>>> origin
