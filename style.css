@@ -392,6 +392,21 @@
   flex-direction: column;
   gap: 8px;
   text-align: left;
+  max-width: 295px;
+}
+
+.image-container {
+  width: 295px;
+  height: 298px;
+  padding: 45px;
+  background-color: #f0eeed;
+  border-radius: 24px;
+}
+
+.top-selling-image {
+  mix-blend-mode: multiply;
+  width: 100%;
+  height: 100%;
 }
 
 .top-selling h2 {
@@ -399,6 +414,7 @@
   font-size: 20px;
   line-height: 27px;
   margin-top: 16px;
+  min-height: 52px;
 }
 
 .current-price,
@@ -423,6 +439,68 @@
   border: 1px solid #f0eeed;
   width: 218px;
   height: 52px;
+  cursor: pointer;
+}
+
+.view-all a {
+  color: black;
+}
+
+.price {
+  display: flex;
+  gap:10px;
+}
+.discount {
+  background-color: rgba(255, 51, 51, 0.1);
+  width: 58px;
+  height: 28px;
+  border-radius: 62px;
+  color: #ff3333;
+  size: 12px;
+  line-height: 16.2px;
+  border: none;
+  padding: 6px 14px;
+}
+
+
+.product .stars {
+  display: flex;
+}
+
+.product .point-stars {
+  font-size: 16px;
+  line-height: 18.9px;
+  font-weight: 400;
+}
+
+.product .star {
+  width: 20px;
+  height: 20px;
+  background-color: gray;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  margin-right: 5px;
+}
+
+.star.full {
+  background-color: #ffc633;
+}
+
+.star.half {
+  background: linear-gradient(to right, #ffc633 50%, #dad0cc 50%);
+}
+.star.empty {
+  background-color: #dad0cc;
 }
 
 @media (max-width: 680px) {
