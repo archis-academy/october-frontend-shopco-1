@@ -9,7 +9,6 @@ function toggleSearch() {
   searchBox.classList.toggle("active");
 }
 // nt-header-end............................
-
 // esra-OC-6-implement-promo-banner-start
 
 document

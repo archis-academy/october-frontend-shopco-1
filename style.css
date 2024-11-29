@@ -90,6 +90,96 @@
 }
 /* esra-OC-6-implement-promo-banner-end */
 
+/* esra-OC-6-implement-promo-banner-start */
+.implement-promo-banner {
+  width: 100%;
+  background-color: black;
+  font-family: var(--fnt-family-satoshi);
+  white-space: nowrap;
+}
+.ip-banner-info-box {
+  height: 38px;
+  max-width: 1350px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  white-space: nowrap;
+  gap: 10px;
+}
+.ip-banner-explain {
+  font-size: clamp(12px, 4vw, 16px);
+  font-weight: 400;
+  line-height: 18.9px;
+  text-decoration-style: solid;
+  white-space: nowrap;
+}
+.ip-banner-explain2 {
+  font-size: clamp(12px, 4vw, 16px);
+  font-weight: 500;
+  line-height: 18.9px;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+.banner_close_icon {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+@media (max-width: 550px) {
+  .implement-promo-banner {
+    flex-direction: row;
+    height: auto;
+    padding: 10px 20px;
+  }
+  .ip-banner-info-box {
+    flex-direction: row;
+    text-align: center;
+    gap: 10px;
+  }
+  .ip-banner-explain,
+  .ip-banner-explain2 {
+    font-size: clamp(10px, 3vw, 14px);
+  }
+  .banner_close_icon {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 280px) {
+  .ip-banner-info-box {
+    flex-direction: column;
+    text-align: center;
+  }
+  .ip-banner-explain,
+  .ip-banner-explain2 {
+    font-size: clamp(8px, 5vw, 10px);
+  }
+  .banner_close_icon {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 550px) {
+  .banner_close_icon {
+    display: none;
+  }
+}
+/* esra-OC-6-implement-promo-banner-end */
+
 /* nursahtuncel-OC-4-Desing-the-Header-Section start */
 .nt-hero-section {
   width: 100%;
@@ -453,6 +543,151 @@
   }
 }
 /*------hero section burada bitiyor-----*/
+
+/*Browse By Dress Stylee Section Start*/
+.browse-by-dress-background {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--ftr-imgs-bg-clr);
+  max-width: 90%;
+  margin: 0px auto;
+  padding: 30px 10px;
+  border-radius: 40px;
+}
+
+.title-of-browse {
+  text-align: center;
+  font-family: var(--fnt-family-integral);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 57.6px;
+  padding-bottom: 30px;
+}
+
+.browse-style-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.first-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.first-container a {
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+}
+
+.second-container a {
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.second-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.browse-option-text {
+  font-weight: 700;
+  font-size: 36px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.browse-picture {
+  border-radius: 20px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.browse-first-form {
+  display: flex;
+  position: relative;
+  border-radius: 20px;
+  width: 407px;
+}
+
+.browse-second-form {
+  display: flex;
+  position: relative;
+  border-radius: 20px;
+  width: 684px;
+  height: 100%;
+}
+/*Browse By Dress Stylee Section End*/
+
+/*Browse By Dress Stylee Section Responsiveness Start*/
+@media screen and (max-width: 1196px) {
+  .first-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .second-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .browse-first-form {
+    height: 290px;
+  }
+
+  .browse-second-form {
+    width: 407px;
+    height: 290px;
+  }
+}
+
+@media screen and (max-width: 518px) {
+  .title-of-browse {
+    font-weight: 700;
+    font-size: 40px;
+  }
+  .browse-option-text {
+    font-weight: 700;
+    font-size: 30px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+
+  .browse-first-form {
+    width: 300px;
+    height: 290px;
+  }
+
+  .browse-second-form {
+    width: 300px;
+    height: 290px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .browse-first-form {
+    width: 200px;
+    height: 200px;
+  }
+
+  .browse-second-form {
+    width: 200px;
+    height: 200px;
+  }
+}
 /* nursahtuncel-OC-29-ımplement the you might also like section start*/
 
 .nt-title {
@@ -547,138 +782,6 @@
 }
 /* nursahtuncel-OC-29-ımplement the you might also like section end*/
 
-/*Browse By Dress Stylee Section Start*/
-.browse-by-dress-background {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--ftr-imgs-bg-clr);
-  max-width: 90%;
-  margin: 0px auto;
-  padding: 30px 10px;
-  border-radius: 40px;
-}
-
-.title-of-browse {
-  text-align: center;
-  font-family: var(--fnt-family-integral);
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 57.6px;
-  padding-bottom: 30px;
-}
-
-.browse-style-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 25px;
-}
-
-.first-container {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-}
-
-.second-container {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-}
-
-.browse-option-text {
-  font-weight: 700;
-  font-size: 36px;
-  position: absolute;
-  left: 20px;
-  top: 20px;
-}
-
-.browse-picture {
-  border-radius: 20px;
-  width: 100%;
-  object-fit: cover;
-}
-
-.browse-first-form {
-  display: flex;
-  position: relative;
-  border-radius: 20px;
-  width: 407px;
-}
-
-.browse-second-form {
-  display: flex;
-  position: relative;
-  border-radius: 20px;
-  width: 684px;
-}
-/*Browse By Dress Stylee Section End*/
-
-/*Browse By Dress Stylee Section Responsiveness Start*/
-@media screen and (max-width: 1196px) {
-  .first-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-  }
-  
-  .second-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-  }
-
-  .browse-first-form {
-    height: 290px;
-  }
-
-  .browse-second-form {
-    width: 407px;
-    height: 290px;
-  }  
-}
-
-@media screen and (max-width: 518px) {
-  .title-of-browse {
-    font-weight: 700;
-    font-size: 40px;
-  }
-  .browse-option-text {
-    font-weight: 700;
-    font-size: 30px;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-  }
-
-  .browse-first-form {
-    width: 300px;
-    height: 290px;
-  }
-
-  .browse-second-form {
-    width: 300px;
-    height: 290px;
-  } 
-}
-
-@media screen and (max-width: 390px) {
-  
-  .browse-first-form {
-    width: 200px;
-    height: 200px;
-  }
-
-  .browse-second-form {
-    width: 200px;
-    height: 200px;
-  } 
-}
-/*Browse By Dress Stylee Section Responsiveness End*/
-
 /* BeyzanurMete-OC-20-Implement-the-Newsletter-Section start*/
 .newsletter-section {
   margin: 0 auto;
@@ -732,3 +835,248 @@
   }
 }
 /* BeyzanurMete-OC-20-Implement-the-Newsletter-Section End*/
+
+/* melikeaksoy/OC-22-implement-the-footer start */
+
+.newsletter-section {
+  margin-top: 80px;
+  position: relative;
+  z-index: 10;
+  margin-bottom: -90px;
+  width: 80%;
+}
+
+footer {
+  background-color: var(--ftr-imgs-bg-clr);
+  padding: 50px 100px;
+  font-family: var(--fnt-family-satoshi);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+  padding-top: 140px;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1440px;
+  align-items: center;
+}
+
+.footer-logo h2 {
+  font-weight: 700;
+  font-family: var(--fnt-family-integral);
+  font-size: 33.45px;
+  line-height: 40.15px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(10px, 6vw, 113px);
+  width: 90%;
+  max-width: 1440px;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.footer-logo p {
+  max-width: 248px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.footer-column h4 {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: clamp(10px, 2vw, 40px);
+}
+
+.footer-right {
+  display: flex;
+  gap: clamp(10px, 6vw, 113px);
+}
+
+.footer-separator {
+  width: 90%;
+  max-width: 1440px;
+  border-top: 1px solid #ddd;
+  margin: 50px 0 25px;
+}
+
+.footer-bottom {
+  width: 90%;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 400;
+}
+
+.footer-column {
+  max-width: 149px;
+  min-width: 130px;
+}
+
+.footer-column ul li a {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--fnt-black);
+  margin-top: clamp(10px, 2vw, 25px);
+}
+
+.footer-column a:last-child {
+  margin-bottom: 0;
+}
+
+.payment-icons {
+  text-align: center;
+}
+
+/* melikeaksoy/OC-22-implement-the-footer end */
+
+/* melikeaksoy/OC-23-implement-the-footer start */
+
+@media (max-width: 1300px) and (min-width: 1000px) {
+  .footer-wrapper {
+    justify-content: center;
+    padding: 0 15px;
+  }
+  .footer-container {
+    gap: clamp(5px, 3vw, 50px);
+  }
+  .footer-right {
+    gap: clamp(5px, 3vw, 50px);
+  }
+  .footer-column {
+    min-width: 90px;
+  }
+  .newsletter-section {
+    margin-bottom: -95px;
+  }
+  .newsletter-title {
+    font-size: 33.45px;
+  }
+}
+
+@media (max-width: 1130px) and (min-width: 1000px) {
+  .newsletter-section {
+    margin-bottom: -95px;
+  }
+}
+
+@media (max-width: 1000px) {
+  footer {
+    padding: 10px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-right {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    align-items: center;
+  }
+
+  .footer-column {
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  .footer-separator {
+    margin: 25px 0 15px;
+  }
+
+  .footer-logo h2 {
+    font-size: 25px;
+  }
+
+  .newsletter-title {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  .footer-column h4 {
+    font-size: 14px;
+  }
+
+  .footer-logo p,
+  .footer-bottom p,
+  .footer-column ul li a {
+    font-size: 12px;
+  }
+
+  .footer-column {
+    max-width: 250px;
+  }
+
+  .payment-icons img {
+    max-width: 46px;
+  }
+  .newsletter-section {
+    margin-bottom: -150px;
+  }
+
+  footer {
+    padding-top: 200px;
+  }
+
+  .newsletter-section {
+    margin-bottom: -160px;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 800px) {
+  .newsletter-section {
+    margin-bottom: -130px;
+  }
+}
+@media (max-width: 800px) and (min-width: 58px) {
+  .newsletter-section {
+    margin-bottom: -140px;
+  }
+}
+
+@media (max-width: 580px) and (min-width: 490px) {
+  .newsletter-section {
+    margin-bottom: -150px;
+  }
+}
+@media (max-width: 490px) {
+  .newsletter-section {
+    margin-bottom: -170px;
+  }
+}
+/* melikeaksoy/OC-23-implement-the-footer end */
