@@ -77,17 +77,15 @@ function ProductDetails() {
   document.querySelector(".pd-hs-description").textContent =
     product.description;
 
-  const discountPrice = product.price * 0.6;
+ 
   document.querySelector(".pd-hs-rating-stars").innerHTML = setRating(
     product.rating.rate
   );
   document.querySelector(".pd-hs-rating-number").textContent =
     product.rating.rate + "/5";
-  document.querySelector(
-    ".pd-hs-current-price"
-  ).textContent = `$${discountPrice.toFixed(0)}`;
-  document.querySelector(".pd-hs-original-price").textContent =
-    "$" + `${product.price}`;
+  const discountPrice = product.price * 0.6;
+  document.querySelector(".pd-hs-current-price").textContent = `$${discountPrice.toFixed(2)}`;
+  document.querySelector(".pd-hs-original-price").textContent ="$" + `${product.price}`;
 }
 
 const buttons = document.querySelectorAll(".pd-hs-size-button");
