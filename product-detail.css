@@ -473,9 +473,7 @@
   .pd-hs-product-details {
     max-width: 75%;
   }
-  .pd-hs-nav {
-    margin-left: 28px;
-  }
+
 }
 
 @media (max-width: 530px) {
