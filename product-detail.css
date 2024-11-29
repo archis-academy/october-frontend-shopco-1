@@ -4,7 +4,7 @@
 
 .nt-title {
   font-family: var(--fnt-family-integral);
-  font-size: 48px;
+  font-size: clamp(32px, 5vw, 48px);
   font-weight: 700;
   line-height: 57.6px;
   text-align: center;
@@ -13,15 +13,17 @@
   text-transform: uppercase;
 }
 .nt-images-container {
-  max-width: 1240px;
+  max-width: 1250px;
+  padding-left: 20px;
   margin: auto;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  row-gap: 40px;
-  column-gap: 40px;
+  flex-wrap: nowrap;
+  justify-content: start;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.nt-images-container::-webkit-scrollbar {
+  display: none;
 }
 .nt-image-div {
   width: 295px;
@@ -31,24 +33,24 @@
   border-radius: 24px;
 }
 .nt-product-image {
+  transition: transform 0.5s;
   mix-blend-mode: multiply;
   width: 100%;
   height: 100%;
 }
-.nt-images-container-half {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
+
 .nt-images-container-half-box {
-  padding: 20px;
+  scroll-snap-align: start;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
-
+.nt-product-image:hover {
+  transform: scale(1.1);
+}
 .nt-prgrp-bttm {
   padding-top: 16px;
   font-family: var(--fnt-family-satoshi);
@@ -56,7 +58,7 @@
   font-weight: 700;
   line-height: 27px;
   text-align: center;
-  width: 300px;
+  width: 270px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -66,11 +68,13 @@
   padding-top: 8px;
   display: flex;
   gap: 13px;
+  justify-content: center;
 }
 .nt-new-price-old-price {
   padding-top: 8px;
   display: flex;
   gap: 10px;
+  justify-content: center;
 }
 .nt-new-price-old-price-1,
 .nt-new-price-old-price-2 {
@@ -78,6 +82,7 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 32.4px;
+  text-decoration: none;
 }
 .nt-new-price-old-price-2 {
   text-decoration: line-through;
@@ -134,30 +139,8 @@
 .rating-value {
   margin-top: 10px;
 }
-
-@media screen and (max-width: 1474px) {
-  .nt-images-container {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+.nt-new-price-old-price-1 {
+  text-decoration: none;
 }
-@media screen and (max-width: 1090px) {
-  .nt-images-container {
-    grid-template-columns: 1fr 1fr;
-  }
 
-  .nt-prgrp-bttm {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 680px) {
-  .nt-images-container {
-    grid-template-columns: 1fr;
-  }
-
-  .nt-title {
-    font-weight: 800;
-    padding-bottom: 10px;
-    font-size: 30px;
-  }
-}
 /* nursahtuncel-OC-29-ımplement the you might also like section end*/
