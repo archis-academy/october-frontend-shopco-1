@@ -79,4 +79,12 @@ const getContainer = () => {
 };
 getProduct();
 
+let container = document.querySelector(".products");
+const showAll = () => {
+  container.style.overflow = "hidden";
+  container.style.flexWrap = "wrap";
+  container.style.maxWidth = "1280px";
+  container.style.justifyContent = "center";
+};
+
 // Create-the-Top-Selling-section end
