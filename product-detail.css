@@ -362,8 +362,8 @@
   background-color: blue;
 }
 
-.originalColor{
-  background-color: #f0eeed ;
+.originalColor {
+  background-color: #f0eeed;
 }
 
 .pd-hs-size-button {
@@ -473,7 +473,6 @@
   .pd-hs-product-details {
     max-width: 75%;
   }
-
 }
 
 @media (max-width: 530px) {

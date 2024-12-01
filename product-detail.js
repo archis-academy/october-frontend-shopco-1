@@ -55,7 +55,6 @@ getProduct();
 
 // nursahtuncel-OC-29-ımplement the you might also like section end
 //emre-OC-25-Product detail hero section start
-
 const urlParams = new URLSearchParams(window.location.search);
 let productId = urlParams.get("productId");
 if (!productId) {
@@ -67,7 +66,7 @@ if (productId > 20) {
 
 function ProductDetails() {
   const product = List.find((item) => item.id === parseInt(productId));
-
+  document.querySelector(".category").textContent = product.category;
   document.querySelector(".pd-hs-main-image").src = product.image;
   document.getElementById("small-image1").src = product.image;
   document.getElementById("small-image2").src = product.image;
@@ -77,15 +76,17 @@ function ProductDetails() {
   document.querySelector(".pd-hs-description").textContent =
     product.description;
 
- 
   document.querySelector(".pd-hs-rating-stars").innerHTML = setRating(
     product.rating.rate
   );
   document.querySelector(".pd-hs-rating-number").textContent =
     product.rating.rate + "/5";
   const discountPrice = product.price * 0.6;
-  document.querySelector(".pd-hs-current-price").textContent = `$${discountPrice.toFixed(2)}`;
-  document.querySelector(".pd-hs-original-price").textContent ="$" + `${product.price}`;
+  document.querySelector(
+    ".pd-hs-current-price"
+  ).textContent = `$${discountPrice.toFixed(2)}`;
+  document.querySelector(".pd-hs-original-price").textContent =
+    "$" + `${product.price}`;
 }
 
 const buttons = document.querySelectorAll(".pd-hs-size-button");
@@ -100,7 +101,6 @@ const buttonColorBrown = document.querySelector(".red");
 const buttonColorGreen = document.querySelector(".green");
 const buttonColorBlue = document.querySelector(".blue");
 const buttonColorOriginal = document.querySelector(".originalColor");
-
 
 const mainImage = document.querySelector(".pd-hs-main-image-container");
 const smallImages = document.querySelectorAll(".pd-hs-small-image-container");
@@ -141,7 +141,6 @@ const minusButton = document.getElementById("pd-hs-minus-btn");
 const plusButton = document.getElementById("pd-hs-plus-btn");
 const quantitySpan = document.querySelector(".quantity-number");
 let quantity = parseInt(quantitySpan.textContent);
-
 minusButton.addEventListener("click", () => {
   if (quantity > 1) {
     quantity--;
@@ -164,11 +163,37 @@ smallImagesSrc.forEach((image) => {
   });
 });
 
-const colorbuttons = document.querySelectorAll('.pd-hs-color');
-colorbuttons.forEach(button => {
-    button.addEventListener('click', () => {
-        colorbuttons.forEach(btn => btn.classList.remove('pd-hs-color-active'));
-        button.classList.add('pd-hs-color-active');
-    });
+const colorbuttons = document.querySelectorAll(".pd-hs-color");
+colorbuttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    colorbuttons.forEach((btn) => btn.classList.remove("pd-hs-color-active"));
+    button.classList.add("pd-hs-color-active");
+  });
+});
+
+const addButton = document.getElementById("pd-hs-add-cart");
+
+addButton.addEventListener("click", () => {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  const product = List.find((item) => item.id === parseInt(productId));
+
+  let selectedColor = document.querySelector(".pd-hs-color.pd-hs-color-active");
+  selectedColor = selectedColor ? selectedColor.id : null;
+
+  let selectedSize = document.querySelector(
+    ".pd-hs-size-button.pd-hs-selected"
+  );
+  selectedSize = selectedSize ? selectedSize.textContent : null;
+  const amount = parseInt(quantitySpan.textContent);
+
+  const cartItem = {
+    amount: amount,
+    size: selectedSize,
+    color: selectedColor,
+    product: product,
+  };
+  cart.push(cartItem);
+  localStorage.setItem("cart", JSON.stringify(cart));
 });
 //emre-OC-25-Product detail hero section end
