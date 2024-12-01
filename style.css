@@ -395,6 +395,7 @@
 .products::-webkit-scrollbar {
   display: none;
 }
+
 .top-selling .product {
   scroll-snap-align: start;
   display: flex;
@@ -402,6 +403,13 @@
   gap: 8px;
   text-align: left;
   max-width: 295px;
+}
+
+.products.expanded {
+  overflow: hidden;
+  flex-wrap: wrap;
+  max-width: 1280px;
+  justify-content: center;
 }
 
 .image-container {

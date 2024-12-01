@@ -19,21 +19,21 @@ const getProduct = () => {
     .then((list) => {
       List = list;
       getContainer();
+    })
+    .catch((err) => {
+      console.error(err);
+      container.innerHTML = "<p>Error loading products.</p>";
     });
 };
 setRating = (rating) => {
-  // 3.5
   let starsHTML = "";
   for (let i = 1; i <= 5; i++) {
-    //5 yıldızım olduğu için 5'e kadar
     if (i <= Math.floor(rating)) {
-      //3
-      starsHTML += '<div class="star full"></div>'; //*
+      starsHTML += '<div class="star full"></div>';
     } else if (i <= Math.ceil(rating)) {
-      //4
       starsHTML += '<div class="star half"></div>';
     } else {
-      starsHTML += '<div class="star empty"></div>'; //boş yıldız
+      starsHTML += '<div class="star empty"></div>';
     }
   }
   return starsHTML;
@@ -80,11 +80,15 @@ const getContainer = () => {
 getProduct();
 
 let container = document.querySelector(".products");
-const showAll = () => {
-  container.style.overflow = "hidden";
-  container.style.flexWrap = "wrap";
-  container.style.maxWidth = "1280px";
-  container.style.justifyContent = "center";
+let viewAllButton = document.querySelector(".view-all");
+let isExpanded = false;
+
+const toggleProductsView = () => {
+  container.classList.toggle("expanded");
+  viewAllButton.textContent = isExpanded ? "View All" : "Hide All";
+  isExpanded = !isExpanded;
 };
+
+viewAllButton.addEventListener("click", toggleProductsView);
 
 // Create-the-Top-Selling-section end
