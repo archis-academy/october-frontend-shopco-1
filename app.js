@@ -22,14 +22,18 @@ const getProduct = () => {
     });
 };
 setRating = (rating) => {
-  let starsHTML = "";
+  // 3.5
+  let starsHTML;
   for (let i = 1; i <= 5; i++) {
+    //5 yıldızım olduğu için 5'e kadar
     if (i <= Math.floor(rating)) {
-      starsHTML += '<div class="star full"></div>';
+      //3
+      starsHTML += '<div class="star full"></div>'; //*
     } else if (i <= Math.ceil(rating)) {
+      //4
       starsHTML += '<div class="star half"></div>';
     } else {
-      starsHTML += '<div class="star empty"></div>';
+      starsHTML += '<div class="star empty"></div>'; //boş yıldız
     }
   }
   return starsHTML;
@@ -39,7 +43,7 @@ const getContainer = () => {
   const container = document.querySelector(".products");
   container.innerHTML = "";
 
-  List.slice(0, 4).forEach((eleman) => {
+  List.slice(0, 20).forEach((eleman) => {
     const discountPrice = eleman.price * 0.6;
 
     const itemHTML = `
@@ -54,9 +58,10 @@ const getContainer = () => {
               <div class="nt-stars-and-puan">
           <div class="stars">
             ${setRating(eleman.rating.rate)} 
+              </div>  
             <div id="point-stars">${eleman.rating.rate}/5</div>
-          </div>   
-        </div>
+         </div>
+        
         <div class="price">
         <p class="current-price">$${discountPrice.toFixed(2)}</p>
               <p class="original-price">$${eleman.price}</p>
