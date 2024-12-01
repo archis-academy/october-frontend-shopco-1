@@ -1,3 +1,41 @@
+// nursahtuncel-OC-28-review section start
+
+const tabItems = document.querySelectorAll(".tab-item");
+const tabPanes = document.querySelectorAll(".tab-pane");
+
+tabItems.forEach((tab, index) => {
+  tab.addEventListener("click", () => {
+    tabItems.forEach((item) => item.classList.remove("active"));
+    tabPanes.forEach((pane) => pane.classList.remove("active"));
+
+    tab.classList.add("active");
+    tabPanes[index].classList.add("active");
+  });
+});
+// **************************
+// Dropdown menü aç/kapat
+const dropdownToggle = document.querySelector(".dropdown-toggle");
+const dropdownMenu = document.querySelector(".dropdown-menu");
+
+dropdownToggle.addEventListener("click", () => {
+  dropdownMenu.style.display =
+    dropdownMenu.style.display === "block" ? "none" : "block";
+});
+
+// Dropdown menüdeki bir seçenek seçildiğinde
+dropdownMenu.addEventListener("click", (e) => {
+  if (e.target.tagName === "LI") {
+    dropdownToggle.textContent = e.target.textContent;
+    dropdownMenu.style.display = "none";
+  }
+});
+
+// "Write a Review" butonu
+document.querySelector(".write-review-btn").addEventListener("click", () => {
+  alert("Redirecting to review form...");
+});
+
+// nursahtuncel-OC-28-review section end
 // nursahtuncel-OC-29-ımplement the you might also like section start
 let List = [];
 const getProduct = () => {

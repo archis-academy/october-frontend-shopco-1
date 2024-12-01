@@ -1,5 +1,146 @@
 @import url("style.css");
 
+/* nursahtuncel-OC-28-review section start*/
+.tabs {
+  max-width: 1240px;
+  width: 100%;
+  margin: auto;
+  padding-top: clamp(50px, 5vw, 80px);
+}
+
+.tab-titles {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.tab-item {
+  width: 33.3%;
+  font-family: "Satoshi";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22px;
+  padding: 12px 20px;
+  cursor: pointer;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.tab-item:hover {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+.tab-item.active {
+  border-bottom: 2px solid rgba(0, 0, 0, 1);
+  color: #000;
+}
+
+.tab-content {
+  margin-top: clamp(20px, 5vw, 24px);
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+/* *************/
+.all-review-container {
+  display: flex;
+  justify-content: space-between;
+}
+.all-reviews-h2-title {
+  font-family: "Satoshi";
+  font-size: clamp(20px, 5vw, 24px);
+  font-weight: 700;
+  line-height: clamp(27px, 5vw, 32.4px);
+  text-align: left;
+}
+.all-reviews-h2-title span {
+  font-family: "Satoshi";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.6);
+}
+/* ***********/
+.review-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-btn {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(240, 240, 240, 1);
+  border: none;
+  border-radius: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.filter-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.arrow-down {
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 5px;
+  list-style: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 150px;
+  padding: 5px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f2f2f2;
+}
+
+.write-review-btn {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* nursahtuncel-OC-28-review section end */
 /* nursahtuncel-OC-29-ımplement the you might also like section start*/
 
 .nt-title {
