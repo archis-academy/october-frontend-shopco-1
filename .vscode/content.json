@@ -1,0 +1,282 @@
+[
+  {
+    "ad": "Ahmet",
+    "soyad": "Yılmaz",
+    "tarih": "Ağustos 11, 2023",
+    "yorum": "Ürün gerçekten çok kaliteli ve hızlı teslim edildi.",
+    "puan": 4.5
+  },
+  {
+    "ad": "Ayşe",
+    "soyad": "Demir",
+    "tarih": "Kasım 30, 2024",
+    "yorum": "Fiyat performans açısından beklentilerimi karşıladı.",
+    "puan": 3.8
+  },
+  {
+    "ad": "Mehmet",
+    "soyad": "Çelik",
+    "tarih": "Aralık 5, 2024",
+    "yorum": "Yorumda belirtilen özellikler doğru, ancak biraz daha hızlı teslimat beklerdim.",
+    "puan": 3.2
+  },
+  {
+    "ad": "Ali",
+    "soyad": "Kara",
+    "tarih": "Eylül 21, 2023",
+    "yorum": "Çok memnun kaldım. Tavsiye ederim.",
+    "puan": 5
+  },
+  {
+    "ad": "Zeynep",
+    "soyad": "Güler",
+    "tarih": "Ekim 2, 2023",
+    "yorum": "Beklediğimden biraz daha küçük, ama işimi görüyor.",
+    "puan": 3
+  },
+  {
+    "ad": "Fatma",
+    "soyad": "Arslan",
+    "tarih": "Kasım 10, 2023",
+    "yorum": "Kargo çok geç geldi ama ürün gerçekten kaliteli.",
+    "puan": 4.2
+  },
+  {
+    "ad": "Okan",
+    "soyad": "Turan",
+    "tarih": "Ocak 12, 2024",
+    "yorum": "Paketleme çok iyiydi, fakat ürün biraz daha dayanıklı olabilirdi.",
+    "puan": 3.5
+  },
+  {
+    "ad": "Elif",
+    "soyad": "Polat",
+    "tarih": "Şubat 7, 2024",
+    "yorum": "Çok hızlı ve sorunsuz teslimat. Harika bir alışverişti.",
+    "puan": 4.8
+  },
+  {
+    "ad": "Veli",
+    "soyad": "Erdem",
+    "tarih": "Mart 9, 2024",
+    "yorum": "Beklediğimden çok daha iyi bir ürün, çok beğendim!",
+    "puan": 5
+  },
+  {
+    "ad": "Murat",
+    "soyad": "Şahin",
+    "tarih": "Nisan 19, 2024",
+    "yorum": "Fiyatına göre oldukça kaliteli.",
+    "puan": 4
+  },
+  {
+    "ad": "Derya",
+    "soyad": "Köksal",
+    "tarih": "Mayıs 1, 2024",
+    "yorum": "Sürekli kullandığım bir ürün, kesinlikle tavsiye ederim.",
+    "puan": 4.7
+  },
+  {
+    "ad": "Sinan",
+    "soyad": "Aslan",
+    "tarih": "Haziran 15, 2024",
+    "yorum": "Beklediğimden çok daha kısa sürede teslim edildi.",
+    "puan": 4.4
+  },
+  {
+    "ad": "Şule",
+    "soyad": "Koç",
+    "tarih": "Temmuz 3, 2024",
+    "yorum": "Çok kötü bir deneyim yaşadım, ürün arızalı geldi.",
+    "puan": 1.5
+  },
+  {
+    "ad": "Cem",
+    "soyad": "Yıldız",
+    "tarih": "Ağustos 20, 2024",
+    "yorum": "Kendi kullanımlarım için mükemmel, fakat biraz büyük.",
+    "puan": 4.3
+  },
+  {
+    "ad": "Gül",
+    "soyad": "Bozkurt",
+    "tarih": "Eylül 8, 2024",
+    "yorum": "Ürün güzel ama teslimat süresi uzun.",
+    "puan": 3.7
+  },
+  {
+    "ad": "Riza",
+    "soyad": "Köse",
+    "tarih": "Ekim 17, 2024",
+    "yorum": "Evet, kesinlikle memnun kaldım.",
+    "puan": 4.6
+  },
+  {
+    "ad": "Emine",
+    "soyad": "Çetin",
+    "tarih": "Kasım 25, 2024",
+    "yorum": "Çok fazla reklam var ama ürünü beğendim.",
+    "puan": 3.9
+  },
+  {
+    "ad": "Sefa",
+    "soyad": "İpek",
+    "tarih": "Aralık 10, 2024",
+    "yorum": "Kullanımı çok kolay ve şık.",
+    "puan": 4.9
+  },
+  {
+    "ad": "Tuna",
+    "soyad": "Sarı",
+    "tarih": "Ocak 5, 2024",
+    "yorum": "Hizmet gayet iyi, ama ürün biraz ağır.",
+    "puan": 3.6
+  },
+  {
+    "ad": "Nazan",
+    "soyad": "Büyüker",
+    "tarih": "Şubat 23, 2024",
+    "yorum": "Çok iyi bir performans, tavsiye ederim.",
+    "puan": 4.8
+  },
+  {
+    "ad": "Seda",
+    "soyad": "Tuncer",
+    "tarih": "Temmuz 22, 2024",
+    "yorum": "Ürün beklediğimden çok daha kaliteli, teşekkürler!",
+    "puan": 4.9
+  },
+  {
+    "ad": "Kaan",
+    "soyad": "Yüksel",
+    "tarih": "Ağustos 5, 2024",
+    "yorum": "Ürün oldukça kaliteli, fakat kutusu hasarlı geldi.",
+    "puan": 3.8
+  },
+  {
+    "ad": "Selin",
+    "soyad": "Bayrak",
+    "tarih": "Eylül 13, 2024",
+    "yorum": "Teslimat süresi çok uzundu, ama ürün güzel.",
+    "puan": 3.4
+  },
+  {
+    "ad": "Emin",
+    "soyad": "Aksoy",
+    "tarih": "Ekim 1, 2024",
+    "yorum": "Mükemmel bir ürün, kesinlikle tavsiye ederim.",
+    "puan": 5
+  },
+  {
+    "ad": "Pelin",
+    "soyad": "Gökçe",
+    "tarih": "Kasım 7, 2024",
+    "yorum": "Ürün kaliteli ama biraz pahalı.",
+    "puan": 4.2
+  },
+  {
+    "ad": "Berk",
+    "soyad": "Öztürk",
+    "tarih": "Aralık 2, 2024",
+    "yorum": "Fiyatına göre beklediğimden çok daha iyi.",
+    "puan": 4.7
+  },
+  {
+    "ad": "Sibel",
+    "soyad": "Yalçın",
+    "tarih": "Ocak 17, 2024",
+    "yorum": "Yorumlar doğruymuş, kesinlikle memnun kaldım.",
+    "puan": 5
+  },
+  {
+    "ad": "Cevdet",
+    "soyad": "Demirtaş",
+    "tarih": "Şubat 26, 2024",
+    "yorum": "Ürünün kalitesi çok iyi, ancak teslimat süresi uzun.",
+    "puan": 4
+  },
+  {
+    "ad": "Serap",
+    "soyad": "Kaya",
+    "tarih": "Mart 15, 2024",
+    "yorum": "Ürünü çok beğendim ama biraz ağır.",
+    "puan": 4.3
+  },
+  {
+    "ad": "İsmail",
+    "soyad": "Kalkan",
+    "tarih": "Nisan 8, 2024",
+    "yorum": "Gerçekten çok kullanışlı ve şık bir ürün.",
+    "puan": 4.8
+  },
+  {
+    "ad": "Vildan",
+    "soyad": "Öztürk",
+    "tarih": "Mayıs 20, 2024",
+    "yorum": "Kesinlikle tavsiye etmiyorum, çok kalitesiz.",
+    "puan": 1.5
+  },
+  {
+    "ad": "Uğur",
+    "soyad": "Beyaz",
+    "tarih": "Haziran 4, 2024",
+    "yorum": "Fiyatına göre kaliteli, ancak kutusunda hasar vardı.",
+    "puan": 3.6
+  },
+  {
+    "ad": "Cansu",
+    "soyad": "Aydın",
+    "tarih": "Temmuz 12, 2024",
+    "yorum": "Görseldekiyle birebir aynı geldi, çok memnun kaldım.",
+    "puan": 5
+  },
+  {
+    "ad": "Fikret",
+    "soyad": "Arıkan",
+    "tarih": "Ağustos 16, 2024",
+    "yorum": "Beklediğimin aksine, biraz daha küçük.",
+    "puan": 3.2
+  },
+  {
+    "ad": "Dilan",
+    "soyad": "Türk",
+    "tarih": "Eylül 23, 2024",
+    "yorum": "Ürün çok hızlı teslim edildi ve oldukça kaliteli.",
+    "puan": 4.6
+  },
+  {
+    "ad": "Emre",
+    "soyad": "Korkmaz",
+    "tarih": "Ekim 29, 2024",
+    "yorum": "Pek memnun kalmadım, biraz daha dayanıklı olabilirdi.",
+    "puan": 2.8
+  },
+  {
+    "ad": "Nazlı",
+    "soyad": "Işık",
+    "tarih": "Kasım 5, 2024",
+    "yorum": "Fiyatı yüksek, ancak gerçekten çok kullanışlı.",
+    "puan": 4.4
+  },
+  {
+    "ad": "Baran",
+    "soyad": "Demir",
+    "tarih": "Aralık 1, 2024",
+    "yorum": "Ürün harika ama teslimat süresi çok uzun.",
+    "puan": 3.9
+  },
+  {
+    "ad": "Burcu",
+    "soyad": "Sönmez",
+    "tarih": "Ocak 22, 2024",
+    "yorum": "Fiyatına göre çok iyi, her yönüyle memnunum.",
+    "puan": 4.8
+  },
+  {
+    "ad": "Kerem",
+    "soyad": "Şimşek",
+    "tarih": "Şubat 4, 2024",
+    "yorum": "Yine de biraz daha dayanıklı olabilirdi.",
+    "puan": 3.3
+  }
+]
