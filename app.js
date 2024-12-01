@@ -23,7 +23,7 @@ const getProduct = () => {
 };
 setRating = (rating) => {
   // 3.5
-  let starsHTML;
+  let starsHTML = "";
   for (let i = 1; i <= 5; i++) {
     //5 yıldızım olduğu için 5'e kadar
     if (i <= Math.floor(rating)) {
@@ -39,6 +39,9 @@ setRating = (rating) => {
   return starsHTML;
 };
 
+const navigateDetail = (id) => {
+  window.location.href = `product-detail.html?ProductId=${id}`;
+};
 const getContainer = () => {
   const container = document.querySelector(".products");
   container.innerHTML = "";
@@ -47,9 +50,11 @@ const getContainer = () => {
     const discountPrice = eleman.price * 0.6;
 
     const itemHTML = `
-<div class="product">
-<div class="image-container">
-              <img class="top-selling-image"
+<div   class="product">
+<div onclick="navigateDetail(${eleman.id})" class="image-container">
+              <img onclick="navigateDetail(${
+                eleman.id
+              })" class="top-selling-image"
                 src="${eleman.image}"
                 alt="${eleman.title}"
               />
