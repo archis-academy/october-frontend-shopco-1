@@ -50,7 +50,7 @@ const getContainer = () => {
     const discountPrice = eleman.price * 0.6;
 
     const itemHTML = `
-<div   class="product">
+<div class="product">
 <div onclick="navigateDetail(${eleman.id})" class="image-container">
               <img onclick="navigateDetail(${
                 eleman.id
