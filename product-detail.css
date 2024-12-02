@@ -96,15 +96,24 @@
 }
 
 .dropdown-toggle {
+  width: 120px;
+  height: 48px;
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 20px;
+  padding: 13px 20px;
+  background-color: rgba(240, 240, 240, 1);
+  align-items: center;
+  border: none;
+  border-radius: 62px;
   cursor: pointer;
 }
-.arrow-down {
+
+.dropdown-toggle p {
+  font-family: "Satoshi";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21.6px;
+  text-align: left;
 }
 .dropdown-menu {
   display: none;
@@ -117,27 +126,95 @@
   border: 1px solid #ddd;
   border-radius: 5px;
   width: 150px;
-  padding: 5px 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown-menu li {
   padding: 10px;
   cursor: pointer;
+  font-family: "Satoshi";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21.6px;
+  text-align: left;
 }
 
 .dropdown-menu li:hover {
-  background-color: #f2f2f2;
+  background-color: rgba(240, 240, 240, 1);
 }
 
 .write-review-btn {
+  width: 166px;
+  height: 48px;
   padding: 10px 20px;
-  background-color: #000;
-  color: #fff;
+  background-color: rgba(0, 0, 0, 1);
+  color: rgba(255, 255, 255, 1);
   border: none;
-  border-radius: 20px;
+  border-radius: 62px;
   cursor: pointer;
-  font-weight: bold;
+  font-family: "Satoshi";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21.6px;
+}
+/* ******************* */
+.review-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 32px;
+  gap: 20px;
+  justify-content: center;
+}
+.rating-review-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.author-review-container p {
+  font-family: "Satoshi";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: left;
+}
+.comment-review-container p {
+  font-family: "Satoshi";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.6);
+}
+.date-review-nt p {
+  font-family: "Satoshi";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.reviews-nt {
+  border: 1px solid red;
+  width: 610px;
+  height: 241px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 28px 32px;
+}
+.author-commert-date-container {
+  max-width: 546px;
+  height: 139px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.date-review-nt {
+  max-width: 549px;
 }
 
 /* nursahtuncel-OC-28-review section end */

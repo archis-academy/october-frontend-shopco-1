@@ -12,8 +12,7 @@ tabItems.forEach((tab, index) => {
     tabPanes[index].classList.add("active");
   });
 });
-// **************************
-// Dropdown menü aç/kapat
+// **************************Dropdown menü aç/kapat**********************
 const dropdownToggle = document.querySelector(".dropdown-toggle");
 const dropdownMenu = document.querySelector(".dropdown-menu");
 
@@ -22,7 +21,7 @@ dropdownToggle.addEventListener("click", () => {
     dropdownMenu.style.display === "block" ? "none" : "block";
 });
 
-// Dropdown menüdeki bir seçenek seçildiğinde
+// ****************Dropdown menüdeki bir seçenek seçildiğinde***********
 dropdownMenu.addEventListener("click", (e) => {
   if (e.target.tagName === "LI") {
     dropdownToggle.textContent = e.target.textContent;
@@ -30,10 +29,65 @@ dropdownMenu.addEventListener("click", (e) => {
   }
 });
 
-// "Write a Review" butonu
+// *********************"Write a Review" butonu***************
 document.querySelector(".write-review-btn").addEventListener("click", () => {
-  alert("Redirecting to review form...");
+  alert("bu kısmı daha sonra ekleyeceğim");
 });
+
+// **************************review******************
+fetch("content.json")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Veri alınamadı: " + response.statusText);
+    }
+    return response.json();
+  })
+  .then((data) => {
+    const reviewContainer = document.querySelector(".review-container");
+    reviewContainer.innerHTML = `
+ <div class="reviews-nt">
+    <div class="author-commert-date-container">
+ <div class="rating-review-container">
+   <div>
+   <img src="images/review-section/rating.svg" alt="">
+   </div>
+      <div> <img src="images/review-section/ücnokta.svg" alt=""></div>
+ </div>
+  
+      <div class="author-review-container">
+ <p> ${data.ad}</p>
+      </div>
+      <div class="comment-review-container">
+ <p>
+ ${data.yorum}
+ </p>
+      </div>
+    </div>
+      <div class="date-review-nt">
+ <p>Posted on ${data.tarih}</p>     </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p>İsim: ${data.name}</p>
+      <p>Yaş: ${data.age}</p>
+      <p>Şehir: ${data.city}</p>
+    `;
+  })
+  .catch((error) => {
+    console.error("Bir hata oluştu:", error);
+  });
 
 // nursahtuncel-OC-28-review section end
 // nursahtuncel-OC-29-ımplement the you might also like section start
