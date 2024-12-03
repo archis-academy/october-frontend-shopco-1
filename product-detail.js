@@ -56,16 +56,16 @@ getProduct();
 // nursahtuncel-OC-29-ımplement the you might also like section end
 //emre-OC-25-Product detail hero section start
 const urlParams = new URLSearchParams(window.location.search);
-let productId = urlParams.get("productId");
-if (!productId) {
-  productId = 1;
+let id = urlParams.get("id");
+if (!id) {
+  id = 1;
 }
-if (productId > 20) {
-  productId = 20;
+if (id > 20) {
+  id = 20;
 }
 
 function ProductDetails() {
-  const product = List.find((item) => item.id === parseInt(productId));
+  const product = List.find((item) => item.id === parseInt(id));
   document.querySelector(".category").textContent = product.category;
   document.querySelector(".pd-hs-main-image").src = product.image;
   document.getElementById("small-image1").src = product.image;
@@ -176,7 +176,7 @@ const addButton = document.getElementById("pd-hs-add-cart");
 addButton.addEventListener("click", () => {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  const product = List.find((item) => item.id === parseInt(productId));
+  const product = List.find((item) => item.id === parseInt(id));
 
   let selectedColor = document.querySelector(".pd-hs-color.pd-hs-color-active");
   selectedColor = selectedColor ? selectedColor.id : null;
