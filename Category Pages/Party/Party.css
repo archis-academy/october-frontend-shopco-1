@@ -1,5 +1,16 @@
 @import url("../../styles/styles.css");
 
+body header{
+  width: 90%;
+  margin: 0 auto;
+  
+}
+
+body section{
+  width: 90%;
+  margin: 0 auto;
+}
+
 /* esra-OC-6-implement-promo-banner-start */
 .implement-promo-banner {
   width: 100%;
@@ -91,12 +102,19 @@
 /* esra-OC-6-implement-promo-banner-end */
 
 /* nursahtuncel-OC-4-Desing-the-Header-Section start */
+header{
+  border-bottom: 1px solid ;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-width: 90%;
+}
+
 .nt-hero-section {
   width: 100%;
   padding: 35px 0;
   display: flex;
   position: relative;
 }
+
 .nt-hero-section-content {
   width: 90%;
   margin: auto;
@@ -322,6 +340,31 @@
 }
 
 /* nursahtuncel-OC-4-Desing-the-Header-Section end*/
+
+/*pages-way Start*/
+.pages-way{
+  display: flex;
+  padding: 20px 0px;  
+}
+
+.pages-way p {
+  font-family: var(--fnt-family-satoshi);
+  font-weight: 400;
+  font-size: 16px;
+  color: var( --hdr-bg-clr);
+}
+
+.pages-way p:first-child {
+  color: rgba(0, 0, 0, 0.6);
+  padding-right: 4px;
+}
+
+.pages-way img{
+  width: 16px;
+  height: 16px;
+  margin-right: 12px;
+}
+/*pages-way End*/
 
 /* BeyzanurMete-OC-20-Implement-the-Newsletter-Section start*/
 .newsletter-section {
