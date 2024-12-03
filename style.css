@@ -90,6 +90,96 @@
 }
 /* esra-OC-6-implement-promo-banner-end */
 
+/* esra-OC-6-implement-promo-banner-start */
+.implement-promo-banner {
+  width: 100%;
+  background-color: black;
+  font-family: var(--fnt-family-satoshi);
+  white-space: nowrap;
+}
+.ip-banner-info-box {
+  height: 38px;
+  max-width: 1350px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  white-space: nowrap;
+  gap: 10px;
+}
+.ip-banner-explain {
+  font-size: clamp(12px, 4vw, 16px);
+  font-weight: 400;
+  line-height: 18.9px;
+  text-decoration-style: solid;
+  white-space: nowrap;
+}
+.ip-banner-explain2 {
+  font-size: clamp(12px, 4vw, 16px);
+  font-weight: 500;
+  line-height: 18.9px;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+.banner_close_icon {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+@media (max-width: 550px) {
+  .implement-promo-banner {
+    flex-direction: row;
+    height: auto;
+    padding: 10px 20px;
+  }
+  .ip-banner-info-box {
+    flex-direction: row;
+    text-align: center;
+    gap: 10px;
+  }
+  .ip-banner-explain,
+  .ip-banner-explain2 {
+    font-size: clamp(10px, 3vw, 14px);
+  }
+  .banner_close_icon {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 280px) {
+  .ip-banner-info-box {
+    flex-direction: column;
+    text-align: center;
+  }
+  .ip-banner-explain,
+  .ip-banner-explain2 {
+    font-size: clamp(8px, 5vw, 10px);
+  }
+  .banner_close_icon {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 550px) {
+  .banner_close_icon {
+    display: none;
+  }
+}
+/* esra-OC-6-implement-promo-banner-end */
+
 /* nursahtuncel-OC-4-Desing-the-Header-Section start */
 .nt-hero-section {
   width: 100%;
@@ -468,7 +558,7 @@
 .title-of-browse {
   text-align: center;
   font-family: var(--fnt-family-integral);
-  font-weight: 700; 
+  font-weight: 700;
   font-size: 48px;
   line-height: 57.6px;
   padding-bottom: 30px;
@@ -498,7 +588,7 @@
   text-decoration: none;
   outline: none;
   color: inherit;
-  cursor: pointer;  
+  cursor: pointer;
 }
 
 .second-container {
@@ -545,7 +635,7 @@
     align-items: center;
     gap: 25px;
   }
-  
+
   .second-container {
     display: flex;
     flex-direction: column;
@@ -560,7 +650,7 @@
   .browse-second-form {
     width: 407px;
     height: 290px;
-  }  
+  }
 }
 
 @media screen and (max-width: 518px) {
@@ -584,11 +674,10 @@
   .browse-second-form {
     width: 300px;
     height: 290px;
-  } 
+  }
 }
 
 @media screen and (max-width: 390px) {
-  
   .browse-first-form {
     width: 200px;
     height: 200px;
@@ -597,9 +686,101 @@
   .browse-second-form {
     width: 200px;
     height: 200px;
-  } 
+  }
 }
-/*Browse By Dress Stylee Section Responsiveness End*/
+/* nursahtuncel-OC-29-ımplement the you might also like section start*/
+
+.nt-title {
+  font-family: var(--fnt-family-integral);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 57.6px;
+  text-align: center;
+  padding-top: 64px;
+  padding-bottom: 55px;
+  text-transform: uppercase;
+}
+.nt-images-container {
+  margin: 0 20px;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.nt-images-container-half {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.nt-images-container-half-box {
+  cursor: pointer;
+}
+.nt-prgrp-bttm {
+  padding-top: 16px;
+  font-family: var(--fnt-family-satoshi);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 27px;
+  text-align: left;
+}
+.nt-stars-and-puan {
+  padding-top: 8px;
+  display: flex;
+  gap: 13px;
+}
+.nt-new-price-old-price {
+  padding-top: 8px;
+  display: flex;
+  gap: 10px;
+}
+.nt-new-price-old-price-1,
+.nt-new-price-old-price-2 {
+  font-family: var(--fnt-family-satoshi);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32.4px;
+  text-decoration: line-through;
+}
+.nt-new-price-old-price-2 {
+  color: rgba(0, 0, 0, 0.4);
+}
+.nt-new-price-old-price-3 {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  color: rgba(255, 51, 51, 1);
+  font-family: var(--fnt-family-satoshi);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16.2px;
+  border: 0px solid rgba(255, 198, 51, 1);
+  background: rgba(0, 0, 0, 1);
+  background: rgba(0, 0, 0, 0.6);
+  background: rgba(255, 51, 51, 1);
+  background: rgba(255, 51, 51, 0.1);
+  padding: 5px 15px;
+  border-radius: 50px;
+}
+@media screen and (max-width: 1279px) {
+  .nt-images-container-half {
+    gap: 50px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .nt-title {
+    padding-bottom: 10px;
+    font-size: 24px;
+  }
+  .nt-images-container-half {
+    display: inline-block;
+  }
+  .nt-images-container-half-box {
+    padding-top: 20px;
+  }
+}
+/* nursahtuncel-OC-29-ımplement the you might also like section end*/
 
 /* BeyzanurMete-OC-20-Implement-the-Newsletter-Section start*/
 .newsletter-section {
@@ -777,7 +958,6 @@ footer {
 /* melikeaksoy/OC-23-implement-the-footer start */
 
 @media (max-width: 1300px) and (min-width: 1000px) {
-
   .footer-wrapper {
     justify-content: center;
     padding: 0 15px;
@@ -806,7 +986,6 @@ footer {
 }
 
 @media (max-width: 1000px) {
-
   footer {
     padding: 10px;
   }
@@ -895,9 +1074,9 @@ footer {
     margin-bottom: -150px;
   }
 }
-  @media (max-width: 490px) {
-    .newsletter-section {
-      margin-bottom: -170px;
-    }
+@media (max-width: 490px) {
+  .newsletter-section {
+    margin-bottom: -170px;
   }
+}
 /* melikeaksoy/OC-23-implement-the-footer end */
