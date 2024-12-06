@@ -157,7 +157,9 @@ hr {
 
 .promo-code {
     display: flex;
+    align-items: center;
     margin-top: 20px;
+    position: relative;
 }
 
 .promo-input {
@@ -165,7 +167,17 @@ hr {
     padding: 8px;
     border-radius: 60px;
     border: 1px solid #ddd;
-    background-color:#F0F0F0;
+    background-color: #F0F0F0;
+    padding-left: 40px;
+}
+
+.promo-icon {
+    position: absolute;
+    left: 15px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    width: 20px; 
+    height: 20px;
 }
 
 .apply-btn {
@@ -188,6 +200,15 @@ hr {
     font-size: 16px;
     cursor: pointer;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkout-btn img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px; 
 }
 
 .cart-container {
