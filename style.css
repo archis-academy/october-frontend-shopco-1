@@ -367,29 +367,40 @@
 /* melikeaksoy-OC-14-Create-the-Top-Selling-section start */
 
 .top-selling {
-  margin-top: 54px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 10px;
   text-align: center;
-  font-family: var(--fnt-family-satoshi);
+  max-width: 1250px;
+  width:100%;
+  gap: 50px;
+  margin: 64px auto 80px;
 }
 
 .top-selling h1 {
   font-family: var(--fnt-family-integral);
   font-weight: 700;
   font-size: 48px;
-  margin-bottom: 55px;
 }
 
 .top-selling .products {
   display: flex;
   gap: 20px;
-  max-width: 1250px;
+  /* display: grid;
+  grid-auto-flow: column; */
+  width:100%;
+  /* grid-auto-columns: calc((100% / 4) - 12px); */
+  justify-content: center;
+  align-items: center;
   padding-left: 20px;
   margin: auto;
   flex-wrap: nowrap;
-  justify-content: start;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
+  overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 .products::-webkit-scrollbar {
@@ -403,6 +414,12 @@
   gap: 8px;
   text-align: left;
   max-width: 295px;
+  cursor: pointer;
+}
+
+.products.dragging .product {
+  cursor: grab;
+  user-select: none;
 }
 
 .products.expanded {

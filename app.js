@@ -91,4 +91,43 @@ const toggleProductsView = () => {
 
 viewAllButton.addEventListener("click", toggleProductsView);
 
+const products = document.querySelector(".products")
+const arrowBtns = document.querySelectorAll(".top-selling i")
+const firstCardWidth = products.querySelector(".product").offsetWidth
+
+arrowBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    if (btn.id === "left") {
+      products.scrollLeft -= firstCardWidth 
+    } else if (btn.id === "right") {
+      products.scrollLeft += firstCardWidth
+    }
+  })
+})
+
+let isDragging = false
+let startX = 0
+let startScrollLeft = 0
+
+const dragStart = (e) => {
+  isDragging = true
+  startX = e.pageX
+  startScrollLeft = carousel.scrollLeft
+  products.classList.add("dragging")
+}
+
+const dragStop = () => {
+  isDragging = false
+  products.classList.remove("dragging")
+}
+
+const dragging = (e) => {
+  if (!isDragging) return
+  products.scrollLeft = startScrollLeft - (e.pageX - startX)
+}
+
+products.addEventListener("mouseover", dragging)
+products.addEventListener("mousedown", dragStart)
+products.addEventListener("mouseup", dragStop)
+
 // Create-the-Top-Selling-section end
