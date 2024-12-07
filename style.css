@@ -382,7 +382,7 @@
 .top-selling h1 {
   font-family: var(--fnt-family-integral);
   font-weight: 700;
-  font-size: 48px;
+  font-size: 3rem;
 }
 
 .top-selling .products {
@@ -396,7 +396,6 @@
   flex-wrap: nowrap;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
-  overflow: hidden;
   scroll-behavior: smooth;
 }
 
@@ -458,7 +457,7 @@
 .original-price,
 .price {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 32.4px;
 }
 
@@ -490,7 +489,7 @@
   height: 28px;
   border-radius: 62px;
   color: #ff3333;
-  size: 12px;
+  font-size: 12px;
   line-height: 16.2px;
   border: none;
   padding: 6px 14px;
@@ -543,51 +542,5 @@
   background-color: #dad0cc;
 }
 
-@media (max-width: 1325px) {
-  .top-selling .product { 
-    max-width: 250px;
-  }
-  .image-container {
-    width: 250px;
-    height: 251px;
-    padding: 35px;
-  }
-}
-
-@media (max-width: 768px) {
-  .top-selling h1 {
-    font-size: 32px;
-    margin-bottom: 32px;
-  }
-
-  .top-selling h2 {
-    font-size: 16px;
-    line-height: 21.6px;
-    margin-top: 10px;
-  }
-
-  .current-price,
-  .original-price,
-  .price {
-    font-size: 20px;
-    line-height: 27px;
-  }
-
-  .view-all {
-    width: 358px;
-    height: 46px;
-    font-size: 14px;
-    line-height: 18.9px;
-    margin-top: 24px;
-  }
-  .top-selling .product { 
-    max-width: 200px;
-  }
-  .image-container {
-    width: 200px;
-    height: 201px;
-    padding: 30px;
-  }
-}
 
 /* melikeaksoy-OC-14-Create-the-Top-Selling-section end */

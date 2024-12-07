@@ -48,7 +48,6 @@ const getContainer = () => {
 
   List.slice(0, 20).forEach((eleman) => {
     const discountPrice = eleman.price * 0.6;
-
     const itemHTML = `
 <div class="product">
 <div onclick="navigateDetail(${eleman.id})" class="image-container">
@@ -84,35 +83,37 @@ let viewAllButton = document.querySelector(".view-all");
 let isExpanded = false;
 
 const toggleProductsView = () => {
-  container.classList.toggle("expanded");
-  viewAllButton.textContent = isExpanded ? "View All" : "Hide All";
-  isExpanded = !isExpanded;
+  // container.classList.toggle("expanded");
+  // viewAllButton.textContent = isExpanded ? "View All" : "Hide All";
+  // isExpanded = !isExpanded;
+// };
+
+if (isExpanded) {
+  // "Hide All" seçeneği - Ürünleri kaydırmalı görünümde göster
+  container.classList.remove("expanded");
+  viewAllButton.textContent = "View All";
+} else {
+  // "View All" seçeneği - Tüm ürünleri görünür hale getir
+  container.classList.add("expanded");
+  viewAllButton.textContent = "Hide All";
+}
+isExpanded = !isExpanded;
 };
 
 viewAllButton.addEventListener("click", toggleProductsView);
 
 const products = document.querySelector(".products")
-const arrowBtns = document.querySelectorAll(".top-selling i")
 const firstCardWidth = products.querySelector(".product").offsetWidth
-
-arrowBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    if (btn.id === "left") {
-      products.scrollLeft -= firstCardWidth 
-    } else if (btn.id === "right") {
-      products.scrollLeft += firstCardWidth
-    }
-  })
-})
 
 let isDragging = false
 let startX = 0
 let startScrollLeft = 0
 
 const dragStart = (e) => {
+  e.preventDefault();
   isDragging = true
-  startX = e.pageX
-  startScrollLeft = carousel.scrollLeft
+  startX = e.pageX || e.touches[0].pageX;
+  startScrollLeft = products.scrollLeft
   products.classList.add("dragging")
 }
 
@@ -123,11 +124,15 @@ const dragStop = () => {
 
 const dragging = (e) => {
   if (!isDragging) return
-  products.scrollLeft = startScrollLeft - (e.pageX - startX)
+  products.scrollLeft = startScrollLeft - (e.pageX - startX) * 1.5;
 }
 
 products.addEventListener("mouseover", dragging)
 products.addEventListener("mousedown", dragStart)
-products.addEventListener("mouseup", dragStop)
+document.addEventListener("mouseup", dragStop)
+
+products.addEventListener("touchstart", dragStart);
+products.addEventListener("touchmove", dragging);
+document.addEventListener("touchend", dragStop);
 
 // Create-the-Top-Selling-section end
