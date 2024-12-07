@@ -454,6 +454,48 @@
 }
 /*------hero section burada bitiyor-----*/
 
+/* melikeaksoy/OC-11-Implement-the-brands-and-partners-section Start */
+
+.brands {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--fnt-black);
+  height: 122px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.brands-part {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(20px, 5vw, 106px);
+}
+
+.brands-img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.brands-part img:hover {
+  transform: scale(1.1); 
+}
+
+@media (max-width: 1060px) {
+  .brands {
+    height: 146px;
+  }
+  .brands-img {
+    max-width: 28%;
+    height: auto;
+  }
+}
+
+/* melikeaksoy/OC-11-Implement-the-brands-and-partners-section End */
+
 /*Browse By Dress Stylee Section Start*/
 .browse-by-dress-background {
   display: flex;
