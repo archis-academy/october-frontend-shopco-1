@@ -83,17 +83,11 @@ let viewAllButton = document.querySelector(".view-all");
 let isExpanded = false;
 
 const toggleProductsView = () => {
-  // container.classList.toggle("expanded");
-  // viewAllButton.textContent = isExpanded ? "View All" : "Hide All";
-  // isExpanded = !isExpanded;
-// };
 
 if (isExpanded) {
-  // "Hide All" seçeneği - Ürünleri kaydırmalı görünümde göster
   container.classList.remove("expanded");
   viewAllButton.textContent = "View All";
 } else {
-  // "View All" seçeneği - Tüm ürünleri görünür hale getir
   container.classList.add("expanded");
   viewAllButton.textContent = "Hide All";
 }

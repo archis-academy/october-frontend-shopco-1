@@ -389,7 +389,7 @@
   display: flex;
   gap: 20px;
   width:100%;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding-left: 20px;
   margin: auto;
@@ -541,6 +541,5 @@
 .star.empty {
   background-color: #dad0cc;
 }
-
 
 /* melikeaksoy-OC-14-Create-the-Top-Selling-section end */
