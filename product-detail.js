@@ -120,27 +120,54 @@ const getContainer = () => {
   List.slice(0, 20).forEach((eleman) => {
     const discount = eleman.price * 0.6;
     const itemHTML = `
- <div class="nt-images-container-half-box">
-   <div onclick="navigateDetail(${eleman.id})" class="nt-image-div">
-<img class="nt-product-image" src="${eleman.image}" alt="${eleman.title}" />
-   </div>
-   <p class="nt-prgrp-bttm">${eleman.title}</p>
-   <div class="nt-stars-and-puan">
-<div class="stars">
-  ${setRating(eleman.rating.rate)}
-</div>
-<div id="stars">${eleman.rating.rate}</div>
-   </div>
-   <div class="nt-new-price-old-price">
-   <p class="nt-new-price-old-price-1">$${discount.toFixed(2)}</p>
-    <p class="nt-new-price-old-price-2">$${eleman.price}</p>
-   <p class="nt-new-price-old-price-3">-40%</p>
-   </div>
-   </div>
-
+      <div class="nt-images-container-half-box">
+        <div onclick="navigateDetail(${eleman.id})" class="nt-image-div">
+          <img class="nt-product-image" draggable="false" src="${
+            eleman.image
+          }" alt="${eleman.title}" />
+        </div>
+        <p class="nt-prgrp-bttm">${eleman.title}</p>
+        <div class="nt-stars-and-puan">
+          <div class="stars">
+            ${setRating(eleman.rating.rate)}
+          </div>
+          <div id="stars">${eleman.rating.rate}</div>
+        </div>
+        <div class="nt-new-price-old-price">
+          <p class="nt-new-price-old-price-1">$${discount.toFixed(2)}</p>
+             <p class="nt-new-price-old-price-2">$${eleman.price}</p>
+          <p class="nt-new-price-old-price-3">-40%</p>
+        </div>
+      </div>
     `;
     container.innerHTML += itemHTML;
   });
 };
 
 getProduct();
+
+const carousel = document.querySelector(".nt-images-container");
+let isDragging = false;
+let startX;
+let scrollStart;
+
+const dragStart = (e) => {
+  isDragging = true;
+  carousel.classList.add("dragging");
+  startX = e.pageX;
+  scrollStart = carousel.scrollLeft;
+};
+
+const dragging = (e) => {
+  if (!isDragging) return;
+  carousel.scrollLeft = scrollStart - (e.pageX - startX);
+};
+
+const dragStop = () => {
+  isDragging = false;
+  carousel.classList.remove("dragging");
+};
+
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("mousemove", dragging);
+document.addEventListener("mouseup", dragStop);
