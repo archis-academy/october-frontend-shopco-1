@@ -54,8 +54,9 @@ const getAllReviews = () => {
  <div class="reviews-nt">
   <div class="author-commert-date-container">
   <div class="rating-review-container">
+
   <div>
-<img src="images/review-section/rating.svg" alt="">
+      ${setRating(data.puan)}
   </div>
    <div class ="ellipsis-nt">
     <img src="images/review-section/ücnokta.svg" alt="">
