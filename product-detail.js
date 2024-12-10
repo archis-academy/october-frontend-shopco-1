@@ -78,6 +78,68 @@ const getAllReviews = () => {
 };
 
 getReviews();
+//Load more reviews button ******************
+const loadAllReviews = () => {
+  const reviewContainer = document.querySelector(".review-container");
+  reviewContainer.innerHTML = ""; // Önce container'ı temizle
+
+  reviewsArray.forEach((data) => {
+    const dataHTML = `
+ <div class="reviews-nt">
+  <div class="author-commert-date-container">
+  <div class="rating-review-container">
+
+  <div>
+      ${setRating(data.puan)}
+  </div>
+   <div class ="ellipsis-nt">
+    <img src="images/review-section/ücnokta.svg" alt="">
+  </div>
+</div>
+<div class="author-review-container">
+  <p>${data.ad} ${data.soyad}</p>
+</div>
+<div class="comment-review-container">
+  <p>${data.yorum}</p>
+</div>
+   </div>
+   <div class="date-review-nt">
+<p>Posted on ${data.tarih}</p>
+   </div>
+ </div>`;
+    reviewContainer.innerHTML += dataHTML;
+  });
+};
+
+let isAllReviewsVisible = false;
+const loadMoreBtn = document.querySelector(".Load-more-reviews-btn");
+loadMoreBtn.addEventListener("click", () => {
+  if (isAllReviewsVisible) {
+    getAllReviews();
+  } else {
+    loadAllReviews();
+  }
+  isAllReviewsVisible = !isAllReviewsVisible;
+});
+
+getAllReviews();
+
+// ***********
+const faqsQuestions = document.querySelectorAll(".faqs-question");
+
+faqsQuestions.forEach((question) => {
+  question.addEventListener("click", () => {
+    const activeAnswer = document.querySelector(".faqs-answer.active");
+    if (activeAnswer && activeAnswer !== question.nextElementSibling) {
+      activeAnswer.classList.remove("active");
+      activeAnswer.previousElementSibling.classList.remove("active");
+    }
+
+    question.classList.toggle("active");
+    question.nextElementSibling.classList.toggle("active");
+  });
+});
+
 // nursahtuncel-OC-28-review section end
 
 // nursahtuncel-OC-29-ımplement the you might also like section start
@@ -139,6 +201,7 @@ const getContainer = () => {
 };
 
 getProduct();
+
 // mouse ile scroll özelliği..
 const carousel = document.querySelector(".nt-images-container");
 let isDragging = false;
@@ -165,49 +228,3 @@ const dragStop = () => {
 carousel.addEventListener("mousedown", dragStart);
 carousel.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop);
-
-//Load more reviews button
-const loadAllReviews = () => {
-  const reviewContainer = document.querySelector(".review-container");
-  reviewContainer.innerHTML = ""; // Önce container'ı temizle
-
-  reviewsArray.forEach((data) => {
-    const dataHTML = `
- <div class="reviews-nt">
-  <div class="author-commert-date-container">
-  <div class="rating-review-container">
-
-  <div>
-      ${setRating(data.puan)}
-  </div>
-   <div class ="ellipsis-nt">
-    <img src="images/review-section/ücnokta.svg" alt="">
-  </div>
-</div>
-<div class="author-review-container">
-  <p>${data.ad} ${data.soyad}</p>
-</div>
-<div class="comment-review-container">
-  <p>${data.yorum}</p>
-</div>
-   </div>
-   <div class="date-review-nt">
-<p>Posted on ${data.tarih}</p>
-   </div>
- </div>`;
-    reviewContainer.innerHTML += dataHTML;
-  });
-};
-
-let isAllReviewsVisible = false;
-const loadMoreBtn = document.querySelector(".Load-more-reviews-btn");
-loadMoreBtn.addEventListener("click", () => {
-  if (isAllReviewsVisible) {
-    getAllReviews();
-  } else {
-    loadAllReviews();
-  }
-  isAllReviewsVisible = !isAllReviewsVisible;
-});
-
-getAllReviews();

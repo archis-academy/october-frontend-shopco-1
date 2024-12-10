@@ -234,6 +234,42 @@
   border-radius: 62px;
   cursor: pointer;
 }
+.faqs-item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.faqs-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 0;
+  color: #555;
+  font-family: var(--fnt-family-satoshi, Arial, sans-serif);
+}
+
+.faqs-answer {
+  display: none;
+  font-family: var(--fnt-family-satoshi, Arial, sans-serif);
+  padding: 10px 0;
+  color: #333;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: start;
+}
+
+.faqs-question.active {
+  color: #000;
+}
+
+.faqs-answer.active {
+  display: block;
+}
+
 /* nursahtuncel-OC-28-review section end */
 /* nursahtuncel-OC-29-ımplement the you might also like section start*/
 
