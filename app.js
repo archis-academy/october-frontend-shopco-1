@@ -19,3 +19,20 @@ document
   });
 
 // esra-OC-6-implement-promo-banner-end
+
+// emre-OC-34-dropdown start
+function toggleDropdown(event) {
+  event.preventDefault();
+  const parentLi = event.target.closest("li"); 
+  parentLi.classList.toggle("show");
+}
+
+document.addEventListener("click", function (event) {
+  const dropdowns = document.querySelectorAll("li.show");
+  dropdowns.forEach((dropdown) => {
+    if (!dropdown.contains(event.target)) {
+      dropdown.classList.remove("show");
+    }
+  });
+});
+// emre-OC-34-dropdown end
