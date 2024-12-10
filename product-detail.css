@@ -16,7 +16,7 @@
 }
 .tab-item {
   width: 33.3%;
-  font-family: "Satoshi";
+  font-family: var(--fnt-family-satoshi, Arial, sans-serif);
   font-size: 20px;
   font-weight: 400;
   line-height: 22px;
@@ -54,14 +54,14 @@
   justify-content: space-between;
 }
 .all-reviews-h2-title {
-  font-family: "Satoshi";
+  font-family: var(--fnt-family-satoshi, Arial, sans-serif);
   font-size: clamp(20px, 5vw, 24px);
   font-weight: 700;
   line-height: clamp(27px, 5vw, 32.4px);
   text-align: left;
 }
 .all-reviews-h2-title span {
-  font-family: "Satoshi";
+  font-family: var(--fnt-family-satoshi, Arial, sans-serif);
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
@@ -110,7 +110,7 @@
 }
 
 .dropdown-toggle p {
-  font-family: "Satoshi";
+  font-family: var(--fnt-family-satoshi, Arial, sans-serif);
   font-size: 16px;
   font-weight: 500;
   line-height: 21.6px;
@@ -176,14 +176,14 @@
   cursor: pointer;
 }
 .author-review-container p {
-  font-family: "Satoshi";
+  font-family: var(--fnt-family-satoshi, Arial, sans-serif);
   font-size: 20px;
   font-weight: 700;
   line-height: 22px;
   text-align: left;
 }
 .comment-review-container p {
-  font-family: "Satoshi";
+  font-family: var(--fnt-family-satoshi, Arial, sans-serif);
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;
@@ -191,7 +191,7 @@
   color: rgba(0, 0, 0, 0.6);
 }
 .date-review-nt p {
-  font-family: "Satoshi";
+  font-family: var(--fnt-family-satoshi, Arial, sans-serif);
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;
@@ -223,7 +223,7 @@
 .Load-more-reviews-btn {
   width: 230px;
   height: 52px;
-  font-family: "Satoshi";
+  font-family: var(--fnt-family-satoshi, Arial, sans-serif);
   font-size: 16px;
   font-weight: 500;
   line-height: 21.6px;
