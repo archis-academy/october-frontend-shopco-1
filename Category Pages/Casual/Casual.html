@@ -98,7 +98,7 @@
     <section>
       <div class="category-filter">
 
-        <div class="cf-main-filter">
+        <div class="cf-main-filter" onclick="toggleFilter()">
           <h6>Filters</h6>
           <img src="../../images/Category-Filter-Section/filter.svg">
         </div>
@@ -106,52 +106,60 @@
         <div class="cf-drop-down-filter">
           <div class="cf-product-container">
             <ul>
-              <li>T-shirts <img src="../../images/Category-Filter-Section/right.svg"></li>
-              <li>Shorts <img src="../../images/Category-Filter-Section/right.svg"></li>
-              <li>Shirts <img src="../../images/Category-Filter-Section/right.svg"></li>
-              <li>Hoodie <img src="../../images/Category-Filter-Section/right.svg"></li>
+              <li>Women<img src="../../images/Category-Filter-Section/right.svg"></li>
+              <li>Men<img src="../../images/Category-Filter-Section/right.svg"></li>
+              <li>Jewelery<img src="../../images/Category-Filter-Section/right.svg"></li>
+              <li>Electronics<img src="../../images/Category-Filter-Section/right.svg"></li>
               <li>Jeans <img src="../../images/Category-Filter-Section/right.svg"></li>
             </ul>
           </div>
-  
+
           <div class="cf-price-container">
-            <h6>Price <img src="../../images/Category-Filter-Section/up.svg"></h6>
-            <input type="range">
-          </div>
-  
-          <div class="cf-colors-container" >
-            <div class="cf-colors-title">
-              <h6>Colors</h6>
-              <img src="../../images/Category-Filter-Section/up.svg">
+            <h6 onclick="togglePrice()">Price <img src="../../images/Category-Filter-Section/up.svg"></h6>
+
+            <div class="cf-price-input-values">
+              <div class="input-way">
+                <input class="price-input" id="minValue" type="range" min="0" max="1000">
+              <input class="price-input" id="maxValue" type="range" min="0" max="1000">
+              </div>
+              
+
             </div>
   
+          </div>
+
+          <div class="cf-colors-container">
+            <div class="cf-colors-title">
+              <h6 onclick="toggleColors()">Colors <img src="../../images/Category-Filter-Section/up.svg"></h6>
+
+            </div>
+
             <div class="cf-colors">
-              <div>
+              <div class="cf-colors-row">
                 <button class="cf-color-btn" id="cf-color-btn-a"></button>
                 <button class="cf-color-btn" id="cf-color-btn-b"></button>
                 <button class="cf-color-btn" id="cf-color-btn-c"></button>
                 <button class="cf-color-btn" id="cf-color-btn-d"></button>
-                <button class="cf-color-btn" id="cf-color-btn-e"></button>           
+                <button class="cf-color-btn" id="cf-color-btn-e"></button>
               </div>
-    
-              <div>
+
+              <div class="cf-colors-row">
                 <button class="cf-color-btn" id="cf-color-btn-f"></button>
                 <button class="cf-color-btn" id="cf-color-btn-g"></button>
                 <button class="cf-color-btn" id="cf-color-btn-h"></button>
                 <button class="cf-color-btn" id="cf-color-btn-i"></button>
-                <button class="cf-color-btn" id="cf-color-btn-j"></button>           
+                <button class="cf-color-btn" id="cf-color-btn-j"></button>
               </div>
-  
+
             </div>
-  
-            
+
           </div>
-  
+
           <div class="cf-size-container">
-            <div class="cf-size-title">
+            <div class="cf-size-title" onclick="toggleSize()">
               <h6>Size <img src="../../images/Category-Filter-Section/up.svg"></h6>
             </div>
-  
+
             <div class="cf-sizes">
               <button>XX-Small</button>
               <button>X-Small</button>
@@ -161,23 +169,10 @@
               <button>X-Large</button>
               <button>XX-Large</button>
               <button>3X-Large</button>
-              <button>4X-Large</button>           
+              <button>4X-Large</button>
             </div>
           </div>
-  
-          <div class="cf-dress-style-container">
-            <div class="cf-dress-style-title">
-              <h6>Dress Style <img src="../../images/Category-Filter-Section/up.svg"></h6>
-            </div>
-            
-            <ul>
-              <li>Casual<img src="../../images/Category-Filter-Section/right.svg"></li>
-              <li>Formal<img src="../../images/Category-Filter-Section/right.svg"></li>
-              <li>Party<img src="../../images/Category-Filter-Section/right.svg"></li>
-              <li>Gym<img src="../../images/Category-Filter-Section/right.svg"></li>
-            </ul>
-          </div>
-  
+
           <button class="filter-btn">Appley Filter</button>
 
         </div>
