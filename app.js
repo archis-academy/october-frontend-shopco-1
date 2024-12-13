@@ -10,6 +10,16 @@ function toggleSearch() {
 }
 // nt-header-end............................
 
+// esra-OC-6-implement-promo-banner-start
+
+document
+  .querySelector(".ip-banner-close-icon")
+  .addEventListener("click", function () {
+    document.querySelector(".implement-promo-banner").style.display = "none";
+  });
+
+// esra-OC-6-implement-promo-banner-end
+
 // Create-the-Top-Selling-section start
 
 let List = [];
