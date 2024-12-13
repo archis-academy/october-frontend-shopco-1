@@ -510,6 +510,16 @@
   margin: 0 5px;
 }
 
+.page-numbers button.current {
+  background-color: grey; 
+  color: white; 
+}
+
+.page-numbers button:hover {
+  background-color: lightgrey; 
+}
+
+
 @media screen and (max-width: 1150px) {
   .category-page {
     margin: 10px auto 80px auto;
@@ -548,13 +558,23 @@
   }
 
   .category-page h1 {
-    font-size: 24px;
+    font-size: 22px;
+  }
+  .page-title-right,
+  .title-sort {
+    font-size: 14px;
+  }
+  .category-page h2 {
+    font-size: 16px;
+  }
+
+  .category-page .original-price {
+    font-size: 20px;
   }
 
   .category-page .products {
     grid-template-columns: 1fr;
   }
-
   .pagination {
     gap: 5px;
     flex-direction: column;

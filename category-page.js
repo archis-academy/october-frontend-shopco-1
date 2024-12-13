@@ -1,39 +1,100 @@
-let List = [];
-let currentPage = 1;
-const itemsPerPage = 9;
+let List = []
+let currentPage = 1
+const itemsPerPage = 9
+
+let sayfalama = [1, 2, 3]
+
+let toplamSayfaSayisi = []
 
 const getProduct = () => {
-  fetch("http://localhost:3000/products")
+  fetch("./db.json")
     .then((res) => res.json())
     .then((list) => {
-      List = list;
-      renderPageNumbers();
-      renderProducts();
+      List = list
+      toplamSayfaSayisi = Math.floor(List.length / itemsPerPage) + 1
+      console.log(toplamSayfaSayisi)
+
+      renderProducts()
     })
-    .catch((error) => console.error("Error fetching products:", error));
-};
+    .catch((error) => console.error("Error fetching products:", error))
+}
 
 const setRating = (rating) => {
-  let starsHTML = "";
+  let starsHTML = ""
   for (let i = 1; i <= 5; i++) {
     if (i <= Math.floor(rating)) {
-      starsHTML += '<div class="star full"></div>';
+      starsHTML += '<div class="star full"></div>'
     } else if (i <= Math.ceil(rating)) {
-      starsHTML += '<div class="star half"></div>';
+      starsHTML += '<div class="star half"></div>'
     } else {
-      starsHTML += '<div class="star empty"></div>';
+      starsHTML += '<div class="star empty"></div>'
     }
   }
-  return starsHTML;
-};
+  return starsHTML
+}
 
-const renderProducts = () => {
-  const container = document.querySelector(".products");
-  container.innerHTML = "";
+const renderSayfalama = () => {
+  const pageNumbersContainer = document.querySelector(".page-numbers")
+  pageNumbersContainer.innerHTML = ""
 
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const productsToShow = List.slice(startIndex, endIndex);
+  sayfalama.forEach((pageNumber, index) => {
+ 
+    const pageButton = document.createElement("button")
+ 
+    pageButton.textContent = `${pageNumber}`
+
+    if (pageNumber === currentPage) {
+      
+      pageButton.classList.add("current")
+    }
+
+    pageButton.onclick = () => {
+      currentPage = pageNumber
+
+      switch (index) {
+   
+        case 0:
+          if (sayfalama[index] !== 1) {
+            sayfalama = sayfalama.map((number) => number - 1)
+          }
+          break
+
+        case 1:
+          if (sayfalama[index] === 2) {
+ 
+          }
+          break
+
+        case 2:
+          if (sayfalama[index] < 10) {
+            sayfalama = sayfalama.map((number) => number + 1)
+          }
+          break
+
+        default:
+          break
+      }
+      renderSayfalama()
+      renderProducts()
+    }
+
+    pageNumbersContainer.appendChild(pageButton)
+  })
+
+  nextButton.disabled = currentPage >= toplamSayfaSayisi
+  prevButton.disabled = currentPage === 1
+}
+
+const renderProducts = async () => {
+  const container = document.querySelector(".products")
+  container.innerHTML = ""
+
+  renderSayfalama()
+
+  const startIndex = (currentPage - 1) * itemsPerPage
+  const endIndex = startIndex + itemsPerPage
+
+  const productsToShow = List.slice(startIndex, endIndex)
 
   productsToShow.forEach((eleman) => {
     const itemHTML = `
@@ -56,96 +117,46 @@ const renderProducts = () => {
          <p class="original-price">$${eleman.price}</p>
          </div> 
           </div>
-    `;
-    container.innerHTML += itemHTML;
-  });
-};
+    `
+    container.innerHTML += itemHTML
+  })
+}
 
-const renderPageNumbers = () => {
-  const pageNumbersContainer = document.querySelector(".page-numbers");
-  pageNumbersContainer.innerHTML = "";
+const prevButton = document.querySelector(".previous")
+prevButton.onclick = () => sayfayi("dusur")
+const nextButton = document.querySelector(".next")
+nextButton.onclick = () => sayfayi("artir")
 
-  const totalPages = Math.ceil(List.length / itemsPerPage);
-  const maxVisiblePages = 5; // Ortada maksimum kaç sayfa numarası görünecek
+const sayfayi = (direction) => {
 
-  let startPage = Math.max(currentPage - Math.floor(maxVisiblePages / 2), 1);
-  let endPage = Math.min(startPage + maxVisiblePages - 1, totalPages);
+  if (direction === "artir" && currentPage < toplamSayfaSayisi) {
+    currentPage += 1
 
-  if (endPage - startPage + 1 < maxVisiblePages && startPage > 1) {
-    startPage = Math.max(endPage - maxVisiblePages + 1, 1);
+    if (
+   
+      sayfalama[sayfalama.length - 1] < toplamSayfaSayisi &&
+      currentPage >= 3
+    ) {
+      sayfalama = sayfalama.map((number) => number + 1)
+    }
   }
 
-  // "Previous" Butonunu Ekleyin
-  const previousButton = document.querySelector(".previous");
-  previousButton.disabled = currentPage === 1;
-  previousButton.addEventListener("click", () => {
-    if (currentPage > 1) {
-      currentPage--;
-      renderProducts();
-      renderPageNumbers();
-    }
-  });
 
-  // "Next" Butonunu Ekleyin
-  const nextButton = document.querySelector(".next");
-  nextButton.disabled = currentPage === totalPages;
-  nextButton.addEventListener("click", () => {
-    if (currentPage < totalPages) {
-      currentPage++;
-      renderProducts();
-      renderPageNumbers();
-    }
-  });
+  else if (direction === "dusur" && currentPage > 1) {
+    currentPage -= 1
+    if (
+      
+      sayfalama[0] > 1 &&
+      currentPage <= toplamSayfaSayisi - 2
+    ) {
+      console.log("Previous:", currentPage)
 
-  // Sayfa düğmelerini oluşturmak için
-  const addPageButton = (page) => {
-    const pageButton = document.createElement("button");
-    pageButton.textContent = page;
-    pageButton.classList.add("page-number");
-    if (page === currentPage) {
-      pageButton.classList.add("active");
+      sayfalama = sayfalama.map((number) => number - 1)
     }
-    pageButton.addEventListener("click", () => {
-      currentPage = page;
-      renderProducts();
-      renderPageNumbers();
-    });
-    pageNumbersContainer.appendChild(pageButton);
-  };
-
-  // Sayfa numaralarını dinamik olarak oluştur
-  if (totalPages <= maxVisiblePages + 2) {
-    // Tüm sayfa numaralarını göster
-    for (let i = 1; i <= totalPages; i++) {
-      addPageButton(i);
-    }
-  } else {
-    // İlk sayfa numarası
-    addPageButton(1);
-
-    // "..." ve ortadaki sayfa numaraları
-    if (currentPage > maxVisiblePages) {
-      const dots = document.createElement("span");
-      dots.textContent = "...";
-      pageNumbersContainer.appendChild(dots);
-    }
-
-    const startPage = Math.max(2, currentPage - 1);
-    const endPage = Math.min(currentPage + 1, totalPages - 1);
-    for (let i = startPage; i <= endPage; i++) {
-      addPageButton(i);
-    }
-
-    // "..." ve son sayfa numarası
-    if (currentPage < totalPages - 2) {
-      const dots = document.createElement("span");
-      dots.textContent = "...";
-      pageNumbersContainer.appendChild(dots);
-    }
-
-    addPageButton(totalPages);
   }
-};
 
-getProduct();
+  renderSayfalama()
+  renderProducts()
+}
 
+getProduct()
