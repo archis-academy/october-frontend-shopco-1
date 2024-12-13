@@ -40,7 +40,7 @@ setRating = (rating) => {
 };
 
 const navigateDetail = (id) => {
-  window.location.href = `product-detail.html?ProductId=${id}`;
+  window.location.href = `product-detail.html?id=${id}`;
 };
 const getContainer = () => {
   const container = document.querySelector(".products");
