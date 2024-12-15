@@ -168,6 +168,29 @@ document
       .scrollIntoView({ behavior: "smooth", block: "center" });
   });
 
+async function getData() {
+  const tdData = await fetch("https://fakestoreapi.com/products");
+  const response = await tdData.json();
+
+  const productDetailContainer = document.querySelector(".tbody");
+  response.forEach((product) => {
+    const itemHTML = `
+            <tr>
+                <td>${product.id}</td>
+                <td>${product.title}</td>
+                <td>${product.description}</td>
+                <td>$${product.price}</td>
+                <td>${product.category}</td>
+                <td>${product.rating.rate}</td>
+                <td><img src="${product.image}" alt="${product.title}"></td>
+            </tr>
+        `;
+    productDetailContainer.innerHTML += itemHTML;
+  });
+}
+
+window.onload = getData;
+
 // nursahtuncel-OC-28-review section end
 
 // nursahtuncel-OC-29-ımplement the you might also like section start

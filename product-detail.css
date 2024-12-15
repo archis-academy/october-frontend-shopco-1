@@ -321,6 +321,32 @@
   background-color: #218838;
   color: white;
 }
+/* ************** */
+
+table {
+  text-align: center;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+th,
+td {
+  font-size: 16px;
+  font-family: var(--fnt-family-satoshi, Arial, sans-serif);
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+td img {
+  max-width: 100px;
+  height: 100px;
+}
+th {
+  font-size: 24px;
+  font-weight: 500;
+  font-family: var(--fnt-family-satoshi, Arial, sans-serif);
+  background-color: #f4f4f4;
+}
 
 /* nursahtuncel-OC-28-review section end */
 /* nursahtuncel-OC-29-ımplement the you might also like section start*/
