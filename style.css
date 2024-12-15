@@ -514,6 +514,7 @@
     font-family: var(--fnt-family-integral);
     font-weight: 700;
     font-size: 3rem;
+    margin-bottom: 55px;
   }
   
   .top-selling .products {
