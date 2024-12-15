@@ -218,31 +218,31 @@ setRating = (rating) => {
 };
 
 const navigateDetail = (id) => {
-  window.location.href = `product-detail.html?ProductId=${id}`;
+  window.location.href = `product-detail.html?id=${id}`;
 };
 const getContainer = () => {
   const container = document.querySelector(".nt-images-container");
   container.innerHTML = "";
-
-  List.slice(0, 20).forEach((eleman) => {
-    const discount = eleman.price * 0.6;
+  List.slice(0, 20).forEach((item) => {
+    const discount = item.price * 0.6;
     const itemHTML = `
       <div class="nt-images-container-half-box">
-        <div onclick="navigateDetail(${eleman.id})" class="nt-image-div">
-          <img class="nt-product-image" draggable="false" src="${
-            eleman.image
-          }" alt="${eleman.title}" />
+        <div onclick="navigateDetail(${item.id})" class="nt-image-div">
+          <img class="nt-product-image"  src="${item.image}" alt="${
+      item.title
+    }" />
         </div>
-        <p class="nt-prgrp-bttm">${eleman.title}</p>
+ 
+        <p class="nt-prgrp-bttm">${item.title}</p>
         <div class="nt-stars-and-puan">
           <div class="stars">
-            ${setRating(eleman.rating.rate)}
+            ${setRating(item.rating.rate)}
           </div>
-          <div id="stars">${eleman.rating.rate}</div>
+          <div id="stars">${item.rating.rate}</div>
         </div>
         <div class="nt-new-price-old-price">
           <p class="nt-new-price-old-price-1">$${discount.toFixed(2)}</p>
-             <p class="nt-new-price-old-price-2">$${eleman.price}</p>
+          <p class="nt-new-price-old-price-2">$${item.price}</p>
           <p class="nt-new-price-old-price-3">-40%</p>
         </div>
       </div>
@@ -250,32 +250,36 @@ const getContainer = () => {
     container.innerHTML += itemHTML;
   });
 };
-
 getProduct();
 
 // mouse ile scroll özelliği..
 const carousel = document.querySelector(".nt-images-container");
+const firstCardWidth = carousel.querySelector(
+  ".nt-images-container-half-box"
+).offsetWidth;
 let isDragging = false;
 let startX;
-let scrollStart;
+let startScrollLeft = 0;
 
 const dragStart = (e) => {
+  e.preventDefault(); //sayfanın kaymasını engelliyoor
   isDragging = true;
+  startX = e.pageX || e.touches[0].pageX;
+  startScrollLeft = carousel.scrollLeft;
   carousel.classList.add("dragging");
-  startX = e.pageX;
-  scrollStart = carousel.scrollLeft;
 };
-
-const dragging = (e) => {
-  if (!isDragging) return;
-  carousel.scrollLeft = scrollStart - (e.pageX - startX);
-};
-
 const dragStop = () => {
   isDragging = false;
   carousel.classList.remove("dragging");
+};
+const dragging = (e) => {
+  if (!isDragging) return;
+  carousel.scrollLeft = startScrollLeft - (e.pageX - startX) * 1.5;
 };
 
 carousel.addEventListener("mousedown", dragStart);
 carousel.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop);
+carousel.addEventListener("touchstart", dragStart);
+carousel.addEventListener("touchmove", dragging);
+document.addEventListener("touchend", dragStop);
