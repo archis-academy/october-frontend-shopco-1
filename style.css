@@ -502,7 +502,6 @@
   text-align: center;
   max-width: 1280px;
   width: 100%;
-  gap: 50px;
   margin: 72px auto 64px;
 }
 
@@ -681,6 +680,23 @@
 }
 
 /* melike/OC-12-the-new-arrivals-section-end */
+
+/* melikeaksoy-OC-12-the-new-arrivals-section-response start */
+
+@media (max-width: 768px) {
+
+  .new-arrivals {
+    margin: 32px auto 40px;
+  }
+  
+  .new-arrivals h1 {
+    font-size: 40px;
+    margin-bottom: 35px;
+  }
+  
+  }
+
+/* melikeaksoy-OC-12-the-new-arrivals-section-response end */ 
 
 /*Browse By Dress Stylee Section Start*/
 .browse-by-dress-background {
