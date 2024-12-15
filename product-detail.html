@@ -50,10 +50,40 @@
               <button class="write-review-btn">Write a Review</button>
             </div>
           </div>
-          <div class="review-container"></div>
-          <button class="Load-more-reviews-btn" onclick="oadAllReviews()">
+          <div class="review-container">
+            
+          </div>
+         
+          <button class="Load-more-reviews-btn" onclick="loadAllReviews()">
             Load More Reviews
           </button>
+          <div class="add-review-container">
+           
+            <div class="review-form-container">
+              <form id="review-form">
+                <h3>Write a Review</h3>
+                <label for="review-rating">Rating:</label>
+                <select id="review-rating" name="rating">
+                  <option value="1">1 </option>
+                  <option value="2">2 </option>
+                  <option value="3">3 </option>
+                  <option value="4">4 </option>
+                  <option value="5">5 </option>
+                </select>
+                <br>
+        
+                <label for="review-name">Name:</label>
+                <input type="text" id="review-name" name="name" placeholder="Your Name" required>
+                <br>
+        
+                <label for="review-comment">Comment:</label>
+                <textarea id="review-comment" name="comment" placeholder="Write your review here..." required></textarea>
+                <br>
+        
+                <button type="submit" class="submit-review-btn">Submit Review</button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
 

@@ -27,10 +27,6 @@ dropdownMenu.addEventListener("click", (e) => {
     dropdownMenu.style.display = "none";
   }
 });
-//************
-document.querySelector(".write-review-btn").addEventListener("click", () => {
-  alert("bu kısmı daha sonra ekleyeceğim");
-});
 
 // ***********
 
@@ -78,6 +74,31 @@ const getAllReviews = () => {
 };
 
 getReviews();
+// ***********
+const addReviewBtn = document.querySelector(".write-review-btn");
+const reviewFormContainer = document.querySelector(".review-form-container");
+
+addReviewBtn.addEventListener("click", () => {
+  reviewFormContainer.style.display =
+    reviewFormContainer.style.display === "block" ? "none" : "block";
+});
+
+const reviewForm = document.getElementById("review-form");
+
+reviewForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const rating = document.getElementById("review-rating").value;
+  const name = document.getElementById("review-name").value;
+  const comment = document.getElementById("review-comment").value;
+
+  reviewForm.reset();
+
+  alert("Your review has been submitted!");
+
+  reviewFormContainer.style.display = "none";
+});
+
 //Load more reviews button ******************
 const loadAllReviews = () => {
   const reviewContainer = document.querySelector(".review-container");
@@ -139,6 +160,13 @@ faqsQuestions.forEach((question) => {
     question.nextElementSibling.classList.toggle("active");
   });
 });
+document
+  .getElementsByClassName("write-review-btn")[0]
+  .addEventListener("click", function () {
+    document
+      .querySelector(".review-form-container")
+      .scrollIntoView({ behavior: "smooth", block: "center" });
+  });
 
 // nursahtuncel-OC-28-review section end
 
