@@ -496,6 +496,208 @@
 
 /* melikeaksoy/OC-11-Implement-the-brands-and-partners-section End */
 
+/* melike/OC-12-the-new-arrivals-section-start */
+.new-arrivals {
+  padding: 10px;
+  text-align: center;
+  max-width: 1280px;
+  width: 100%;
+  margin: 72px auto 64px;
+}
+
+.new-arrivals-header {
+  font-family: var(--fnt-family-integral);
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 55px;
+}
+
+.new-arrivals .new-arrivals-products {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+  margin: auto;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.new-arrivals-products::-webkit-scrollbar {
+  display: none;
+}
+
+.new-arrivals .new-arrivals-product {
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+  max-width: 295px;
+  cursor: pointer;
+}
+
+.new-arrivals-products.dragging .new-arrivals-product {
+  cursor: grab;
+  user-select: none;
+}
+
+.new-arrivals-products.expanded {
+  overflow: hidden;
+  flex-wrap: wrap;
+  max-width: 1280px;
+  justify-content: center;
+}
+
+.new-arrivals-image-container {
+  width: 295px;
+  height: 298px;
+  padding: 45px;
+  background: #f0eeed;
+  border-radius: 24px;
+}
+
+.new-arrivals-image {
+  transition: transform 0.5s;
+  cursor: pointer;
+  mix-blend-mode: multiply;
+  width: 100%;
+  height: 100%;
+}
+
+.new-arrivals-product-image:hover {
+  transform: scale(1.1);
+}
+
+.new-arrivals h2 {
+  white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    margin-top: 16px;
+}
+
+.current-price,
+  .original-price,
+  .price {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 32.4px;
+  }
+  
+  .original-price {
+    color: rgba(0, 0, 0, 0.4);
+    text-decoration: line-through;
+  }
+
+  .new-arrivals-button {
+    padding: 16px 54px;
+    border-radius: 62px;
+    font-size: 16px;
+    line-height: 21.6px;
+    margin-top: 36px;
+    border: 1px solid #f0eeed;
+    width: 218px;
+    height: 52px;
+    cursor: pointer;
+    color: black;
+  }
+
+  .price {
+    display: flex;
+    gap: 10px;
+  }
+
+.discount {
+  background-color: rgba(255, 51, 51, 0.1);
+  width: 58px;
+  height: 28px;
+  border-radius: 62px;
+  color: #ff3333;
+  font-size: 12px;
+  line-height: 16.2px;
+  border: none;
+  padding: 6px 14px;
+}
+
+.nt-stars-and-puan {
+  width: 150px;
+  padding-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.new-arrivals-product .stars {
+  margin-right: 13px;
+  display: flex;
+}
+
+.new-arrivals-product .point-stars {
+  font-size: 16px;
+  line-height: 18.9px;
+  font-weight: 400;
+}
+
+.new-arrivals-product .star {
+  width: 20px;
+    height: 20px;
+    background-color: gray;
+    clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      98% 35%,
+      68% 57%,
+      79% 91%,
+      50% 70%,
+      21% 91%,
+      32% 57%,
+      2% 35%,
+      39% 35%
+    );
+    margin-right: 5px;
+}
+
+.star.full {
+  background-color: #ffc633;
+}
+
+.star.half {
+  background: linear-gradient(to right, #ffc633 50%, #dad0cc 50%);
+}
+.star.empty {
+  background-color: #dad0cc;
+}
+
+.line {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 64px auto;
+}
+
+/* melike/OC-12-the-new-arrivals-section-end */
+
+/* melikeaksoy-OC-12-the-new-arrivals-section-response start */
+
+@media (max-width: 768px) {
+
+  .new-arrivals {
+    margin: 32px auto 40px;
+  }
+  
+  .new-arrivals h1 {
+    font-size: 40px;
+    margin-bottom: 35px;
+  }
+  
+  }
+
+/* melikeaksoy-OC-12-the-new-arrivals-section-response end */ 
+
 /*Browse By Dress Stylee Section Start*/
 .browse-by-dress-background {
   display: flex;
