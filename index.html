@@ -54,9 +54,17 @@
             <div class="nt-hero-section-content-ul">
               <ul>
                 <li>
-                  <a href="" class="nt-list nt-list-2"
+                  <a href="" class="nt-list nt-list-2" onclick="toggleDropdown(event)"
                     >Shop <img src="images/assagi-isaret-eden-ok.png" alt=""
                   /></a>
+                <!-- emre/OC-34- dropdown start -->
+                  <div class="dropdown-menu">
+                    <span><a href="#">Women's Clothing</a></span>
+                    <span><a href="#">Men's Clothing</a></span>
+                    <span><a href="#">Jewelery</a></span>
+                    <span><a href="#">Electronics</a></span>
+                  </div>
+                <!-- emre/OC-34- dropdown end -->
                 </li>
                 <li><a href="" class="nt-list nt-list-2">On Sale</a></li>
                 <li><a href="" class="nt-list nt-list-2">New Arrivals</a></li>
@@ -85,8 +93,20 @@
                 src="images/nt-basket-icon.svg"
                 alt=""
               />
-
+                <!-- emre/OC-34- dropdown sign in start -->
+              <a href="#" id="dropdownToggle">
               <img class="nt-left-icon" src="images/nt-user-icon.svg" alt="" />
+              </a>
+              <div class="dropdown-menu signin-dropdown" id="dropdownMenu">
+                <form>
+                  <label for="email">E-mail</label>
+                  <input type="email" id="email" name="email" placeholder="Enter your email" required />     
+                  <label for="password">Password</label>
+                  <input type="password" id="password" name="password" placeholder="Enter your password" required />
+                  <button type="submit">Sign In</button>
+                </form>
+              </div>
+              <!-- emre/OC-34- dropdown  sign in end -->
             </div>
           </div>
         </div>
