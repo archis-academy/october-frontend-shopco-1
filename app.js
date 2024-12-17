@@ -35,4 +35,25 @@ document.addEventListener("click", function (event) {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdownToggle = document.getElementById("dropdownToggle");
+  const dropdownMenu = document.getElementById("dropdownMenu");
+
+  dropdownToggle.addEventListener("click", (event) => {
+    event.preventDefault();
+    if (dropdownMenu.style.display === "block") {
+      dropdownMenu.style.display = "none";
+    } else {
+      dropdownMenu.style.display = "block";
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+      dropdownMenu.style.display = "none";
+    }
+  });
+});
+
 // emre-OC-34-dropdown end
