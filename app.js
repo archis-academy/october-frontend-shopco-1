@@ -22,13 +22,13 @@ document
 
 // Create-the-Top-Selling-section start
 
-let List = [];
-const getProduct = () => {
+let Lists = [];
+const getProducte = () => {
   fetch("https://fakestoreapi.com/products")
     .then((res) => res.json())
     .then((list) => {
-      List = list;
-      getContainer();
+      Lists = list;
+      getContainere();
     })
     .catch((err) => {
       console.error(err);
@@ -52,11 +52,11 @@ setRating = (rating) => {
 const navigateDetail = (id) => {
   window.location.href = `product-detail.html?id=${id}`;
 };
-const getContainer = () => {
+const getContainere = () => {
   const container = document.querySelector(".products");
   container.innerHTML = "";
 
-  List.slice(0, 20).forEach((eleman) => {
+  Lists.slice(0, 20).forEach((eleman) => {
     const discountPrice = eleman.price * 0.6;
     const itemHTML = `
 <div class="product">
@@ -86,7 +86,7 @@ const getContainer = () => {
     container.innerHTML += itemHTML;
   });
 };
-getProduct();
+getProducte();
 
 let container = document.querySelector(".products");
 let viewAllButton = document.querySelector(".view-all");
