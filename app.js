@@ -169,7 +169,7 @@ setRating = (rating) => {
   return starsHTML;
 };
 
-const navigateDetail = (id) => {
+const navigateDetaile = (id) => {
   window.location.href = `product-detail.html?id=${id}`;
 };
 const getContainere = () => {
@@ -180,7 +180,7 @@ const getContainere = () => {
     const discountPrice = eleman.price * 0.6;
     const itemHTML = `
 <div class="product">
-<div onclick="navigateDetail(${eleman.id})" class="image-container">
+<div onclick="navigateDetails(${eleman.id})" class="image-container">
               <img onclick="navigateDetail(${
                 eleman.id
               })" class="top-selling-image"
@@ -208,11 +208,11 @@ const getContainere = () => {
 };
 getProducte();
 
-let container = document.querySelector(".products");
-let viewAllButton = document.querySelector(".view-all");
-let isExpanded = false;
+let containerse = document.querySelector(".products");
+let viewAllButtone = document.querySelector(".view-all");
+let isExpandede = false;
 
-const toggleProductsView = () => {
+const toggleProductsViewe = () => {
 
 if (isExpanded) {
   container.classList.remove("expanded");
@@ -226,14 +226,14 @@ isExpanded = !isExpanded;
 
 viewAllButton.addEventListener("click", toggleProductsView);
 
-const products = document.querySelector(".products")
-const firstCardWidth = products.querySelector(".product").offsetWidth
+const productse = document.querySelector(".products")
+const firstCardWidthe = products.querySelector(".product").offsetWidth
 
-let isDragging = false
-let startX = 0
-let startScrollLeft = 0
+let isDragginge = false
+let startXe = 0
+let startScrollLefte = 0
 
-const dragStart = (e) => {
+const dragStarte = (e) => {
   e.preventDefault();
   isDragging = true
   startX = e.pageX || e.touches[0].pageX;
@@ -241,12 +241,12 @@ const dragStart = (e) => {
   products.classList.add("dragging")
 }
 
-const dragStop = () => {
+const dragStope = () => {
   isDragging = false
   products.classList.remove("dragging")
 }
 
-const dragging = (e) => {
+const dragginge = (e) => {
   if (!isDragging) return
   products.scrollLeft = startScrollLeft - (e.pageX - startX) * 1.5;
 }
