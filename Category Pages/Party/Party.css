@@ -666,3 +666,82 @@ header{
       }
     }
   /* melikeaksoy/OC-23-implement-the-footer end */
+
+  .cf-price-double-input{
+  position: relative;
+  width: 100%;
+  height: 6px;
+  border-radius: 20px;
+  background-color: var(--ftr-imgs-bg-clr);
+  }
+
+  .cf-input-track{
+  position: absolute;
+  /*left:25%;
+  right:25%;
+  z-index: 2;
+  top: 0;
+  bottom: 0;*/
+  border-radius: 5px;
+  background-color:var(--hdr-bg-clr);
+  }
+
+  .price-input[type="range"]{
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+  pointer-events: none;
+  appearance: none;
+  outline: none;
+  
+  /*z-index: 2;
+  display: flex;*/
+  }
+
+  .price-input[type="range"]::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-top: -7px;
+  background-color: var(--hdr-bg-clr);
+  pointer-events: auto;
+  cursor: pointer;
+  }
+  
+  .price-input[type="range"]::-moz-range-thumb{
+    -moz-appearance: none;
+    width: 20px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: -7px;
+    background-color:rgb(255, 85, 0) ;
+    pointer-events: auto;
+    cursor: pointer;
+    }
+
+    .price-input[ type="range"]::-ms-thumb{
+      -ms-progress-appearance:  none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #000000;
+      pointer-events: auto;
+      cursor: pointer;
+    }
+
+    .price-tag{
+      position: absolute;
+      padding: 20px;
+      
+    }
+
+    #minPrice{
+      left: 50%;
+      transform: translateX(-50%) translateY(-100%);
+    }
+
+    #maxPrice{
+      right: 50%;
+      transform: translateX(50%) translateY(100%);
+    }

@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Formal.css">
 
-    <title>Shop.Co</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Formal.css">
+
+  <title>Shop.Co</title>
 </head>
 
 <body>
 
-    <!-- esra/OC-6-implement-promo-banner-start -->
+  <!-- esra/OC-6-implement-promo-banner-start -->
   <section class="implement-promo-banner">
     <div class="ip-banner-info-box">
       <div class="ip-banner-explain">
@@ -94,7 +95,33 @@
     </section>
     <!--pages-way End-->
 
-    
+    <!--Category-Filter-Section Start -->
+    <section>
+
+      
+
+      <div class="cf-price-input-values">
+        <div class="input-way"></div>
+        <input class="price-input" id="minValue" oninput="minSlide()" type="range" min="0" max="1000" value="0">
+        <input class="price-input" id="maxValue" oninput="maxSlide()" type="range" min="0" max="1000" value="1000">
+      </div>
+      
+      <div class="input-way-filter">
+        <span id="minPrice">
+          0
+        </span>
+
+        <span id="maxPrice"> 
+          1000         
+        </span>
+
+      </div>
+
+
+    </section>
+    <!--Category-Filter-Section End -->
+
+
     <!-- BeyzanurMete-OC-20 Implement the Newsletter  section start -->
     <div class="newsletter-section">
       <div class="newsletter-title">
@@ -124,7 +151,8 @@
           <div class="social-icons">
             <a href="#"><i class="twitter-icon"><img src="../../images/footer/Twitter.svg" alt="Twitter" /></i></a>
             <a href="#"><i class="facebook-icon"><img src="../../images/footer/Facebook.svg" alt="Facebook" /></i></a>
-            <a href="#"><i class="instagram-icon"><img src="../../images/footer/Instagram.svg" alt="Instagram" /></i></a>
+            <a href="#"><i class="instagram-icon"><img src="../../images/footer/Instagram.svg"
+                  alt="Instagram" /></i></a>
             <a href="#"><i class="github-icon"><img src="../../images/footer/Github.svg" alt="Github" /></i></a>
           </div>
         </div>
@@ -187,7 +215,7 @@
 
 
 
-    <script src="Formal.js"></script>
+  <script src="Formal.js"></script>
 </body>
 
 </html>

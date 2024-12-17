@@ -115,22 +115,27 @@
           </div>
 
           <div class="cf-price-container">
-            <h6 onclick="togglePrice()">Price <img src="../../images/Category-Filter-Section/up.svg"></h6>
+            <h6 onclick="togglePrice()">Price <img class="cf-price-img" src="../../images/Category-Filter-Section/up.svg"></h6>
 
-            <div class="cf-price-input-values">
-              <div class="input-way">
-                <input class="price-input" id="minValue" type="range" min="0" max="1000">
-              <input class="price-input" id="maxValue" type="range" min="0" max="1000">
+            <div class="cf-price">
+
+              <div class="cf-price-double-input">
+                <span class="cf-input-track"></span>
+                
+                <input class="price-input" id="minValue" oninput="slideMin()" type="range" min="0" max="1000" value="0">
+                <input class="price-input" id="maxValue" oninput="slideMax()" type="range" min="0" max="1000" value="1000">
+        
+                <span class="price-tag" id="minPrice">0</span>
+                <span class="price-tag" id="maxPrice">1000</span>
+        
               </div>
-              
 
             </div>
-  
           </div>
 
           <div class="cf-colors-container">
             <div class="cf-colors-title">
-              <h6 onclick="toggleColors()">Colors <img src="../../images/Category-Filter-Section/up.svg"></h6>
+              <h6 onclick="toggleColors()">Colors <img class="cf-colors-img" src="../../images/Category-Filter-Section/up.svg"></h6>
 
             </div>
 
@@ -157,7 +162,7 @@
 
           <div class="cf-size-container">
             <div class="cf-size-title" onclick="toggleSize()">
-              <h6>Size <img src="../../images/Category-Filter-Section/up.svg"></h6>
+              <h6>Size <img class="cf-sizes-img" src="../../images/Category-Filter-Section/up.svg"></h6>
             </div>
 
             <div class="cf-sizes">
@@ -173,7 +178,7 @@
             </div>
           </div>
 
-          <button class="filter-btn">Appley Filter</button>
+          <button class="filter-btn">Apply Filter</button>
 
         </div>
       </div>

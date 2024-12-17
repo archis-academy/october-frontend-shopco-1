@@ -20,7 +20,7 @@ document
 
 // esra-OC-6-implement-promo-banner-end
 
-//Category Filter Section Start
+//----------------------Category Filter Section Start--------------------------------------------
 
 //Open-Close functions
 function toggleFilter() {
@@ -31,23 +31,76 @@ function toggleFilter() {
 }
 
 function togglePrice() {
-  const filterDown = document.querySelector(".cf-price-input-values");
+  const filterDown = document.querySelector(".cf-price");
   filterDown.classList.toggle("active");
+
+  const priceImg = document.querySelector(".cf-price-img");
+  priceImg.classList.toggle("rotate")
 }
 
 function toggleColors() {
   const filterDown = document.querySelector(".cf-colors");
   filterDown.classList.toggle("active");
+
+  const colorsImg = document.querySelector(".cf-colors-img");
+  colorsImg.classList.toggle("rotate")
 }
 
 function toggleSize() {
   const filterDown = document.querySelector(".cf-sizes");
   filterDown.classList.toggle("active");
+
+  const sizesImg = document.querySelector(".cf-sizes-img");
+  sizesImg.classList.toggle("rotate")
 }
 
- // Price Filter İnput
- const minValue = document.getElementById ("minValue");
- const maxValue = document.getElementById ("maxValue");
- const sliderWay = document.querySelector(".input-way");
+//Price-input
+window.onload = function () {
+  slideMin();
+  slideMax();
+}
 
-//Category Filter Section End
+const minValue = document.querySelector("#minValue");
+const maxValue = document.querySelector("#maxValue");
+const minPrice = document.querySelector("#minPrice");
+const maxPrice = document.querySelector("#maxPrice");
+const minGap = 0;
+const inputTrack = document.querySelector(".cf-input-track");
+const sliderMinVal = parseInt(minValue.min);
+const sliderMaxVal = parseInt(maxValue.max);
+
+
+function slideMin() {
+  let gap = parseInt(maxValue.value) - parseInt(minValue.value);
+  if (gap <= minGap) {
+    minValue.value = parseInt(maxValue.value) - minGap;
+  }
+  minPrice.innerHTML = "$" + minValue.value;
+  setArea();
+}
+
+function slideMax() {
+  let gap = parseInt(maxValue.value) - parseInt(minValue.value);
+  if (gap <= minGap) {
+    maxValue.value = parseInt(minValue.value) + minGap;
+  }
+  maxPrice.innerHTML = "$" + maxValue.value;
+  setArea();
+}
+
+function setArea() {
+  inputTrack.style.left = (minValue.value / sliderMaxVal) * 100 + "%";
+  minPrice.style.left = (minValue.value / sliderMaxVal) * 100 + "%";
+  inputTrack.style.right = 100 - (maxValue.value / sliderMaxVal) * 100 + "%";
+  maxPrice.style.right = 100 - (maxValue.value / sliderMaxVal) * 100 + "%";
+}
+
+//Filter 
+
+
+
+
+
+
+
+//----------------------Category Filter Section End--------------------------------------------

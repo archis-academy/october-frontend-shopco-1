@@ -666,3 +666,73 @@ header{
       }
     }
   /* melikeaksoy/OC-23-implement-the-footer end */
+
+.cf-price-input-values input[ type="range"]{
+  position: absolute;
+  appearance: none;
+  width: 100%;
+  outline: none;
+  margin: 0 auto;
+  background-color: transparent;
+  pointer-events: none;
+}
+
+.input-way{
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #555;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.cf-price-input-values input[ type="range"]::-webkit-slider-runnable-track{
+  -webkit-appearance: none;
+  height: 5px;
+  
+}
+
+.cf-price-input-values input[ type="range"]::-moz-range-track{
+  -moz-appearance: none;
+  height: 5px;
+  
+}
+
+.cf-price-input-values input[ type="range"]::-ms-track{
+  appearance: none;
+  height: 5px;
+  
+}
+
+.cf-price-input-values input[ type="range"]::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-top: -7px;
+  background-color: #000000;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.cf-price-input-values input[ type="range"]::-moz-range-thumb{
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #000000;
+  margin: 0 auto;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.cf-price-input-values input[ type="range"]::-ms-thumb{
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #000000;
+  pointer-events: auto;
+  cursor: pointer;
+
+}
