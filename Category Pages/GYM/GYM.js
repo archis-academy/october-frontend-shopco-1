@@ -19,3 +19,32 @@ function toggleMenu() {
     });
   
   // esra-OC-6-implement-promo-banner-end
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const minRange = document.getElementById("minRange");
+    const maxRange = document.getElementById("maxRange");
+    const minValue = document.getElementById("minValue");
+    const maxValue = document.getElementById("maxValue");
+
+    minRange.addEventListener("input", function() {
+        const minVal = parseInt(minRange.value);
+        const maxVal = parseInt(maxRange.value);
+
+        if (minVal > maxVal) {
+            minRange.value = maxVal;
+        } else {
+            minValue.textContent = minVal;
+        }
+    });
+
+    maxRange.addEventListener("input", function() {
+        const minVal = parseInt(minRange.value);
+        const maxVal = parseInt(maxRange.value);
+
+        if (maxVal < minVal) {
+            maxRange.value = minVal;
+        } else {
+            maxValue.textContent = maxVal;
+        }
+    });
+});
