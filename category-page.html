@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="category-page.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -104,155 +104,41 @@
       <!-- nursahtuncel-OC-4 hero section end-->
         
     </header>
-    <main>
-      <!--hero section burada başlıyor-->
-      <section class="hero-section">
-        <div class="hero-section-container">
-          <div class="hero-section-image-container">
-            <img
-              src="images/hero-section/models.png"
-              alt="hero section background image"
-              class="hero-section-background-image"
-            />
-            <img
-              src="images/hero-section/image1.png"
-              alt="Star Icon"
-              class="star-left"
-            />
-            <img
-              src="images/hero-section/image1.png"
-              alt="Star Icon"
-              class="star-right"
-            />
-          </div>
-          <div class="hero-sectin-info">
-            <h1>FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
-            <p>
-              Browse through our diverse range of meticulously crafted garments,
-              designed to bring out your individuality and cater to your sense
-              of style.
-            </p>
-            <button class="hero-section-button">Shop Now</button>
-            <div class="hero-section-stats">
-              <div>
-                <h2>200+</h2>
-                <p>International Brands</p>
-              </div>
-              <div class="vertical-line"></div>
-              <div>
-                <h2>2,000+</h2>
-                <p>High-Quality Products</p>
-              </div>
-              <div class="vertical-line line-right"></div>
-              <div>
-                <h2>30,000+</h2>
-                <p>Happy Customers</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--hero section burada bitiyor-->
-
-      <!--melikeaksoy/OC-11-Implement-the-brands-and-partners-section Start-->
-
-      <section class="brands">
-      <div class="brands-part">
-        <img class="brands-img" src="./images/brands/Versace.svg" alt="Versace"/>
-        <img class="brands-img" src="./images/brands/Zara.svg" alt="Zara"/>
-        <img class="brands-img" src="./images/brands/Gucci.svg" alt="Gucci"/>
-        <img class="brands-img" src="./images/brands/Prada.svg" alt="Prada"/>
-        <img class="brands-img" src="./images/brands/Calvin.svg" alt="Calvin Klein"/>
-      </div>
-    </section>
     
-      <!--melikeaksoy/OC-11-Implement-the-brands-and-partners-section End-->
-
-      <!-- melike/OC-12-the-new-arrivals-section-start -->
-    <section class="new-arrivals">
-      <h1 class="new-arrivals-header">NEW ARRIVALS</h1>
-     <div class="new-arrivals-products">
-    <div class="new-arrivals-product"></div>
-  </div>
-    <button onclick="showAll()" class="new-arrivals-button">View All</button>
-    <div class="line"></div>
-</section>
-<!-- melike/OC-12-the-new-arrivals-section-end -->
-
-   <!-- melikeaksoy-OC-14-Create-the-Top-Selling-section start -->
-
-   <section class="top-selling">
-    <h1>TOP SELLING</h1>
-    <div class="products">
-      <div class="product">
-      </div>
-    </div>
-    <button onclick="showAll()" class="view-all">View All</button>
-  </section>
-
-
-  <!-- melikeaksoy-OC-14-Create-the-Top-Selling-section end -->
-
-      <!--Browse By Dress Style Section Start-->
-      <section class="browse">
-        <div class="browse-by-dress-background">
-          <p class="title-of-browse">BROWSE BY DRESS STYLE</p>
-          <div class="browse-style-container">
-            <div class="first-container">
-              <a href="./Category Pages/Casual/Casual.html" target="_parent">
-                <div class="browse-first-form">
-                  <h4 class="browse-option-text">Casual</h4>
-                  <img
-                    class="browse-picture"
-                    src="./images/Browse-By-Dress-Style-Section/image 11.svg"
-                    alt="#"
-                  />
-                </div>
-              </a>
-              <a href="./Category Pages/Formal/Formal.html" target="_parent">
-                <div class="browse-second-form">
-                  <h4 class="browse-option-text">Formal</h4>
-                  <img
-                    class="browse-picture"
-                    src="./images/Browse-By-Dress-Style-Section/image 13.svg"
-                    alt="#"
-                  />
-                </div> 
-              </a>
-              
-              
-            </div>
-            <div class="second-container">
-              <a href="./Category Pages/Party/Party.html" target="_parent">
-                <div class="browse-second-form">
-                  <h4 class="browse-option-text">Party</h4>
-                  <img
-                    class="browse-picture"
-                    src="./images/Browse-By-Dress-Style-Section/image 12.svg"
-                    alt="#"
-                  />
-                </div>
-              </a>
-              <a href="./Category Pages/GYM/GYM.html" target="_parent">
-                <div class="browse-first-form">
-                  <h4 class="browse-option-text">GYM</h4>
-                  <img
-                    class="browse-picture"
-                    src="./images/Browse-By-Dress-Style-Section/image 14.svg"
-                    alt="#"
-                  />
-                </div>
-              </a>
-              
-              
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--Browse By Dress Style Section End-->
+    <main>
       
-       <!-- BeyzanurMete-OC-20 Implement the Newsletter  section start -->
-       <div class="newsletter-section">
+        <!--melikeaksoy/OC-36-Category-Products-Section start -->
+
+<section class="category-page">
+  <div class="category-page-title">
+    <h1>Casual</h1>
+    <div class="page-title-right">
+      <span>Showing 1-10 of 100 Products</span>
+      <div class="title-sort">
+      <span>Sort by:</span>
+      <select id="sort-options">
+        <option value="popular">Most Popular</option>
+        <option value="low-to-high">Price: Low to High</option>
+        <option value="high-to-low">Price: High to Low</option>
+      </select>
+    </div>
+  </div>
+</div>
+  <div class="products">
+    <div class="product">   
+    </div>
+  </div>
+  <div class="pagination">
+    <button class="previous"><img src="images/category/arrow-left.svg">Previous</button>
+    <div class="page-numbers"></div>
+    <button class="next">Next<img src="images/category/arrow-right.svg"></button>
+  </div>
+</section>
+
+        <!--melikeaksoy/OC-36-Category-Products-Section end -->
+
+    <!-- BeyzanurMete-OC-20 Implement the Newsletter  section start -->
+    <div class="newsletter-section">
         <div class="newsletter-title">
             STAY UP TO DATE ABOUT <br> OUR LATEST OFFERS
         </div>
@@ -350,5 +236,7 @@
     </footer>
     <!-- melikeaksoy/OC-22-implement-the-footer end -->
   </body>
-  <script src="app.js"></script>
+  <script src="category-page.js"></script>
 </html>
+
+    
