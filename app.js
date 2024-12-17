@@ -22,13 +22,13 @@ document
 
 // melike/OC-12-the-new-arrivals-section-start
 
-let List = [];
-const getProduct = () => {
+let Liste = [];
+const getProducts = () => {
   fetch("https://fakestoreapi.com/products")
     .then((res) => res.json())
     .then((list) => {
-      List = list;
-      getContainer();
+      Liste = list;
+      getContainers();
     })
     .catch((err) => {
       console.error(err);
@@ -52,11 +52,11 @@ setRating = (rating) => {
 const navigateDetail = (id) => {
   window.location.href = `product-detail.html?id=${id}`;
 };
-const getContainer = () => {
+const getContainers = () => {
   const container = document.querySelector(".new-arrivals-products");
   container.innerHTML = "";
 
-  List.slice(0, 20).forEach((eleman) => {
+  Liste.slice(0, 20).forEach((eleman) => {
     const discountPrice = eleman.price * 0.6;
     const itemHTML = `
 <div class="new-arrivals-product">
@@ -85,7 +85,7 @@ const getContainer = () => {
     container.innerHTML += itemHTML;
   });
 };
-getProduct();
+getProducts();
 
 let container = document.querySelector(".new-arrivals-products");
 let viewAllButton = document.querySelector(".new-arrivals-button");
