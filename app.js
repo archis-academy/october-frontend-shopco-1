@@ -140,123 +140,124 @@ document.addEventListener("touchend", dragStop);
 
 // melike/OC-12-the-new-arrivals-section-end
 
-// Create-the-Top-Selling-section start
+// Create-the-Top-Selling-section star
 
-let Lists = [];
-const getProducte = () => {
-  fetch("https://fakestoreapi.com/products")
-    .then((res) => res.json())
-    .then((list) => {
-      Lists = list;
-      getContainere();
-    })
-    .catch((err) => {
-      console.error(err);
-      container.innerHTML = "<p>Error loading products.</p>";
-    });
-};
-setRating = (rating) => {
-  let starsHTML = "";
-  for (let i = 1; i <= 5; i++) {
-    if (i <= Math.floor(rating)) {
-      starsHTML += '<div class="star full"></div>';
-    } else if (i <= Math.ceil(rating)) {
-      starsHTML += '<div class="star half"></div>';
-    } else {
-      starsHTML += '<div class="star empty"></div>';
+(function() {  // IIFE (Immediately Invoked Function Expression) her iki bölümün birbirinden bağımsız çalışmasını sağlıyor.
+
+  let Lists = [];
+  const getProducts = () => {
+    fetch("https://fakestoreapi.com/products")
+      .then((res) => res.json())
+      .then((list) => {
+        Lists = list;
+        getContainers();
+      })
+      .catch((err) => {
+        console.error(err);
+        container.innerHTML = "<p>Error loading products.</p>";
+      });
+  };
+
+  const setRating = (rating) => {
+    let starsHTML = "";
+    for (let i = 1; i <= 5; i++) {
+      if (i <= Math.floor(rating)) {
+        starsHTML += '<div class="star full"></div>';
+      } else if (i <= Math.ceil(rating)) {
+        starsHTML += '<div class="star half"></div>';
+      } else {
+        starsHTML += '<div class="star empty"></div>';
+      }
     }
-  }
-  return starsHTML;
-};
+    return starsHTML;
+  };
 
-const navigateDetaile = (id) => {
-  window.location.href = `product-detail.html?id=${id}`;
-};
-const getContainere = () => {
-  const container = document.querySelector(".products");
-  container.innerHTML = "";
+  const navigateDetail = (id) => {
+    window.location.href = `product-detail.html?id=${id}`;
+  };
 
-  Lists.slice(0, 20).forEach((eleman) => {
-    const discountPrice = eleman.price * 0.6;
-    const itemHTML = `
-<div class="product">
-<div onclick="navigateDetails(${eleman.id})" class="image-container">
-              <img onclick="navigateDetail(${
-                eleman.id
-              })" class="top-selling-image"
-                src="${eleman.image}"
-                alt="${eleman.title}"
-              />
-              </div> 
-              <h2>${eleman.title}</h2>
-              <div class="nt-stars-and-puan">
-          <div class="stars">
-            ${setRating(eleman.rating.rate)} 
-              </div>  
+  const getContainers = () => {
+    const container = document.querySelector(".products");
+    container.innerHTML = "";
+
+    Lists.slice(0, 20).forEach((eleman) => {
+      const discountPrice = eleman.price * 0.6;
+      const itemHTML = `
+        <div class="product">
+          <div onclick="navigateDetail(${eleman.id})" class="image-container">
+            <img onclick="navigateDetail(${eleman.id})" class="top-selling-image" src="${eleman.image}" alt="${eleman.title}" />
+          </div> 
+          <h2>${eleman.title}</h2>
+          <div class="nt-stars-and-puan">
+            <div class="stars">
+              ${setRating(eleman.rating.rate)} 
+            </div>  
             <div id="point-stars">${eleman.rating.rate}/5</div>
-         </div>
-        
-        <div class="price">
-        <p class="current-price">$${discountPrice.toFixed(2)}</p>
-              <p class="original-price">$${eleman.price}</p>
-              <button class= "discount">40%</button>
+          </div>
+          <div class="price">
+            <p class="current-price">$${discountPrice.toFixed(2)}</p>
+            <p class="original-price">$${eleman.price}</p>
+            <button class="discount">40%</button>
+          </div>
         </div>
-            </div>
-    `;
-    container.innerHTML += itemHTML;
-  });
-};
-getProducte();
+      `;
+      container.innerHTML += itemHTML;
+    });
+  };
 
-let containerse = document.querySelector(".products");
-let viewAllButtone = document.querySelector(".view-all");
-let isExpandede = false;
+  getProducts();
 
-const toggleProductsViewe = () => {
+  let container = document.querySelector(".products");
+  let viewAllButton = document.querySelector(".view-all");
+  let isExpanded = false;
 
-if (isExpanded) {
-  container.classList.remove("expanded");
-  viewAllButton.textContent = "View All";
-} else {
-  container.classList.add("expanded");
-  viewAllButton.textContent = "Hide All";
-}
-isExpanded = !isExpanded;
-};
+  const toggleProductsView = () => {
+    if (isExpanded) {
+      container.classList.remove("expanded");
+      viewAllButton.textContent = "View All";
+    } else {
+      container.classList.add("expanded");
+      viewAllButton.textContent = "Hide All";
+    }
+    isExpanded = !isExpanded;
+  };
 
-viewAllButton.addEventListener("click", toggleProductsView);
+  viewAllButton.addEventListener("click", toggleProductsView);
 
-const productse = document.querySelector(".products")
-const firstCardWidthe = products.querySelector(".product").offsetWidth
+  const products = document.querySelector(".products");
+  const firstCardWidth = products.querySelector(".product").offsetWidth;
 
-let isDragginge = false
-let startXe = 0
-let startScrollLefte = 0
+  let isDragging = false;
+  let startX = 0;
+  let startScrollLeft = 0;
 
-const dragStarte = (e) => {
-  e.preventDefault();
-  isDragging = true
-  startX = e.pageX || e.touches[0].pageX;
-  startScrollLeft = products.scrollLeft
-  products.classList.add("dragging")
-}
+  const dragStart = (e) => {
+    e.preventDefault();
+    isDragging = true;
+    startX = e.pageX || e.touches[0].pageX;
+    startScrollLeft = products.scrollLeft;
+    products.classList.add("dragging");
+  };
 
-const dragStope = () => {
-  isDragging = false
-  products.classList.remove("dragging")
-}
+  const dragStop = () => {
+    isDragging = false;
+    products.classList.remove("dragging");
+  };
 
-const dragginge = (e) => {
-  if (!isDragging) return
-  products.scrollLeft = startScrollLeft - (e.pageX - startX) * 1.5;
-}
+  const dragging = (e) => {
+    if (!isDragging) return;
+    products.scrollLeft = startScrollLeft - (e.pageX - startX) * 1.5;
+  };
 
-products.addEventListener("mouseover", dragging)
-products.addEventListener("mousedown", dragStart)
-document.addEventListener("mouseup", dragStop)
+  products.addEventListener("mouseover", dragging);
+  products.addEventListener("mousedown", dragStart);
+  document.addEventListener("mouseup", dragStop);
 
-products.addEventListener("touchstart", dragStart);
-products.addEventListener("touchmove", dragging);
-document.addEventListener("touchend", dragStop);
+  products.addEventListener("touchstart", dragStart);
+  products.addEventListener("touchmove", dragging);
+  document.addEventListener("touchend", dragStop);
+
+})();  // IIFE sonu
 
 // Create-the-Top-Selling-section end
+
