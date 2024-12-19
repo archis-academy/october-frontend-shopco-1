@@ -458,6 +458,8 @@
 
 .brands {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   align-items: center;
   background-color: var(--fnt-black);
@@ -481,7 +483,7 @@
 }
 
 .brands-part img:hover {
-  transform: scale(1.1); 
+  transform: scale(1.1);
 }
 
 @media (max-width: 1060px) {
@@ -698,6 +700,200 @@
 
 /* melikeaksoy-OC-12-the-new-arrivals-section-response end */ 
 
+/* melikeaksoy-OC-14-Create-the-Top-Selling-section start */
+
+.top-selling {
+  padding: 10px;
+  text-align: center;
+  max-width: 1280px;
+  width: 100%;
+  margin: 64px auto 80px;
+}
+
+.top-selling h1 {
+  font-family: var(--fnt-family-integral);
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 55px;
+}
+
+.top-selling .products {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+  margin: auto;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.products::-webkit-scrollbar {
+  display: none;
+}
+
+.top-selling .product {
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+  max-width: 295px;
+  cursor: pointer;
+}
+
+.products.dragging .product {
+  cursor: grab;
+  user-select: none;
+}
+
+.products.expanded {
+  overflow: hidden;
+  flex-wrap: wrap;
+  max-width: 1280px;
+  justify-content: center;
+}
+
+.image-container {
+  width: 295px;
+  height: 298px;
+  padding: 45px;
+  background-color: #f0eeed;
+  border-radius: 24px;
+}
+
+.top-selling-image {
+  transition: transform 0.5s;
+  cursor: pointer;
+  mix-blend-mode: multiply;
+  width: 100%;
+  height: 100%;
+}
+.top-selling-image:hover {
+  transform: scale(1.1);
+}
+.top-selling h2 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  margin-top: 16px;
+}
+
+.current-price,
+.original-price,
+.price {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 32.4px;
+}
+
+.original-price {
+  color: rgba(0, 0, 0, 0.4);
+  text-decoration: line-through;
+}
+
+.view-all {
+  padding: 16px 54px;
+  border-radius: 62px;
+  font-size: 16px;
+  line-height: 21.6px;
+  margin-top: 36px;
+  border: 1px solid #f0eeed;
+  width: 218px;
+  height: 52px;
+  cursor: pointer;
+  color: black;
+}
+
+.price {
+  display: flex;
+  gap: 10px;
+}
+.discount {
+  background-color: rgba(255, 51, 51, 0.1);
+  width: 58px;
+  height: 28px;
+  border-radius: 62px;
+  color: #ff3333;
+  font-size: 12px;
+  line-height: 16.2px;
+  border: none;
+  padding: 6px 14px;
+}
+.nt-stars-and-puan {
+  width: 150px;
+  padding-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.product .stars {
+  margin-right: 13px;
+  display: flex;
+}
+
+.product .point-stars {
+  font-size: 16px;
+  line-height: 18.9px;
+  font-weight: 400;
+}
+
+.product .star {
+  width: 20px;
+  height: 20px;
+  background-color: gray;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  margin-right: 5px;
+}
+
+.star.full {
+  background-color: #ffc633;
+}
+
+.star.half {
+  background: linear-gradient(to right, #ffc633 50%, #dad0cc 50%);
+}
+.star.empty {
+  background-color: #dad0cc;
+}
+
+/* melikeaksoy-OC-14-Create-the-Top-Selling-section end */
+
+/* melikeaksoy-OC-14-Create-the-Top-Selling-section-response start */
+
+@media (max-width: 768px) {
+
+.top-selling {
+  margin: 32px auto 40px;
+}
+
+.top-selling h1 {
+  font-size: 40px;
+  margin-bottom: 35px;
+}
+
+}
+
+/* melikeaksoy-OC-14-Create-the-Top-Selling-section-response end */
+
+
 /*Browse By Dress Stylee Section Start*/
 .browse-by-dress-background {
   display: flex;
@@ -712,7 +908,7 @@
 .title-of-browse {
   text-align: center;
   font-family: var(--fnt-family-integral);
-  font-weight: 700; 
+  font-weight: 700;
   font-size: 48px;
   line-height: 57.6px;
   padding-bottom: 30px;
@@ -742,7 +938,7 @@
   text-decoration: none;
   outline: none;
   color: inherit;
-  cursor: pointer;  
+  cursor: pointer;
 }
 
 .second-container {
@@ -789,7 +985,7 @@
     align-items: center;
     gap: 25px;
   }
-  
+
   .second-container {
     display: flex;
     flex-direction: column;
@@ -804,7 +1000,7 @@
   .browse-second-form {
     width: 407px;
     height: 290px;
-  }  
+  }
 }
 
 @media screen and (max-width: 518px) {
@@ -828,11 +1024,10 @@
   .browse-second-form {
     width: 300px;
     height: 290px;
-  } 
+  }
 }
 
 @media screen and (max-width: 390px) {
-  
   .browse-first-form {
     width: 200px;
     height: 200px;
@@ -841,7 +1036,7 @@
   .browse-second-form {
     width: 200px;
     height: 200px;
-  } 
+  }
 }
 /*Browse By Dress Stylee Section Responsiveness End*/
 
@@ -1021,7 +1216,6 @@ footer {
 /* melikeaksoy/OC-23-implement-the-footer start */
 
 @media (max-width: 1300px) and (min-width: 1000px) {
-
   .footer-wrapper {
     justify-content: center;
     padding: 0 15px;
@@ -1050,7 +1244,6 @@ footer {
 }
 
 @media (max-width: 1000px) {
-
   footer {
     padding: 10px;
   }
@@ -1139,9 +1332,9 @@ footer {
     margin-bottom: -150px;
   }
 }
-  @media (max-width: 490px) {
-    .newsletter-section {
-      margin-bottom: -170px;
-    }
+@media (max-width: 490px) {
+  .newsletter-section {
+    margin-bottom: -170px;
   }
+}
 /* melikeaksoy/OC-23-implement-the-footer end */
