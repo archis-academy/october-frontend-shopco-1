@@ -22,59 +22,63 @@ document
 
 // melike/OC-12-the-new-arrivals-section-start
 
-let Liste = [];
-const getProducts = () => {
-  fetch("https://fakestoreapi.com/products")
-    .then((res) => res.json())
-    .then((list) => {
-      Liste = list;
-      getContainers();
-    })
-    .catch((err) => {
-      console.error(err);
-      container.innerHTML = "<p>Error loading products.</p>";
-    });
-};
-setRating = (rating) => {
-  let starsHTML = "";
-  for (let i = 1; i <= 5; i++) {
-    if (i <= Math.floor(rating)) {
-      starsHTML += '<div class="star full"></div>';
-    } else if (i <= Math.ceil(rating)) {
-      starsHTML += '<div class="star half"></div>';
-    } else {
-      starsHTML += '<div class="star empty"></div>';
-    }
-  }
-  return starsHTML;
-};
-
-const navigateDetail = (id) => {
+window.navigateDetail = (id) => {
   window.location.href = `product-detail.html?id=${id}`;
 };
-const getContainers = () => {
-  const container = document.querySelector(".new-arrivals-products");
-  container.innerHTML = "";
+(function () {
+  let Liste = [];
+  const getProducts = () => {
+    fetch("https://fakestoreapi.com/products")
+      .then((res) => res.json())
+      .then((list) => {
+        Liste = list;
+        getContainers();
+      })
+      .catch((err) => {
+        console.error(err);
+        container.innerHTML = "<p>Error loading products.</p>";
+      });
+  };
+  setRating = (rating) => {
+    let starsHTML = "";
+    for (let i = 1; i <= 5; i++) {
+      if (i <= Math.floor(rating)) {
+        starsHTML += '<div class="star full"></div>';
+      } else if (i <= Math.ceil(rating)) {
+        starsHTML += '<div class="star half"></div>';
+      } else {
+        starsHTML += '<div class="star empty"></div>';
+      }
+    }
+    return starsHTML;
+  };
 
-  Liste.slice(0, 20).forEach((eleman) => {
-    const discountPrice = eleman.price * 0.6;
-    const itemHTML = `
+  const getContainers = () => {
+    const container = document.querySelector(".new-arrivals-products");
+    container.innerHTML = "";
+
+    Liste.slice(0, 20).forEach((eleman) => {
+      const discountPrice = eleman.price * 0.6;
+      const itemHTML = `
 <div class="new-arrivals-product">
-<div onclick="navigateDetail(${eleman.id})" class="new-arrivals-image-container">
-              <img onclick="navigateDetail(${eleman.id
-})" class="new-arrivals-image"
+<div onclick="navigateDetail(${
+        eleman.id
+      })" class="new-arrivals-image-container">
+              <img onclick="navigateDetail(${
+                eleman.id
+              })" class="new-arrivals-image"
                 src="${eleman.image}"
                 alt="${eleman.title}"
               />
-              </div> 
+              </div>
               <h2>${eleman.title}</h2>
               <div class="nt-stars-and-puan">
           <div class="stars">
-            ${setRating(eleman.rating.rate)} 
-              </div>  
+            ${setRating(eleman.rating.rate)}
+              </div>
             <div id="point-stars">${eleman.rating.rate}/5</div>
          </div>
-        
+
         <div class="price">
         <p class="current-price">$${discountPrice.toFixed(2)}</p>
               <p class="original-price">$${eleman.price}</p>
@@ -82,60 +86,62 @@ const getContainers = () => {
         </div>
             </div>
     `;
-    container.innerHTML += itemHTML;
-  });
-};
-getProducts();
+      container.innerHTML += itemHTML;
+    });
+  };
+  getProducts();
 
-let container = document.querySelector(".new-arrivals-products");
-let viewAllButton = document.querySelector(".new-arrivals-button");
-let isExpanded = false;
+  let container = document.querySelector(".new-arrivals-products");
+  let viewAllButton = document.querySelector(".new-arrivals-button");
+  let isExpanded = false;
 
-const toggleProductsView = () => {
+  const toggleProductsView = () => {
+    if (isExpanded) {
+      container.classList.remove("expanded");
+      viewAllButton.textContent = "View All";
+    } else {
+      container.classList.add("expanded");
+      viewAllButton.textContent = "Hide All";
+    }
+    isExpanded = !isExpanded;
+  };
 
-if (isExpanded) {
-  container.classList.remove("expanded");
-  viewAllButton.textContent = "View All";
-} else {
-  container.classList.add("expanded");
-  viewAllButton.textContent = "Hide All";
-}
-isExpanded = !isExpanded;
-};
+  viewAllButton.addEventListener("click", toggleProductsView);
 
-viewAllButton.addEventListener("click", toggleProductsView);
+  const products = document.querySelector(".new-arrivals-products");
+  const firstCardWidth = products.querySelector(
+    ".new-arrivals-product"
+  ).offsetWidth;
 
-const products = document.querySelector(".new-arrivals-products")
-const firstCardWidth = products.querySelector(".new-arrivals-product").offsetWidth
+  let isDragging = false;
+  let startX = 0;
+  let startScrollLeft = 0;
 
-let isDragging = false
-let startX = 0
-let startScrollLeft = 0
+  const dragStart = (e) => {
+    e.preventDefault();
+    isDragging = true;
+    startX = e.pageX || e.touches[0].pageX;
+    startScrollLeft = products.scrollLeft;
+    products.classList.add("dragging");
+  };
 
-const dragStart = (e) => {
-  e.preventDefault();
-  isDragging = true
-  startX = e.pageX || e.touches[0].pageX;
-  startScrollLeft = products.scrollLeft
-  products.classList.add("dragging")
-}
+  const dragStop = () => {
+    isDragging = false;
+    products.classList.remove("dragging");
+  };
 
-const dragStop = () => {
-  isDragging = false
-  products.classList.remove("dragging")
-}
+  const dragging = (e) => {
+    if (!isDragging) return;
+    products.scrollLeft = startScrollLeft - (e.pageX - startX) * 1.5;
+  };
 
-const dragging = (e) => {
-  if (!isDragging) return
-  products.scrollLeft = startScrollLeft - (e.pageX - startX) * 1.5;
-}
+  products.addEventListener("mouseover", dragging);
+  products.addEventListener("mousedown", dragStart);
+  document.addEventListener("mouseup", dragStop);
 
-products.addEventListener("mouseover", dragging)
-products.addEventListener("mousedown", dragStart)
-document.addEventListener("mouseup", dragStop)
+  products.addEventListener("touchstart", dragStart);
+  products.addEventListener("touchmove", dragging);
+  document.addEventListener("touchend", dragStop);
 
-products.addEventListener("touchstart", dragStart);
-products.addEventListener("touchmove", dragging);
-document.addEventListener("touchend", dragStop);
-
-// melike/OC-12-the-new-arrivals-section-end
+  // melike/OC-12-the-new-arrivals-section-end
+})();
