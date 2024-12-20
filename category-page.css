@@ -323,6 +323,460 @@
 
 /* nursahtuncel-OC-4-Desing-the-Header-Section end*/
 
+.main-design-container{
+ display: flex;
+ flex-direction: column;
+ width: 90%;
+ margin: 0 auto;
+}
+
+.main-design{
+  display: flex;
+  gap: 20px; 
+  position: relative;
+  
+}
+
+/*pages-way Start*/
+.pages-way-container{
+  display: flex;
+}
+
+.pages-way {
+  display: flex;  
+  padding: 20px 0px;  
+}
+
+.pages-way p {
+  font-family: var(--fnt-family-satoshi);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--hdr-bg-clr);
+}
+
+.pages-way p:first-child {
+  color: rgba(0, 0, 0, 0.6);
+  padding-right: 4px;
+}
+
+.pages-way img {
+  width: 16px;
+  height: 16px;
+  margin-right: 12px;
+}
+
+/*pages-way End*/
+
+/* Category Filter Section Start*/
+.category-filter {
+  display: flex;
+  flex-direction: column;
+  width: 295px;
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 20px 24px;
+  gap: 24px;
+  background-color: var(--wht-clr);
+}
+
+.cf-main-filter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cf-main-filter h6 {
+  font-family: var(--fnt-family-satoshi);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.cf-main-filter img {
+  cursor: pointer;
+}
+
+.cf-drop-down-filter {
+  display: none;
+}
+
+.cf-drop-down-filter.active {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: var(--wht-clr);
+}
+
+.cf-product-container {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+}
+
+.cf-product-container ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+
+}
+
+.cf-product-container ul li {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--fnt-family-satoshi);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--hdr-bg-clr);
+  opacity: 60%;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cf-product-styles ul li img {
+  width: 16px;
+  height: 16px;
+}
+
+.cf-price-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-bottom: 1px solid;
+  border-color: rgba(0, 0, 0, 0.1);
+  padding-bottom: 10px;
+
+}
+
+.cf-price-container h6 {
+  font-family: var(--fnt-family-satoshi);
+  color: var(--hdr-bg-clr);
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.cf-price {
+  display: none;
+}
+
+.cf-price.active {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.cf-price-img {
+  transition: transform 0.3 ease;
+}
+
+.cf-price-img.rotate {
+  transform: rotate(180deg);
+}
+
+.cf-price-double-input {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 6px;
+  border-radius: 20px;
+  background-color: var(--ftr-imgs-bg-clr);
+}
+
+.cf-input-track {
+  position: absolute;
+  z-index: 2;
+  left: 0%;
+  right: 0%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: var(--hdr-bg-clr);
+}
+
+.price-input[type="range"] {
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+  pointer-events: none;
+  appearance: none;
+  outline: none;
+  z-index: 3;
+}
+
+.price-input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-top: -7px;
+  background-color: var(--hdr-bg-clr);
+  pointer-events: auto;
+  z-index: 3;
+  cursor: pointer;
+  left: 25%;
+  right: 25%;
+}
+
+.price-input[type="range"]::-moz-range-thumb {
+  -moz-appearance: none;
+  width: 20px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: -7px;
+  background-color: var(--hdr-bg-clr);
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.price-input[ type="range"]::-ms-thumb {
+  -ms-progress-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--hdr-bg-clr);
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.price-tag {
+  position: absolute;
+  display: block;
+  
+}
+
+#minPrice {
+  
+  transform: translateX(-18px) translateY(100%);
+}
+
+#maxPrice {
+  
+  transform: translateY(-150%);
+}
+
+
+.cf-colors-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-bottom: 1px solid;
+  border-color: rgba(0, 0, 0, 0.1);
+  padding-bottom: 10px;
+}
+
+.cf-colors {
+  display: none;
+}
+
+.cf-colors.active {
+  display: flex;
+}
+
+.cf-colors-img {
+  transition: transform 0.3 ease;
+}
+
+.cf-colors-img.rotate {
+  transform: rotate(180deg);
+
+}
+
+.cf-colors-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cf-colors-title {
+  cursor: pointer;
+}
+
+.cf-colors-container div h6 {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--fnt-family-satoshi);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--hdr-bg-clr);
+}
+
+.cf-colors {
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cf-color-btn {
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  border: 2px solid;
+  border-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+#cf-color-btn-a {
+  background-color: #00C12B;
+}
+
+#cf-color-btn-b {
+  background-color: #F50606;
+}
+
+#cf-color-btn-c {
+  background-color: #F5DD06;
+}
+
+#cf-color-btn-d {
+  background-color: #F57906;
+}
+
+#cf-color-btn-e {
+  background-color: #06CAF5;
+}
+
+#cf-color-btn-f {
+  background-color: #063AF5;
+}
+
+#cf-color-btn-g {
+  background-color: #7D06F5;
+}
+
+#cf-color-btn-h {
+  background-color: #F506A4;
+}
+
+#cf-color-btn-i {
+  background-color: #FFFFFF;
+}
+
+#cf-color-btn-j {
+  background-color: #000000;
+}
+
+.cf-size-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+
+.cf-size-title {
+  cursor: pointer;
+}
+
+.cf-size-title h6 {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--fnt-family-satoshi);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--hdr-bg-clr);
+}
+
+.cf-sizes-img {
+  transition: transform 0.3 ease;
+}
+
+.cf-sizes-img.rotate {
+  transform: rotate(180deg);
+
+}
+
+.cf-sizes {
+  display: none;
+}
+
+.cf-sizes.active {
+  display: block;
+  gap: 8px;
+}
+
+.cf-sizes button {
+  font-family: var(--fnt-family-satoshi);
+  font-weight: 400;
+  font-size: 14px;
+  background-color: var(--ftr-imgs-bg-clr);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 62px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.cf-sizes button:hover {
+  background-color: var(--hdr-bg-clr);
+  color: var(--wht-clr);
+}
+
+.filter-btn {
+  font-family: var(--fnt-family-satoshi);
+  font-weight: 500;
+  font-size: 14px;
+  background-color: var(--hdr-bg-clr);
+  color: var(--wht-clr);
+  padding: 16px 54px;
+  border: none;
+  border-radius: 62px;
+  cursor: pointer;
+}
+
+.filter-btn:hover{
+  font-size: 16px;
+
+}
+
+/* Category Filter Section End*/
+
+/* Category Filter Section Responsiveness Start*/
+@media (max-width: 700px) {
+  .category-filter {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    border-radius: 50%;
+    padding: 8px;
+  }
+
+  .category-filter.active {
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 20px 24px;
+    gap: 24px;
+  }
+
+  .cf-main-filter {
+    display: flex;
+    justify-content: end;
+    padding-bottom: 0px;
+    
+  }
+
+  .cf-main-filter h6 {
+    display: none;
+  }
+
+  .cf-main-filter img {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+}
+
+/* Category Filter Section Responsiveness End*/
+
 /* melikeaksoy/OC-36-Category-Products-Section start */
 
 .category-page {
@@ -332,9 +786,8 @@
   max-width: 925px;
   width: 100%;
   gap: 30px;
-  margin: 60px 100px 80px 20px;
   font-family: var(--fnt-family-satoshi);
-  margin: 60px 100px 80px auto;
+  
 }
 
 .category-page h1 {
@@ -471,7 +924,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 216px;
+  
   width: 100%;
   max-width: 925px;
 }
@@ -882,3 +1335,5 @@ footer {
   }
 }
 /* melikeaksoy/OC-23-implement-the-footer end */
+
+

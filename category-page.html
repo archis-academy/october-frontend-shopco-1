@@ -1,242 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="category-page.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="category-page.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
-    <title>Shop.Co</title>
-  </head>
-  <body>
-    <!-- esra/OC-6-implement-promo-banner-start -->
-    <section class="implement-promo-banner">
-      <div class="ip-banner-info-box">
-        <div class="ip-banner-explain">
-          Sign up and get 20% off to your first order.
-        </div>
-        <div class="ip-banner-explain2">Sign Up Now</div>
-        <div class="banner_close_icon">
-          <img
-            class="ip-banner-close-icon"
-            src="images/banner_close_icon.png"
-            alt="close_icon"
-          />
-        </div>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <title>Shop.Co</title>
+</head>
+
+<body>
+  <!-- esra/OC-6-implement-promo-banner-start -->
+  <section class="implement-promo-banner">
+    <div class="ip-banner-info-box">
+      <div class="ip-banner-explain">
+        Sign up and get 20% off to your first order.
       </div>
-    </section>
-    <!-- esra/OC-6-implement-promo-banner-end -->
-    <header>
-      <!-- nursahtuncel-OC-4 hero section start -->
+      <div class="ip-banner-explain2">Sign Up Now</div>
+      <div class="banner_close_icon">
+        <img class="ip-banner-close-icon" src="images/banner_close_icon.png" alt="close_icon" />
+      </div>
+    </div>
+  </section>
+  <!-- esra/OC-6-implement-promo-banner-end -->
+  <header>
+    <!-- nursahtuncel-OC-4 hero section start -->
 
-      <div class="hamburger-menu-other-side">
-        <div class="nt-hero-section">
-          <div class="nt-hero-section-content">
-            <div class="nt-logo">
-              <div>
-                <img
-                  class="nt-hamburger-menu-icon"
-                  onclick="toggleMenu()"
-                  src="images/hamburger-menu-icon.svg"
-                  alt="hamburger menu"
-                />
-              </div>
-              <div>SHOP.CO</div>
+    <div class="hamburger-menu-other-side">
+      <div class="nt-hero-section">
+        <div class="nt-hero-section-content">
+          <div class="nt-logo">
+            <div>
+              <img class="nt-hamburger-menu-icon" onclick="toggleMenu()" src="images/hamburger-menu-icon.svg"
+                alt="hamburger menu" />
+            </div>
+            <div>SHOP.CO</div>
+          </div>
+
+          <div class="nt-hero-section-content-ul">
+            <ul>
+              <li>
+                <a href="" class="nt-list nt-list-2">Shop <img src="images/assagi-isaret-eden-ok.png" alt="" /></a>
+              </li>
+              <li><a href="" class="nt-list nt-list-2">On Sale</a></li>
+              <li><a href="" class="nt-list nt-list-2">New Arrivals</a></li>
+              <li><a href="" class="nt-list nt-list-2">Brands</a></li>
+            </ul>
+          </div>
+
+          <div class="nt-hero-section-search-box">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="Search for products..." />
+          </div>
+
+          <div class="nt-icons">
+            <div class="nt-secret-search-box">
+              <input type="text" placeholder="Search.." />
             </div>
 
-            <div class="nt-hero-section-content-ul">
-              <ul>
-                <li>
-                  <a href="" class="nt-list nt-list-2"
-                    >Shop <img src="images/assagi-isaret-eden-ok.png" alt=""
-                  /></a>
-                </li>
-                <li><a href="" class="nt-list nt-list-2">On Sale</a></li>
-                <li><a href="" class="nt-list nt-list-2">New Arrivals</a></li>
-                <li><a href="" class="nt-list nt-list-2">Brands</a></li>
-              </ul>
-            </div>
+            <img class="nt-search-icon nt-left-icon nt-left-icon-2" onclick="toggleSearch()"
+              src="images/nt-search-icon.svg" alt="" />
+            <img class="nt-left-icon" src="images/nt-basket-icon.svg" alt="" />
 
-            <div class="nt-hero-section-search-box">
-              <i class="fa fa-search"></i>
-              <input type="text" placeholder="Search for products..." />
-            </div>
-
-            <div class="nt-icons">
-              <div class="nt-secret-search-box">
-                <input type="text" placeholder="Search.." />
-              </div>
-
-              <img
-                class="nt-search-icon nt-left-icon nt-left-icon-2"
-                onclick="toggleSearch()"
-                src="images/nt-search-icon.svg"
-                alt=""
-              />
-              <img
-                class="nt-left-icon"
-                src="images/nt-basket-icon.svg"
-                alt=""
-              />
-
-              <img class="nt-left-icon" src="images/nt-user-icon.svg" alt="" />
-            </div>
+            <img class="nt-left-icon" src="images/nt-user-icon.svg" alt="" />
           </div>
         </div>
       </div>
-      <div class="nt-hamburger-menu-2">
-        <div class="navbar_items">
-          <ul class="nav-menu">
-            <li class="nav-link">Shop</li>
-            <li class="nav-item">On Sale</li>
-            <li class="nav-item">New Arrivals</li>
-            <li class="nav-item">Brands</li>
-          </ul>
-        </div>
+    </div>
+    <div class="nt-hamburger-menu-2">
+      <div class="navbar_items">
+        <ul class="nav-menu">
+          <li class="nav-link">Shop</li>
+          <li class="nav-item">On Sale</li>
+          <li class="nav-item">New Arrivals</li>
+          <li class="nav-item">Brands</li>
+        </ul>
       </div>
-      <!-- nursahtuncel-OC-4 hero section end-->
+    </div>
+    <!-- nursahtuncel-OC-4 hero section end-->
+
+  </header>
+
+  <main>
+    <div class="main-design-container">
+      <!--pages-way Start-->
+      <section>
         
-    </header>
-    
-    <main>
-      
+          <div class="pages-way">
+            <p>Home</p>
+            <img src="../../images/Category-Filter-Section/right.svg" alt="#">
+            <p>Casual</p>
+          </div>
+        
+      </section>
+      <!--pages-way End-->
+
+      <div class="main-design">
+        <!--Category-Filter-Section Start -->
+        <section>
+          <div class="category-filter">
+
+            <div class="cf-main-filter" onclick="toggleFilter()">
+              <h6>Filters</h6>
+              <img src="../../images/Category-Filter-Section/filter.svg">
+            </div>
+
+            <div class="cf-drop-down-filter">
+              <div class="cf-product-container">
+                <ul>
+                  <li data-category="women's clothing">Women<img src="../../images/Category-Filter-Section/right.svg"></li>
+                  <li data-category="men's clothing">Men<img src="../../images/Category-Filter-Section/right.svg"></li>
+                  <li data-category="jewelery">Jewelery<img src="../../images/Category-Filter-Section/right.svg"></li>
+                  <li data-category="electronics">Electronics<img src="../../images/Category-Filter-Section/right.svg"></li>
+                </ul>
+              </div>
+
+              <div class="cf-price-container">
+                <h6 onclick="togglePrice()">Price <img class="cf-price-img"
+                    src="../../images/Category-Filter-Section/up.svg"></h6>
+
+                <div class="cf-price">
+
+                  <div class="cf-price-double-input">
+                    <span class="cf-input-track"></span>
+
+                    <input class="price-input" id="minValue" oninput="slideMin()" type="range" min="0" max="1000"
+                      value="0">
+                    <input class="price-input" id="maxValue" oninput="slideMax()" type="range" min="0" max="1000"
+                      value="1000">
+
+                    <span class="price-tag" id="minPrice">0</span>
+                    <span class="price-tag" id="maxPrice">1000</span>
+
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="cf-colors-container">
+                <div class="cf-colors-title">
+                  <h6 onclick="toggleColors()">Colors <img class="cf-colors-img"
+                      src="../../images/Category-Filter-Section/up.svg"></h6>
+
+                </div>
+
+                <div class="cf-colors">
+                  <div class="cf-colors-row">
+                    <button class="cf-color-btn" id="cf-color-btn-a"></button>
+                    <button class="cf-color-btn" id="cf-color-btn-b"></button>
+                    <button class="cf-color-btn" id="cf-color-btn-c"></button>
+                    <button class="cf-color-btn" id="cf-color-btn-d"></button>
+                    <button class="cf-color-btn" id="cf-color-btn-e"></button>
+                  </div>
+
+                  <div class="cf-colors-row">
+                    <button class="cf-color-btn" id="cf-color-btn-f"></button>
+                    <button class="cf-color-btn" id="cf-color-btn-g"></button>
+                    <button class="cf-color-btn" id="cf-color-btn-h"></button>
+                    <button class="cf-color-btn" id="cf-color-btn-i"></button>
+                    <button class="cf-color-btn" id="cf-color-btn-j"></button>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="cf-size-container">
+                <div class="cf-size-title" onclick="toggleSize()">
+                  <h6>Size <img class="cf-sizes-img" src="../../images/Category-Filter-Section/up.svg"></h6>
+                </div>
+
+                <div class="cf-sizes">
+                  <button>XX-Small</button>
+                  <button>X-Small</button>
+                  <button>Small</button>
+                  <button>Medium</button>
+                  <button>Large</button>
+                  <button>X-Large</button>
+                  <button>XX-Large</button>
+                  <button>3X-Large</button>
+                  <button>4X-Large</button>
+                </div>
+              </div>
+
+              <button class="filter-btn">Apply Filter</button>
+
+            </div>
+          </div>
+        </section>
+        <!--Category-Filter-Section End -->
+
+
         <!--melikeaksoy/OC-36-Category-Products-Section start -->
 
-<section class="category-page">
-  <div class="category-page-title">
-    <h1>Casual</h1>
-    <div class="page-title-right">
-      <span>Showing 1-10 of 100 Products</span>
-      <div class="title-sort">
-      <span>Sort by:</span>
-      <select id="sort-options">
-        <option value="popular">Most Popular</option>
-        <option value="low-to-high">Price: Low to High</option>
-        <option value="high-to-low">Price: High to Low</option>
-      </select>
-    </div>
-  </div>
-</div>
-  <div class="products">
-    <div class="product">   
-    </div>
-  </div>
-  <div class="pagination">
-    <button class="previous"><img src="images/category/arrow-left.svg">Previous</button>
-    <div class="page-numbers"></div>
-    <button class="next">Next<img src="images/category/arrow-right.svg"></button>
-  </div>
-</section>
+        <section class="category-page">
+          <div class="category-page-title">
+            <h1>Casual</h1>
+            <div class="page-title-right">
+              <span>Showing 1-10 of 100 Products</span>
+              <div class="title-sort">
+                <span>Sort by:</span>
+                <select id="sort-options">
+                  <option value="popular">Most Popular</option>
+                  <option value="low-to-high">Price: Low to High</option>
+                  <option value="high-to-low">Price: High to Low</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="products">
+            <div class="product">
+            </div>
+          </div>
+          <div class="pagination">
+            <button class="previous"><img src="images/category/arrow-left.svg">Previous</button>
+            <div class="page-numbers"></div>
+            <button class="next">Next<img src="images/category/arrow-right.svg"></button>
+          </div>
+        </section>
 
         <!--melikeaksoy/OC-36-Category-Products-Section end -->
 
+      </div>
+
+
+    </div>
     <!-- BeyzanurMete-OC-20 Implement the Newsletter  section start -->
     <div class="newsletter-section">
-        <div class="newsletter-title">
-            STAY UP TO DATE ABOUT <br> OUR LATEST OFFERS
-        </div>
-        <div class="newsletter-form">
-            
-            <img src="images/Frame.png" alt="Email Icon" class="input-icon">
-            <input type="email" class="newsletter-input" placeholder="Enter your email address" />
-          
-            <button class="newsletter-button">Subscribe to Newsletter</button>
-        </div>
-        <!-- BeyzanurMete-OC-20 Implement-the-Newsletter-section End -->
-    </main>
-<!--melikeaksoy/OC-22-implement-the-footer start -->
-    <footer>
-      <div class="footer-wrapper">
-        <div class="footer-container">
-          <div class="footer-logo">
-            <h2>SHOP.CO</h2>
-            <p>
-              We have clothes that suit your style and which you're proud to
-              wear. From women to men.
-            </p>
-            <div class="social-icons">
-              <a href="#"
-                ><i class="twitter-icon"
-                  ><img src="images/footer/Twitter.svg" alt="Twitter" /></i
-              ></a>
-              <a href="#"
-                ><i class="facebook-icon"
-                  ><img src="images/footer/Facebook.svg" alt="Facebook" /></i
-              ></a>
-              <a href="#"
-                ><i class="instagram-icon"
-                  ><img src="images/footer/Instagram.svg" alt="Instagram" /></i
-              ></a>
-              <a href="#"
-                ><i class="github-icon"
-                  ><img src="images/footer/Github.svg" alt="Github" /></i
-              ></a>
-            </div>
-          </div>
-          <div class="footer-right">
-            <div class="footer-column">
-              <h4>COMPANY</h4>
-              <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Works</a></li>
-                <li><a href="#">Career</a></li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <h4>HELP</h4>
-              <ul>
-                <li><a href="#">Customer Support</a></li>
-                <li><a href="#">Delivery Details</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <h4>FAQ</h4>
-              <ul>
-                <li><a href="#">Account</a></li>
-                <li><a href="#">Manage Deliveries</a></li>
-                <li><a href="#">Orders</a></li>
-                <li><a href="#">Payments</a></li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <h4>RESOURCES</h4>
-              <ul>
-                <li><a href="#">Free eBooks</a></li>
-                <li><a href="#">Development Tutorial</a></li>
-                <li><a href="#">How to - Blog</a></li>
-                <li><a href="#">Youtube Playlist</a></li>
-              </ul>
-            </div>
+      <div class="newsletter-title">
+        STAY UP TO DATE ABOUT <br> OUR LATEST OFFERS
+      </div>
+      <div class="newsletter-form">
+
+        <img src="images/Frame.png" alt="Email Icon" class="input-icon">
+        <input type="email" class="newsletter-input" placeholder="Enter your email address" />
+
+        <button class="newsletter-button">Subscribe to Newsletter</button>
+      </div>
+      <!-- BeyzanurMete-OC-20 Implement-the-Newsletter-section End -->
+  </main>
+  <!--melikeaksoy/OC-22-implement-the-footer start -->
+  <footer>
+    <div class="footer-wrapper">
+      <div class="footer-container">
+        <div class="footer-logo">
+          <h2>SHOP.CO</h2>
+          <p>
+            We have clothes that suit your style and which you're proud to
+            wear. From women to men.
+          </p>
+          <div class="social-icons">
+            <a href="#"><i class="twitter-icon"><img src="images/footer/Twitter.svg" alt="Twitter" /></i></a>
+            <a href="#"><i class="facebook-icon"><img src="images/footer/Facebook.svg" alt="Facebook" /></i></a>
+            <a href="#"><i class="instagram-icon"><img src="images/footer/Instagram.svg" alt="Instagram" /></i></a>
+            <a href="#"><i class="github-icon"><img src="images/footer/Github.svg" alt="Github" /></i></a>
           </div>
         </div>
-  
-        <div class="footer-separator"></div>
-  
-        <div class="footer-bottom">
-          <p>Shop.co © 2000-2023, All Rights Reserved</p>
-          <div class="payment-icons">
-            <img src="images/footer/visa-icon.svg" alt="Visa" />
-            <img src="images/footer/mastercard-icon.svg" alt="MasterCard" />
-            <img src="images/footer/paypal-icon.svg" alt="PayPal" />
-            <img src="images/footer/applepay-icon.svg" alt="Apple Pay" />
-            <img src="images/footer/googlepay-icon.svg" alt="Google Pay" />
+        <div class="footer-right">
+          <div class="footer-column">
+            <h4>COMPANY</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Works</a></li>
+              <li><a href="#">Career</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>HELP</h4>
+            <ul>
+              <li><a href="#">Customer Support</a></li>
+              <li><a href="#">Delivery Details</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>FAQ</h4>
+            <ul>
+              <li><a href="#">Account</a></li>
+              <li><a href="#">Manage Deliveries</a></li>
+              <li><a href="#">Orders</a></li>
+              <li><a href="#">Payments</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>RESOURCES</h4>
+            <ul>
+              <li><a href="#">Free eBooks</a></li>
+              <li><a href="#">Development Tutorial</a></li>
+              <li><a href="#">How to - Blog</a></li>
+              <li><a href="#">Youtube Playlist</a></li>
+            </ul>
           </div>
         </div>
       </div>
-    </footer>
-    <!-- melikeaksoy/OC-22-implement-the-footer end -->
-  </body>
-  <script src="category-page.js"></script>
-</html>
 
-    
+      <div class="footer-separator"></div>
+
+      <div class="footer-bottom">
+        <p>Shop.co © 2000-2023, All Rights Reserved</p>
+        <div class="payment-icons">
+          <img src="images/footer/visa-icon.svg" alt="Visa" />
+          <img src="images/footer/mastercard-icon.svg" alt="MasterCard" />
+          <img src="images/footer/paypal-icon.svg" alt="PayPal" />
+          <img src="images/footer/applepay-icon.svg" alt="Apple Pay" />
+          <img src="images/footer/googlepay-icon.svg" alt="Google Pay" />
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- melikeaksoy/OC-22-implement-the-footer end -->
+</body>
+<script src="category-page.js"></script>
+
+</html>
