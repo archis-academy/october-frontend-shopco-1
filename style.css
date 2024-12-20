@@ -458,6 +458,11 @@
 /* nursahtuncel-OC-29-ımplement the you might also like section end*/
 
 /* Create the Testimonial Section Start*/
+.ctt-section{
+  width: 90%;
+  margin: 0 auto;
+}
+
 .ctt-first-row {
   display: flex;
   max-width: 1240px;
@@ -495,29 +500,7 @@
 }
 
 .ctt-secodn-row-design{
-  background-color: aqua;
   width: 100px;
-}
-
-.ctt-left-design{
-  background-color: rgb(255, 255, 255);
-  opacity: 85%;
-  filter: blur(8px);
-  width: 17.5%;
-  height: 206px;
-  position: absolute;
-  left: 0;
-}
-
-.ctt-right-design{
-  background-color: rgb(255, 255, 255);
-  opacity: 85%;
-  filter: blur(8px);
-  width: 17.5%;
-  height: 206px;
-  position: absolute;
-  right: 0;
-  z-index: 99;
 }
 
 .slider{
@@ -532,8 +515,30 @@
   z-index: -1;
 }
 
+.ctt-left-design{
+  background-color: rgb(255, 255, 255);
+  opacity: 85%;
+  filter: blur(8px);
+  width: 17.5%;
+  height: 206px;
+  position: absolute;
+  left: 0;
+  width: 20%;
+}
+
+.ctt-right-design{
+  background-color: rgb(255, 255, 255);
+  opacity: 85%;
+  filter: blur(8px);
+  width: 17.5%;
+  height: 206px;
+  position: absolute;
+  right: 0;
+  width: 20%;
+}
+
 ::-webkit-scrollbar{
-  display: none;
+  display: none; 
 }
 
 .slide{
@@ -588,10 +593,42 @@
   .slider{
     max-width: 840px;
   }
+
+  .ctt-left-design{
+    display: none;
+  }
+  
+  .ctt-right-design{
+    display: none;
+  }
+
+  
 }
 @media screen and (max-width: 944px) {
   .slider{
     max-width: 420px;
   }
+}
+@media screen and (max-width: 475px) {
+  .ctt-first-row {
+    flex-direction: column;
+  }
+
+  .ctt-first-row div{
+    text-align: center;
+  }
+
+  .ctt-arrows{
+    justify-content: space-between;
+  }
+
+  .slider{
+    max-width: 220px;
+  }
+
+  .slide{
+    min-width: 200px;
+  }
+  
 }
 /* Create the Testimonial Section Responsiveness End*/

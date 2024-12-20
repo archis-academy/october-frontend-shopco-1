@@ -56,12 +56,14 @@ document.addEventListener("DOMContentLoaded", function () {
       const prev = document.getElementById('prev');
       const next = document.getElementById('next');
 
+      
+
       next.addEventListener('click', () => {
         const slideWidth = document.querySelector('.slide').offsetWidth;
         if (sliderContainer.scrollLeft + sliderContainer.offsetWidth >= sliderContainer.scrollWidth) {
           sliderContainer.scrollLeft = 0;
         } else {
-          sliderContainer.scrollLeft += slideWidth;
+          sliderContainer.scrollLeft += slideWidth + 20;
         }
         console.log(sliderContainer.scrollLeft);
       });
@@ -71,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (sliderContainer.scrollLeft <= 0) {
           sliderContainer.scrollLeft = sliderContainer.scrollWidth - sliderContainer.offsetWidth;
         } else {
-          sliderContainer.scrollLeft -= slideWidth;
+          sliderContainer.scrollLeft -= slideWidth+20;
         }
         console.log(sliderContainer.scrollLeft);
       });
