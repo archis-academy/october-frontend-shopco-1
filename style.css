@@ -1247,8 +1247,8 @@ li.show > .dropdown-menu {
   border-bottom: none;
 }
 
-.bskt-cart-item span {
-  font-size: 10px;
+.bskt-cart-item span a {
+  font-size: 12px;
   color: black;
 }
 

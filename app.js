@@ -212,10 +212,10 @@ function bsktRenderCartItems() {
   cart.forEach((item, index) => {
     const bsktCartItem = document.createElement("div");
     bsktCartItem.classList.add("bskt-cart-item");
-    const title = item.product.title.length > 30 ? item.product.title.slice(0, 25) + "..." : item.product.title;
+    const title = item.product.title.length > 30 ? item.product.title.slice(0, 30) + "..." : item.product.title;
 
     bsktCartItem.innerHTML = `
-      <span>${title} - (${item.amount})</span>
+      <span><a href="./cart.html">${title} - (${item.amount})</a></span>
       <button class="bskt-cart-remove-btn" data-index="${index}">X</button>
     `;
 
