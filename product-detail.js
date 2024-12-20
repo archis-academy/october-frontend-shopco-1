@@ -179,12 +179,12 @@ addButton.addEventListener("click", () => {
   const product = List.find((item) => item.id === parseInt(id));
 
   let selectedColor = document.querySelector(".pd-hs-color.pd-hs-color-active");
-  selectedColor = selectedColor ? selectedColor.id : null;
+  selectedColor = selectedColor ? selectedColor.id : "gray";
 
   let selectedSize = document.querySelector(
     ".pd-hs-size-button.pd-hs-selected"
   );
-  selectedSize = selectedSize ? selectedSize.textContent : null;
+  selectedSize = selectedSize ? selectedSize.textContent : "Small";
   const amount = parseInt(quantitySpan.textContent);
 
   const cartItem = {
