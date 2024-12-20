@@ -10,4 +10,5 @@
   --hdr-bg-clr: #000000; /*every header background color*/
   --fnt-family-integral: "Integral CF", sans-serif;
   --fnt-family-satoshi: "Satoshi", sans-serif;
+  --fnt-black: black;
 }
