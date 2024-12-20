@@ -56,4 +56,65 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+const bsktBasketIcon = document.getElementById("basketIcon");
+const bsktCartDropdownMenu = document.getElementById("bsktCartDropdownMenu");
+const bsktCartItemsContainer = document.getElementById("bsktCartItemsContainer"); 
+
+bsktBasketIcon.addEventListener("click", (e) => {
+  e.preventDefault();
+  bsktCartDropdownMenu.classList.toggle("bskt-active"); 
+  bsktRenderCartItems();
+});
+
+document.addEventListener("click", (e) => {
+  if (
+    !bsktCartDropdownMenu.contains(e.target) && 
+    e.target !== bsktBasketIcon && 
+    !e.target.classList.contains("bskt-cart-remove-btn") 
+  ) {
+    bsktCartDropdownMenu.classList.remove("bskt-active");
+  }
+  
+  if (e.target === bsktBasketIcon) {
+    bsktCartDropdownMenu.classList.add("bskt-active"); 
+  }
+});
+
+
+function bsktRenderCartItems() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  bsktCartItemsContainer.innerHTML = "";
+
+  if (cart.length === 0) {
+    bsktCartItemsContainer.innerHTML = `<p class="bskt-empty-message">Your Cart is empty!</p>`;
+    return;
+  }
+
+  cart.forEach((item, index) => {
+    const bsktCartItem = document.createElement("div");
+    bsktCartItem.classList.add("bskt-cart-item");
+    const title = item.product.title.length > 30 ? item.product.title.slice(0, 25) + "..." : item.product.title;
+
+    bsktCartItem.innerHTML = `
+      <span>${title} - (${item.amount})</span>
+      <button class="bskt-cart-remove-btn" data-index="${index}">X</button>
+    `;
+
+    bsktCartItemsContainer.appendChild(bsktCartItem);
+  });
+
+  document.querySelectorAll(".bskt-cart-remove-btn").forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const index = e.target.getAttribute("data-index");
+      bsktRemoveCartItem(index); 
+    });
+  });
+}
+
+function bsktRemoveCartItem(index) {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.splice(index, 1); 
+  localStorage.setItem("cart", JSON.stringify(cart)); 
+  bsktRenderCartItems(); 
+}
 // emre-OC-34-dropdown end
