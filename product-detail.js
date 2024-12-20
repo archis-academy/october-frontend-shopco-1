@@ -366,29 +366,26 @@ document
       .querySelector(".review-form-container")
       .scrollIntoView({ behavior: "smooth", block: "center" });
   });
+//product detail sekmesi
+async function getData(productId) {
+  const Data = await fetch(`https://fakestoreapi.com/products/${productId}`);
+  const response = await Data.json();
 
-async function getData() {
-  const tdData = await fetch("https://fakestoreapi.com/products");
-  const response = await tdData.json();
+  function ProductDetailTab(product) {
+    document.getElementById("th-id").textContent = product.id;
+    document.getElementById("th-title").textContent = product.title;
+    document.getElementById("th-description").textContent = product.description;
+    document.getElementById("th-category").textContent = product.category;
+  }
 
-  const productDetailContainer = document.querySelector(".tbody");
-  response.forEach((product) => {
-    const itemHTML = `
-            <tr>
-                <td>${product.id}</td>
-                <td>${product.title}</td>
-                <td>${product.description}</td>
-                <td>$${product.price}</td>
-                <td>${product.category}</td>
-                <td>${product.rating.rate}</td>
-                <td><img src="${product.image}" alt="${product.title}"></td>
-            </tr>
-        `;
-    productDetailContainer.innerHTML += itemHTML;
-  });
+  ProductDetailTab(response);
 }
+window.onload = function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  const productId = urlParams.get("id");
 
-window.onload = getData;
+  getData(productId);
+};
 
 // nursahtuncel-OC-28-review section end
 
@@ -444,7 +441,7 @@ const getAllContainer = () => {
           <p class="nt-new-price-old-price-328">-40%</p>
         </div>
       </div>
-    `;
+   `;
     container.innerHTML += itemHTML;
   });
 
