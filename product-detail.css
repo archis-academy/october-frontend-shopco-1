@@ -515,6 +515,8 @@
 
 /* nursahtuncel-OC-28-review section start*/
 .tabs {
+  padding-left: 20px;
+  padding-right: 20px;
   max-width: 1240px;
   width: 100%;
   margin: auto;
@@ -610,7 +612,7 @@
 }
 
 .dropdown-toggle {
-  width: 120px;
+  width: 80px;
   height: 48px;
   display: flex;
   justify-content: space-between;
@@ -658,8 +660,8 @@
 }
 
 .write-review-btn {
-  width: 166px;
-  height: 48px;
+  width: 140px;
+  /* height: 48px; */
   padding: 10px 20px;
   background-color: rgba(0, 0, 0, 1);
   color: rgba(255, 255, 255, 1);
@@ -868,6 +870,13 @@ th {
   font-size: 20px;
   font-weight: 600;
 }
+@media screen and (max-width: 480px) {
+  .all-review-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
 /* nursahtuncel-OC-28-review section end */
 /* nursahtuncel-OC-29-ımplement the you might also like section start*/
 
@@ -893,7 +902,7 @@ th {
   flex-wrap: nowrap;
   justify-content: start;
   overflow-x: scroll;
-  scroll-behavior: smooth; /* Kaydırma animasyonu */
+  scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
 }
 
@@ -915,7 +924,7 @@ th {
 }
 
 .nt-images-container28.dragging {
-  cursor: grabbing; /* Sürükleme sırasında fare ikonu */
+  cursor: grabbing;
 }
 
 .nt-images-container-half-box28 {
