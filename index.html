@@ -1,195 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-
-  <title>Shop.Co</title>
-</head>
-
-<body>
-  <!-- esra/OC-6-implement-promo-banner-start -->
-  <section class="implement-promo-banner">
-    <div class="ip-banner-info-box">
-      <div class="ip-banner-explain">
-        Sign up and get 20% off to your first order.
-      </div>
-      <div class="ip-banner-explain2">Sign Up Now</div>
-      <div class="banner_close_icon">
-        <img class="ip-banner-close-icon" src="images/banner_close_icon.png" alt="close_icon" />
-      </div>
-    </div>
-  </section>
-  <!-- esra/OC-6-implement-promo-banner-end -->
-  <header>
-    <!-- nursahtuncel-OC-4 hero section start -->
-
-    <div class="hamburger-menu-other-side">
-      <div class="nt-hero-section">
-        <div class="nt-hero-section-content">
-          <div class="nt-logo">
-            <div>
-              <img class="nt-hamburger-menu-icon" onclick="toggleMenu()" src="images/hamburger-menu-icon.svg"
-                alt="hamburger menu" />
-            </div>
-            <div>SHOP.CO</div>
-          </div>
-
-          <div class="nt-hero-section-content-ul">
-            <ul>
-              <li>
-                <a href="" class="nt-list nt-list-2">Shop <img src="images/assagi-isaret-eden-ok.png" alt="" /></a>
-              </li>
-              <li><a href="" class="nt-list nt-list-2">On Sale</a></li>
-              <li><a href="" class="nt-list nt-list-2">New Arrivals</a></li>
-              <li><a href="" class="nt-list nt-list-2">Brands</a></li>
-            </ul>
-          </div>
-
-          <div class="nt-hero-section-search-box">
-            <i class="fa fa-search"></i>
-            <input type="text" placeholder="Search for products..." />
-          </div>
-
-          <div class="nt-icons">
-            <div class="nt-secret-search-box">
-              <input type="text" placeholder="Search.." />
-            </div>
-
-            <img class="nt-search-icon nt-left-icon nt-left-icon-2" onclick="toggleSearch()"
-              src="images/nt-search-icon.svg" alt="" />
-            <img class="nt-left-icon" src="images/nt-basket-icon.svg" alt="" />
-
-            <img class="nt-left-icon" src="images/nt-user-icon.svg" alt="" />
-          </div>
+    <title>Shop.Co</title>
+  </head>
+  <body>
+    <!-- esra/OC-6-implement-promo-banner-start -->
+    <section class="implement-promo-banner">
+      <div class="ip-banner-info-box">
+        <div class="ip-banner-explain">
+          Sign up and get 20% off to your first order.
         </div>
-      </div>
-    </div>
-    <div class="nt-hamburger-menu-2">
-      <div class="navbar_items">
-        <ul class="nav-menu">
-          <li class="nav-link">Shop</li>
-          <li class="nav-item">On Sale</li>
-          <li class="nav-item">New Arrivals</li>
-          <li class="nav-item">Brands</li>
-        </ul>
-      </div>
-    </div>
-    <!-- nursahtuncel-OC-4 hero section end-->
-
-  </header>
-  <main>
-    <!--hero section burada başlıyor-->
-    <section class="hero-section">
-      <div class="hero-section-container">
-        <div class="hero-section-image-container">
-          <img src="images/hero-section/models.png" alt="hero section background image"
-            class="hero-section-background-image" />
-          <img src="images/hero-section/image1.png" alt="Star Icon" class="star-left" />
-          <img src="images/hero-section/image1.png" alt="Star Icon" class="star-right" />
-        </div>
-        <div class="hero-sectin-info">
-          <h1>FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
-          <p>
-            Browse through our diverse range of meticulously crafted garments,
-            designed to bring out your individuality and cater to your sense
-            of style.
-          </p>
-          <button class="hero-section-button">Shop Now</button>
-          <div class="hero-section-stats">
-            <div>
-              <h2>200+</h2>
-              <p>International Brands</p>
-            </div>
-            <div class="vertical-line"></div>
-            <div>
-              <h2>2,000+</h2>
-              <p>High-Quality Products</p>
-            </div>
-            <div class="vertical-line line-right"></div>
-            <div>
-              <h2>30,000+</h2>
-              <p>Happy Customers</p>
-            </div>
-          </div>
+        <div class="ip-banner-explain2">Sign Up Now</div>
+        <div class="banner_close_icon">
+          <img
+            class="ip-banner-close-icon"
+            src="images/banner_close_icon.png"
+            alt="close_icon"
+          />
         </div>
       </div>
     </section>
-    <!--hero section burada bitiyor-->
+    <!-- esra/OC-6-implement-promo-banner-end -->
+    <header>
+      <!-- nursahtuncel-OC-4 hero section start -->
 
-    <!--melikeaksoy/OC-11-Implement-the-brands-and-partners-section Start-->
+      <div class="hamburger-menu-other-side">
+        <div class="nt-hero-section">
+          <div class="nt-hero-section-content">
+            <div class="nt-logo">
+              <div>
+                <img
+                  class="nt-hamburger-menu-icon"
+                  onclick="toggleMenu()"
+                  src="images/hamburger-menu-icon.svg"
+                  alt="hamburger menu"
+                />
+              </div>
+              <div>SHOP.CO</div>
+            </div>
 
-    <section class="brands">
+            <div class="nt-hero-section-content-ul">
+              <ul>
+                <li>
+                  <a href="" class="nt-list nt-list-2"
+                    >Shop <img src="images/assagi-isaret-eden-ok.png" alt=""
+                  /></a>
+                </li>
+                <li><a href="" class="nt-list nt-list-2">On Sale</a></li>
+                <li><a href="" class="nt-list nt-list-2">New Arrivals</a></li>
+                <li><a href="" class="nt-list nt-list-2">Brands</a></li>
+              </ul>
+            </div>
+
+            <div class="nt-hero-section-search-box">
+              <i class="fa fa-search"></i>
+              <input type="text" placeholder="Search for products..." />
+            </div>
+
+            <div class="nt-icons">
+              <div class="nt-secret-search-box">
+                <input type="text" placeholder="Search.." />
+              </div>
+
+              <img
+                class="nt-search-icon nt-left-icon nt-left-icon-2"
+                onclick="toggleSearch()"
+                src="images/nt-search-icon.svg"
+                alt=""
+              />
+              <img
+                class="nt-left-icon"
+                src="images/nt-basket-icon.svg"
+                alt=""
+              />
+
+              <img class="nt-left-icon" src="images/nt-user-icon.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nt-hamburger-menu-2">
+        <div class="navbar_items">
+          <ul class="nav-menu">
+            <li class="nav-link">Shop</li>
+            <li class="nav-item">On Sale</li>
+            <li class="nav-item">New Arrivals</li>
+            <li class="nav-item">Brands</li>
+          </ul>
+        </div>
+      </div>
+      <!-- nursahtuncel-OC-4 hero section end-->
+        
+    </header>
+    <main>
+      <!--hero section burada başlıyor-->
+      <section class="hero-section">
+        <div class="hero-section-container">
+          <div class="hero-section-image-container">
+            <img
+              src="images/hero-section/models.png"
+              alt="hero section background image"
+              class="hero-section-background-image"
+            />
+            <img
+              src="images/hero-section/image1.png"
+              alt="Star Icon"
+              class="star-left"
+            />
+            <img
+              src="images/hero-section/image1.png"
+              alt="Star Icon"
+              class="star-right"
+            />
+          </div>
+          <div class="hero-sectin-info">
+            <h1>FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
+            <p>
+              Browse through our diverse range of meticulously crafted garments,
+              designed to bring out your individuality and cater to your sense
+              of style.
+            </p>
+            <button class="hero-section-button">Shop Now</button>
+            <div class="hero-section-stats">
+              <div>
+                <h2>200+</h2>
+                <p>International Brands</p>
+              </div>
+              <div class="vertical-line"></div>
+              <div>
+                <h2>2,000+</h2>
+                <p>High-Quality Products</p>
+              </div>
+              <div class="vertical-line line-right"></div>
+              <div>
+                <h2>30,000+</h2>
+                <p>Happy Customers</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--hero section burada bitiyor-->
+
+      <!--melikeaksoy/OC-11-Implement-the-brands-and-partners-section Start-->
+
+      <section class="brands">
       <div class="brands-part">
-        <img class="brands-img" src="./images/brands/Versace.svg" alt="Versace" />
-        <img class="brands-img" src="./images/brands/Zara.svg" alt="Zara" />
-        <img class="brands-img" src="./images/brands/Gucci.svg" alt="Gucci" />
-        <img class="brands-img" src="./images/brands/Prada.svg" alt="Prada" />
-        <img class="brands-img" src="./images/brands/Calvin.svg" alt="Calvin Klein" />
+        <img class="brands-img" src="./images/brands/Versace.svg" alt="Versace"/>
+        <img class="brands-img" src="./images/brands/Zara.svg" alt="Zara"/>
+        <img class="brands-img" src="./images/brands/Gucci.svg" alt="Gucci"/>
+        <img class="brands-img" src="./images/brands/Prada.svg" alt="Prada"/>
+        <img class="brands-img" src="./images/brands/Calvin.svg" alt="Calvin Klein"/>
       </div>
     </section>
+    
+      <!--melikeaksoy/OC-11-Implement-the-brands-and-partners-section End-->
 
-    <!--melikeaksoy/OC-11-Implement-the-brands-and-partners-section End-->
-
-    <!-- melike/OC-12-the-new-arrivals-section-start -->
+      <!-- melike/OC-12-the-new-arrivals-section-start -->
     <section class="new-arrivals">
       <h1 class="new-arrivals-header">NEW ARRIVALS</h1>
-      <div class="new-arrivals-products">
-        <div class="new-arrivals-product"></div>
+     <div class="new-arrivals-products">
+    <div class="new-arrivals-product"></div>
+  </div>
+    <button onclick="showAll()" class="new-arrivals-button">View All</button>
+    <div class="line"></div>
+</section>
+<!-- melike/OC-12-the-new-arrivals-section-end -->
+
+   <!-- melikeaksoy-OC-14-Create-the-Top-Selling-section start -->
+
+   <section class="top-selling">
+    <h1>TOP SELLING</h1>
+    <div class="products">
+      <div class="product">
       </div>
-      <button onclick="showAll()" class="new-arrivals-button">View All</button>
-      <div class="line"></div>
-    </section>
-    <!-- melike/OC-12-the-new-arrivals-section-end -->
-
-    <!--Browse By Dress Style Section Start-->
-    <section class="browse">
-      <div class="browse-by-dress-background">
-        <p class="title-of-browse">BROWSE BY DRESS STYLE</p>
-        <div class="browse-style-container">
-          <div class="first-container">
-            <a href="./Category Pages/Casual/Casual.html" target="_parent">
-              <div class="browse-first-form">
-                <h4 class="browse-option-text">Casual</h4>
-                <img class="browse-picture" src="./images/Browse-By-Dress-Style-Section/image 11.svg" alt="#" />
-              </div>
-            </a>
-            <a href="./Category Pages/Formal/Formal.html" target="_parent">
-              <div class="browse-second-form">
-                <h4 class="browse-option-text">Formal</h4>
-                <img class="browse-picture" src="./images/Browse-By-Dress-Style-Section/image 13.svg" alt="#" />
-              </div>
-            </a>
+    </div>
+    <button onclick="showAll()" class="view-all">View All</button>
+  </section>
 
 
-          </div>
-          <div class="second-container">
-            <a href="./Category Pages/Party/Party.html" target="_parent">
-              <div class="browse-second-form">
-                <h4 class="browse-option-text">Party</h4>
-                <img class="browse-picture" src="./images/Browse-By-Dress-Style-Section/image 12.svg" alt="#" />
-              </div>
-            </a>
-            <a href="./Category Pages/GYM/GYM.html" target="_parent">
-              <div class="browse-first-form">
-                <h4 class="browse-option-text">GYM</h4>
-                <img class="browse-picture" src="./images/Browse-By-Dress-Style-Section/image 14.svg" alt="#" />
-              </div>
-            </a>
+  <!-- melikeaksoy-OC-14-Create-the-Top-Selling-section end -->
 
-
+      <!--Browse By Dress Style Section Start-->
+      <section class="browse">
+        <div class="browse-by-dress-background">
+          <p class="title-of-browse">BROWSE BY DRESS STYLE</p>
+          <div class="browse-style-container">
+            <div class="first-container">
+              <a href="./category-page.html" target="_parent">
+                <div class="browse-first-form">
+                  <h4 class="browse-option-text">Casual</h4>
+                  <img
+                    class="browse-picture"
+                    src="./images/Browse-By-Dress-Style-Section/image 11.svg"
+                    alt="#"
+                  />
+                </div>
+              </a>
+              <a href="./category-page.html" target="_parent">
+                <div class="browse-second-form">
+                  <h4 class="browse-option-text">Formal</h4>
+                  <img
+                    class="browse-picture"
+                    src="./images/Browse-By-Dress-Style-Section/image 13.svg"
+                    alt="#"
+                  />
+                </div> 
+              </a>
+              
+              
+            </div>
+            <div class="second-container">
+              <a href="./category-page.html" target="_parent">
+                <div class="browse-second-form">
+                  <h4 class="browse-option-text">Party</h4>
+                  <img
+                    class="browse-picture"
+                    src="./images/Browse-By-Dress-Style-Section/image 12.svg"
+                    alt="#"
+                  />
+                </div>
+              </a>
+              <a href="./category-page.html" target="_parent">
+                <div class="browse-first-form">
+                  <h4 class="browse-option-text">GYM</h4>
+                  <img
+                    class="browse-picture"
+                    src="./images/Browse-By-Dress-Style-Section/image 14.svg"
+                    alt="#"
+                  />
+                </div>
+              </a>
+              
+              
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!--Browse By Dress Style Section End-->
+      </section>
+      <!--Browse By Dress Style Section End-->
 
-    <!--- Create the Testimonial Section Start --->
+      <!--- Create the Testimonial Section Start --->
     <section class="ctt-section">
 
       <div class="ctt-first-row">
@@ -224,94 +286,105 @@
 
     </section>
     <!--Create the Testimonial Section End -->
-
-    <!-- BeyzanurMete-OC-20 Implement the Newsletter  section start -->
-    <div class="newsletter-section">
-      <div class="newsletter-title">
-        STAY UP TO DATE ABOUT <br> OUR LATEST OFFERS
-      </div>
-      <div class="newsletter-form">
-
-        <img src="images/Frame.png" alt="Email Icon" class="input-icon">
-        <input type="email" class="newsletter-input" placeholder="Enter your email address" />
-
-        <button class="newsletter-button">Subscribe to Newsletter</button>
-      </div>
-      <!-- BeyzanurMete-OC-20 Implement-the-Newsletter-section End -->
-  </main>
-  <!--melikeaksoy/OC-22-implement-the-footer start -->
-  <footer>
-    <div class="footer-wrapper">
-      <div class="footer-container">
-        <div class="footer-logo">
-          <h2>SHOP.CO</h2>
-          <p>
-            We have clothes that suit your style and which you're proud to
-            wear. From women to men.
-          </p>
-          <div class="social-icons">
-            <a href="#"><i class="twitter-icon"><img src="images/footer/Twitter.svg" alt="Twitter" /></i></a>
-            <a href="#"><i class="facebook-icon"><img src="images/footer/Facebook.svg" alt="Facebook" /></i></a>
-            <a href="#"><i class="instagram-icon"><img src="images/footer/Instagram.svg" alt="Instagram" /></i></a>
-            <a href="#"><i class="github-icon"><img src="images/footer/Github.svg" alt="Github" /></i></a>
+      
+       <!-- BeyzanurMete-OC-20 Implement the Newsletter  section start -->
+       <div class="newsletter-section">
+        <div class="newsletter-title">
+            STAY UP TO DATE ABOUT <br> OUR LATEST OFFERS
+        </div>
+        <div class="newsletter-form">
+            
+            <img src="images/Frame.png" alt="Email Icon" class="input-icon">
+            <input type="email" class="newsletter-input" placeholder="Enter your email address" />
+          
+            <button class="newsletter-button">Subscribe to Newsletter</button>
+        </div>
+        <!-- BeyzanurMete-OC-20 Implement-the-Newsletter-section End -->
+    </main>
+<!--melikeaksoy/OC-22-implement-the-footer start -->
+    <footer>
+      <div class="footer-wrapper">
+        <div class="footer-container">
+          <div class="footer-logo">
+            <h2>SHOP.CO</h2>
+            <p>
+              We have clothes that suit your style and which you're proud to
+              wear. From women to men.
+            </p>
+            <div class="social-icons">
+              <a href="#"
+                ><i class="twitter-icon"
+                  ><img src="images/footer/Twitter.svg" alt="Twitter" /></i
+              ></a>
+              <a href="#"
+                ><i class="facebook-icon"
+                  ><img src="images/footer/Facebook.svg" alt="Facebook" /></i
+              ></a>
+              <a href="#"
+                ><i class="instagram-icon"
+                  ><img src="images/footer/Instagram.svg" alt="Instagram" /></i
+              ></a>
+              <a href="#"
+                ><i class="github-icon"
+                  ><img src="images/footer/Github.svg" alt="Github" /></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-right">
+            <div class="footer-column">
+              <h4>COMPANY</h4>
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Works</a></li>
+                <li><a href="#">Career</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h4>HELP</h4>
+              <ul>
+                <li><a href="#">Customer Support</a></li>
+                <li><a href="#">Delivery Details</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h4>FAQ</h4>
+              <ul>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Manage Deliveries</a></li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">Payments</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h4>RESOURCES</h4>
+              <ul>
+                <li><a href="#">Free eBooks</a></li>
+                <li><a href="#">Development Tutorial</a></li>
+                <li><a href="#">How to - Blog</a></li>
+                <li><a href="#">Youtube Playlist</a></li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="footer-right">
-          <div class="footer-column">
-            <h4>COMPANY</h4>
-            <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Features</a></li>
-              <li><a href="#">Works</a></li>
-              <li><a href="#">Career</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h4>HELP</h4>
-            <ul>
-              <li><a href="#">Customer Support</a></li>
-              <li><a href="#">Delivery Details</a></li>
-              <li><a href="#">Terms & Conditions</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h4>FAQ</h4>
-            <ul>
-              <li><a href="#">Account</a></li>
-              <li><a href="#">Manage Deliveries</a></li>
-              <li><a href="#">Orders</a></li>
-              <li><a href="#">Payments</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h4>RESOURCES</h4>
-            <ul>
-              <li><a href="#">Free eBooks</a></li>
-              <li><a href="#">Development Tutorial</a></li>
-              <li><a href="#">How to - Blog</a></li>
-              <li><a href="#">Youtube Playlist</a></li>
-            </ul>
+  
+        <div class="footer-separator"></div>
+  
+        <div class="footer-bottom">
+          <p>Shop.co © 2000-2023, All Rights Reserved</p>
+          <div class="payment-icons">
+            <img src="images/footer/visa-icon.svg" alt="Visa" />
+            <img src="images/footer/mastercard-icon.svg" alt="MasterCard" />
+            <img src="images/footer/paypal-icon.svg" alt="PayPal" />
+            <img src="images/footer/applepay-icon.svg" alt="Apple Pay" />
+            <img src="images/footer/googlepay-icon.svg" alt="Google Pay" />
           </div>
         </div>
       </div>
-
-      <div class="footer-separator"></div>
-
-      <div class="footer-bottom">
-        <p>Shop.co © 2000-2023, All Rights Reserved</p>
-        <div class="payment-icons">
-          <img src="images/footer/visa-icon.svg" alt="Visa" />
-          <img src="images/footer/mastercard-icon.svg" alt="MasterCard" />
-          <img src="images/footer/paypal-icon.svg" alt="PayPal" />
-          <img src="images/footer/applepay-icon.svg" alt="Apple Pay" />
-          <img src="images/footer/googlepay-icon.svg" alt="Google Pay" />
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- melikeaksoy/OC-22-implement-the-footer end -->
-</body>
-<script src="app.js"></script>
-
+    </footer>
+    <!-- melikeaksoy/OC-22-implement-the-footer end -->
+  </body>
+  <script src="app.js"></script>
 </html>
