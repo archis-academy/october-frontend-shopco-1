@@ -837,30 +837,37 @@
 /* ************** */
 
 table {
+  display: flex;
   text-align: center;
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 th,
 td {
-  font-size: 16px;
-  font-family: var(--fnt-family-satoshi, Arial, sans-serif);
+  font-size: 12px;
+  font-family: "satoshi";
   border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
+  padding: 10px;
+  text-align: center;
 }
 td img {
   max-width: 100px;
   height: 100px;
 }
 th {
-  font-size: 24px;
+  flex: 1 1 100%;
+  border: 1px solid rgb(105, 96, 96);
+  font-size: 16px;
   font-weight: 500;
-  font-family: var(--fnt-family-satoshi, Arial, sans-serif);
+  font-family: "integral";
   background-color: #f4f4f4;
 }
-
+.th {
+  font-size: 20px;
+  font-weight: 600;
+}
 /* nursahtuncel-OC-28-review section end */
 /* nursahtuncel-OC-29-ımplement the you might also like section start*/
 
