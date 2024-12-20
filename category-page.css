@@ -334,17 +334,17 @@
   display: flex;
   gap: 20px; 
   position: relative;
+  justify-content: center;
+  
   
 }
 
 /*pages-way Start*/
-.pages-way-container{
-  display: flex;
-}
 
 .pages-way {
   display: flex;  
-  padding: 20px 0px;  
+  padding: 20px 0px;
+  
 }
 
 .pages-way p {
