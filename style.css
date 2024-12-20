@@ -323,6 +323,8 @@
 
 /* nursahtuncel-OC-4-Desing-the-Header-Section end*/
 
+
+
 /*------hero section burada başlıyor-----*/
 .hero-section {
   background-color: var(--hdr-section-clr);
@@ -1039,6 +1041,182 @@
   }
 }
 /*Browse By Dress Stylee Section Responsiveness End*/
+
+/* Create the Testimonial Section Start*/
+.ctt-section{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.ctt-first-row {
+  display: flex;
+  max-width: 1240px;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.ctt-first-row div{
+  display: flex;
+}
+
+.ctt-first-row div h4{
+  font-family: var(--fnt-family-integral);
+  font-weight: 700;
+  font-size: 48px;
+  color: var(--hdr-bg-clr);
+}
+
+.ctt-arrows{
+  display: flex;
+  gap: 10px;
+}
+
+.ctt-arrows button{
+  display: flex;
+  align-items: end;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.ctt-second-row{
+  display: flex;
+}
+
+.ctt-secodn-row-design{
+  width: 100px;
+}
+
+.slider{
+  display: flex;
+  margin: auto;
+  max-width: 85%;
+  gap: 20px;
+  overflow-x:auto;
+  scroll-behavior: smooth; 
+  box-sizing: border-box;
+  position: relative;
+  z-index: -1;
+}
+
+.ctt-left-design{
+  background-color: rgb(255, 255, 255);
+  opacity: 85%;
+  filter: blur(8px);
+  width: 17.5%;
+  height: 206px;
+  position: absolute;
+  left: 0;
+  width: 20%;
+}
+
+.ctt-right-design{
+  background-color: rgb(255, 255, 255);
+  opacity: 85%;
+  filter: blur(8px);
+  width: 17.5%;
+  height: 206px;
+  position: absolute;
+  right: 0;
+  width: 20%;
+}
+
+::-webkit-scrollbar{
+  display: none; 
+}
+
+.slide{
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 10%);
+  border-radius: 28px;
+  padding: 28px 32px;
+  
+}
+
+.star-rate{
+  display: flex;
+}
+
+.star-rate img{
+  padding-right: 4px;
+}
+
+.user{
+  display: flex;
+  align-items: center;
+  padding: 15px 0px;
+}
+
+.user h4{
+  font-family: var(--fnt-family-satoshi);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--hdr-bg-clr);
+}
+
+.user img{
+  padding-left: 10px;
+}
+
+.review p{
+  font-family: --fnt-family-satoshi;
+  font-weight: 400;
+  font-size: 16px;
+  color: --hdr-bg-clr;
+  opacity: 60%;
+}
+
+/* Create the Testimonial Section End*/
+
+/* Create the Testimonial Section Responsiveness Start*/
+
+@media screen and (max-width: 1442px) {
+  .slider{
+    max-width: 840px;
+  }
+
+  .ctt-left-design{
+    display: none;
+  }
+  
+  .ctt-right-design{
+    display: none;
+  }
+
+  
+}
+@media screen and (max-width: 944px) {
+  .slider{
+    max-width: 420px;
+  }
+}
+@media screen and (max-width: 475px) {
+  .ctt-first-row {
+    flex-direction: column;
+  }
+
+  .ctt-first-row div{
+    text-align: center;
+  }
+
+  .ctt-arrows{
+    justify-content: space-between;
+  }
+
+  .slider{
+    max-width: 220px;
+  }
+
+  .slide{
+    min-width: 200px;
+  }
+  
+}
+/* Create the Testimonial Section Responsiveness End*/
 
 /* BeyzanurMete-OC-20-Implement-the-Newsletter-Section start*/
 .newsletter-section {
