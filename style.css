@@ -1338,3 +1338,151 @@ footer {
   }
 }
 /* melikeaksoy/OC-23-implement-the-footer end */
+/* emre/OC-34-dropdown start*/
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  font-family: var(--fnt-family-satoshi);
+  background-color: white;
+  padding: 10px 0;
+  width: 200px; 
+  margin-top: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.dropdown-menu span {
+  display: block;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.dropdown-menu span a {
+  text-decoration: none; 
+  color: black;
+  font-size: clamp(12px,1.5vw,14px);
+}
+
+
+li.show > .dropdown-menu {
+  display: block;
+}
+
+.signin-dropdown {
+  right: 50px;
+}
+
+.dropdown-menu form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--fnt-family-satoshi);
+
+}
+
+.dropdown-menu label {
+  font-size: clamp(12px,1.5vw,14px);
+  margin-bottom: 5px;
+}
+
+.dropdown-menu input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.dropdown-menu button {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  width: 150px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.bskt-dropdown-menu {
+  display: none; 
+  position: absolute;
+  top: 80px;
+  right: 80px;
+  max-width: 450px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 15px;
+  font-family: Arial, sans-serif;
+}
+
+.bskt-dropdown-menu.bskt-active {
+  display: block; 
+}
+
+.bskt-dropdown-title {
+  font-size: clamp(14px,2vw,18px);
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.bskt-cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.bskt-cart-item:last-child {
+  border-bottom: none;
+}
+
+.bskt-cart-item span a {
+  font-size: 12px;
+  color: black;
+}
+
+.bskt-cart-remove-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 8px;
+  cursor: pointer;
+  font-size: 10px;
+  margin-left: 5px;
+}
+
+.bskt-cart-remove-btn:hover {
+  background-color: #e60000;
+}
+
+.bskt-empty-message {
+  text-align: center;
+  font-size: clamp(12px,1.5vw,14px);
+  color: #666;
+}
+
+@media (max-width: 660px) {
+   .shop-dropdown {
+    display: none !important;
+  }
+
+  .dropdown-menu{
+    width: 150px;
+  }
+  .dropdown-menu input {
+
+    width: 120px;
+    font-size: 10px;
+  }
+
+  .dropdown-menu button { 
+    width: 100px;
+    font-size: 10px;
+  }
+}
+/* emre/OC-34-dropdown end*/

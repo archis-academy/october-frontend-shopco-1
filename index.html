@@ -54,9 +54,17 @@
             <div class="nt-hero-section-content-ul">
               <ul>
                 <li>
-                  <a href="" class="nt-list nt-list-2"
+                  <a href="" class="nt-list nt-list-2" onclick="toggleDropdown(event)"
                     >Shop <img src="images/assagi-isaret-eden-ok.png" alt=""
                   /></a>
+                <!-- emre/OC-34- dropdown shop start -->
+                  <div class="dropdown-menu shop-dropdown">
+                    <span><a href="./category-page.html">Women's Clothing</a></span>
+                    <span><a href="./category-page.html">Men's Clothing</a></span>
+                    <span><a href="./category-page.html">Jewelery</a></span>
+                    <span><a href="./category-page.html">Electronics</a></span>
+                  </div>
+                <!-- emre/OC-34- dropdown shop end -->
                 </li>
                 <li><a href="" class="nt-list nt-list-2">On Sale</a></li>
                 <li><a href="" class="nt-list nt-list-2">New Arrivals</a></li>
@@ -84,9 +92,29 @@
                 class="nt-left-icon"
                 src="images/nt-basket-icon.svg"
                 alt=""
+                id="basketIcon"
               />
-
+              <!-- emre/OC-34- dropdown cart start -->
+              <div class="bskt-dropdown-menu" id="bsktCartDropdownMenu">
+                <p class="bskt-dropdown-title">Your Cart</p>
+                <div id="bsktCartItemsContainer">
+                </div>
+              </div>
+              <!-- emre/OC-34- dropdown cart end -->
+                <!-- emre/OC-34- dropdown sign in start -->
+              <a href="#" id="dropdownToggle">
               <img class="nt-left-icon" src="images/nt-user-icon.svg" alt="" />
+              </a>
+              <div class="dropdown-menu signin-dropdown" id="dropdownMenu">
+                <form>
+                  <label for="email">E-mail</label>
+                  <input type="email" id="email" name="email" placeholder="Enter your email" required />     
+                  <label for="password">Password</label>
+                  <input type="password" id="password" name="password" placeholder="Enter your password" required />
+                  <button type="submit">Sign In</button>
+                </form>
+              </div>
+              <!-- emre/OC-34- dropdown  sign in end -->
             </div>
           </div>
         </div>
