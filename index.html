@@ -54,9 +54,17 @@
             <div class="nt-hero-section-content-ul">
               <ul>
                 <li>
-                  <a href="" class="nt-list nt-list-2"
+                  <a href="" class="nt-list nt-list-2" onclick="toggleDropdown(event)"
                     >Shop <img src="images/assagi-isaret-eden-ok.png" alt=""
                   /></a>
+                <!-- emre/OC-34- dropdown shop start -->
+                  <div class="dropdown-menu shop-dropdown">
+                    <span><a href="./category-page.html">Women's Clothing</a></span>
+                    <span><a href="./category-page.html">Men's Clothing</a></span>
+                    <span><a href="./category-page.html">Jewelery</a></span>
+                    <span><a href="./category-page.html">Electronics</a></span>
+                  </div>
+                <!-- emre/OC-34- dropdown shop end -->
                 </li>
                 <li><a href="" class="nt-list nt-list-2">On Sale</a></li>
                 <li><a href="" class="nt-list nt-list-2">New Arrivals</a></li>
@@ -84,9 +92,29 @@
                 class="nt-left-icon"
                 src="images/nt-basket-icon.svg"
                 alt=""
+                id="basketIcon"
               />
-
+              <!-- emre/OC-34- dropdown cart start -->
+              <div class="bskt-dropdown-menu" id="bsktCartDropdownMenu">
+                <p class="bskt-dropdown-title">Your Cart</p>
+                <div id="bsktCartItemsContainer">
+                </div>
+              </div>
+              <!-- emre/OC-34- dropdown cart end -->
+                <!-- emre/OC-34- dropdown sign in start -->
+              <a href="#" id="dropdownToggle">
               <img class="nt-left-icon" src="images/nt-user-icon.svg" alt="" />
+              </a>
+              <div class="dropdown-menu signin-dropdown" id="dropdownMenu">
+                <form>
+                  <label for="email">E-mail</label>
+                  <input type="email" id="email" name="email" placeholder="Enter your email" required />     
+                  <label for="password">Password</label>
+                  <input type="password" id="password" name="password" placeholder="Enter your password" required />
+                  <button type="submit">Sign In</button>
+                </form>
+              </div>
+              <!-- emre/OC-34- dropdown  sign in end -->
             </div>
           </div>
         </div>
@@ -179,13 +207,27 @@
 </section>
 <!-- melike/OC-12-the-new-arrivals-section-end -->
 
+   <!-- melikeaksoy-OC-14-Create-the-Top-Selling-section start -->
+
+   <section class="top-selling">
+    <h1>TOP SELLING</h1>
+    <div class="products">
+      <div class="product">
+      </div>
+    </div>
+    <button onclick="showAll()" class="view-all">View All</button>
+  </section>
+
+
+  <!-- melikeaksoy-OC-14-Create-the-Top-Selling-section end -->
+
       <!--Browse By Dress Style Section Start-->
       <section class="browse">
         <div class="browse-by-dress-background">
           <p class="title-of-browse">BROWSE BY DRESS STYLE</p>
           <div class="browse-style-container">
             <div class="first-container">
-              <a href="./Category Pages/Casual/Casual.html" target="_parent">
+              <a href="./category-page.html" target="_parent">
                 <div class="browse-first-form">
                   <h4 class="browse-option-text">Casual</h4>
                   <img
@@ -195,7 +237,7 @@
                   />
                 </div>
               </a>
-              <a href="./Category Pages/Formal/Formal.html" target="_parent">
+              <a href="./category-page.html" target="_parent">
                 <div class="browse-second-form">
                   <h4 class="browse-option-text">Formal</h4>
                   <img
@@ -209,7 +251,7 @@
               
             </div>
             <div class="second-container">
-              <a href="./Category Pages/Party/Party.html" target="_parent">
+              <a href="./category-page.html" target="_parent">
                 <div class="browse-second-form">
                   <h4 class="browse-option-text">Party</h4>
                   <img
@@ -219,7 +261,7 @@
                   />
                 </div>
               </a>
-              <a href="./Category Pages/GYM/GYM.html" target="_parent">
+              <a href="./category-page.html" target="_parent">
                 <div class="browse-first-form">
                   <h4 class="browse-option-text">GYM</h4>
                   <img
@@ -236,6 +278,42 @@
         </div>
       </section>
       <!--Browse By Dress Style Section End-->
+
+      <!--- Create the Testimonial Section Start --->
+    <section class="ctt-section">
+
+      <div class="ctt-first-row">
+        <div>
+          <h4>
+            <bold>OUR HAPPY CUSTOMERS</bold>
+          </h4>
+        </div>
+        <div class="ctt-arrows">
+          <button id="prev">
+            <img src="images/Create The Testimonial/left-arrow.svg">
+          </button>
+          <button id="next">
+            <img src="images/Create The Testimonial/right-arrow.svg ">
+          </button>
+        </div>
+      </div>
+
+      <div class="ctt-second-row">
+        <div class="ctt-left-design">
+
+        </div>
+
+        <div class="slider">
+          <!--Review-cards-->
+        </div>
+
+        <div class="ctt-right-design">
+
+        </div>
+      </div>
+
+    </section>
+    <!--Create the Testimonial Section End -->
       
        <!-- BeyzanurMete-OC-20 Implement the Newsletter  section start -->
        <div class="newsletter-section">
