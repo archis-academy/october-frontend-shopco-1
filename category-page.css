@@ -1,4 +1,4 @@
-@import url("./styles/styles.css");
+@import url("style.css");
 
 /* esra-OC-6-implement-promo-banner-start */
 .implement-promo-banner {
@@ -323,215 +323,59 @@
 
 /* nursahtuncel-OC-4-Desing-the-Header-Section end*/
 
-/*------hero section burada başlıyor-----*/
-.hero-section {
-  background-color: var(--hdr-section-clr);
-  margin: 0 auto;
-  max-width: 1440px;
-}
+/* melikeaksoy/OC-36-Category-Products-Section start */
 
-.hero-section-container {
-  padding-inline: 40px;
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-
-.hero-section-background-image {
-  max-width: 100%;
-  position: relative;
-  display: block;
-}
-
-.hero-sectin-info {
-  order: -1;
+.category-page {
   display: flex;
   flex-direction: column;
-  max-width: clamp(200px, 45vw, 600px);
-  gap: clamp(10px, 1.5vw, 32px);
-}
-
-.hero-sectin-info h1 {
-  font-size: clamp(30px, 5vw, 64px);
-  font-weight: 800;
-  line-height: clamp(26px, 4vw, 60px);
-  font-family: var(--fnt-family-integral);
-}
-
-.hero-sectin-info p {
-  font-size: clamp(12px, 1.4vw, 16px);
-  color: black;
-  opacity: 60%;
-  font-family: var(--fnt-family-satoshi);
-  margin-bottom: 5px;
-}
-
-.hero-section-button {
-  width: clamp(120px, 20vw, 210px);
-  padding: 15px 35px;
-  font-family: var(--fnt-family-satoshi);
-  font-weight: 500;
-  background-color: black;
-  color: white;
-  border: none;
-  border-radius: 62px;
-  font-size: clamp(9px, 1.2vw, 16px);
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.hero-section-stats {
-  display: flex;
-  margin-top: clamp(12px, 3.5vw, 60px);
-  justify-content: space-between;
-  font-family: var(--fnt-family-satoshi);
-}
-
-.hero-section-stats h2 {
-  font-size: clamp(16px, 3.5vw, 40px);
-  font-weight: 700;
-  line-height: clamp(25px, 4vw, 50px);
-}
-.hero-section-stats p {
-  font-size: clamp(12px, 1.5vw, 16px);
-  font-weight: 400;
-  line-height: clamp(10px, 1.5vw, 20px);
-  opacity: 60%;
-}
-.vertical-line {
-  width: 1px;
-  height: clamp(45px, 6vw, 74px);
-  background-color: black;
-  opacity: 10%;
-}
-
-.hero-section-image-container {
-  position: relative;
-}
-
-.star-left {
-  position: absolute;
-  top: 40%;
-  left: 10%;
-  width: clamp(20px, 4vw, 56px);
-}
-
-.star-right {
-  position: absolute;
-  top: 12%;
-  right: 12%;
-  width: clamp(45px, 8vw, 100px);
-}
-
-@media (max-width: 725px) {
-  .hero-section-container {
-    flex-direction: column;
-    padding-inline: 0px;
-  }
-
-  .hero-sectin-info {
-    max-width: 85%;
-    margin-top: 30px;
-  }
-}
-
-@media (max-width: 425px) {
-  .hero-section-button {
-    width: unset;
-    padding: 10px 35px;
-    align-self: stretch;
-  }
-
-  .hero-section-stats {
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-
-  .line-right {
-    opacity: 0%;
-  }
-}
-/*------hero section burada bitiyor-----*/
-
-/* melikeaksoy/OC-11-Implement-the-brands-and-partners-section Start */
-
-.brands {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--fnt-black);
-  height: 122px;
+  padding: 10px;
+  max-width: 925px;
   width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
+  gap: 30px;
+  margin: 60px 100px 80px 20px;
+  font-family: var(--fnt-family-satoshi);
+  margin: 60px 100px 80px auto;
 }
 
-.brands-part {
+.category-page h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.category-page-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.page-title-right {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: clamp(20px, 5vw, 106px);
+  gap: 12px;
 }
 
-.brands-img {
-  max-width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
+.page-title-right,
+.title-sort {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
 }
 
-.brands-part img:hover {
-  transform: scale(1.1); 
+#sort-options {
+  border: none;
+  font-size: 16px;
 }
 
-@media (max-width: 1060px) {
-  .brands {
-    height: 146px;
-  }
-  .brands-img {
-    max-width: 28%;
-    height: auto;
-  }
-}
-
-/* melikeaksoy/OC-11-Implement-the-brands-and-partners-section End */
-
-/* melike/OC-12-the-new-arrivals-section-start */
-.new-arrivals {
-  padding: 10px;
-  text-align: center;
-  max-width: 1280px;
-  width: 100%;
-  margin: 72px auto 64px;
-}
-
-.new-arrivals-header {
-  font-family: var(--fnt-family-integral);
-  font-weight: 700;
-  font-size: 3rem;
-  margin-bottom: 55px;
-}
-
-.new-arrivals .new-arrivals-products {
-  display: flex;
+.category-page .products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   width: 100%;
-  justify-content: flex-start;
-  align-items: center;
-  padding-left: 20px;
-  margin: auto;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
+  justify-content: center;
+  max-width: 925px;
 }
 
-.new-arrivals-products::-webkit-scrollbar {
-  display: none;
-}
-
-.new-arrivals .new-arrivals-product {
-  scroll-snap-align: start;
+.category-page .product {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -540,27 +384,15 @@
   cursor: pointer;
 }
 
-.new-arrivals-products.dragging .new-arrivals-product {
-  cursor: grab;
-  user-select: none;
-}
-
-.new-arrivals-products.expanded {
-  overflow: hidden;
-  flex-wrap: wrap;
-  max-width: 1280px;
-  justify-content: center;
-}
-
-.new-arrivals-image-container {
+.category-page .image-container {
   width: 295px;
   height: 298px;
   padding: 45px;
-  background: #f0eeed;
-  border-radius: 24px;
+  background-color: #f0eeed;
+  border-radius: 20px;
 }
 
-.new-arrivals-image {
+.category-page-image {
   transition: transform 0.5s;
   cursor: pointer;
   mix-blend-mode: multiply;
@@ -568,99 +400,54 @@
   height: 100%;
 }
 
-.new-arrivals-product-image:hover {
+.category-page-image:hover {
   transform: scale(1.1);
 }
 
-.new-arrivals h2 {
+.category-page h2 {
   white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 27px;
-    margin-top: 16px;
-}
-
-.current-price,
-  .original-price,
-  .price {
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 32.4px;
-  }
-  
-  .original-price {
-    color: rgba(0, 0, 0, 0.4);
-    text-decoration: line-through;
-  }
-
-  .new-arrivals-button {
-    padding: 16px 54px;
-    border-radius: 62px;
-    font-size: 16px;
-    line-height: 21.6px;
-    margin-top: 36px;
-    border: 1px solid #f0eeed;
-    width: 218px;
-    height: 52px;
-    cursor: pointer;
-    color: black;
-  }
-
-  .price {
-    display: flex;
-    gap: 10px;
-  }
-
-.discount {
-  background-color: rgba(255, 51, 51, 0.1);
-  width: 58px;
-  height: 28px;
-  border-radius: 62px;
-  color: #ff3333;
-  font-size: 12px;
-  line-height: 16.2px;
-  border: none;
-  padding: 6px 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 16px;
 }
 
 .nt-stars-and-puan {
   width: 150px;
-  padding-top: 8px;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-.new-arrivals-product .stars {
+.product .stars {
   margin-right: 13px;
   display: flex;
 }
 
-.new-arrivals-product .point-stars {
+.product .point-stars {
   font-size: 16px;
   line-height: 18.9px;
   font-weight: 400;
 }
 
-.new-arrivals-product .star {
+.product .star {
   width: 20px;
-    height: 20px;
-    background-color: gray;
-    clip-path: polygon(
-      50% 0%,
-      61% 35%,
-      98% 35%,
-      68% 57%,
-      79% 91%,
-      50% 70%,
-      21% 91%,
-      32% 57%,
-      2% 35%,
-      39% 35%
-    );
-    margin-right: 5px;
+  height: 20px;
+  background-color: gray;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  margin-right: 5px;
 }
 
 .star.full {
@@ -674,176 +461,127 @@
   background-color: #dad0cc;
 }
 
-.line {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  margin: 64px auto;
+.category-page .original-price {
+  font-weight: bold;
+  font-size: 24px;
 }
 
-/* melike/OC-12-the-new-arrivals-section-end */
-
-/* melikeaksoy-OC-12-the-new-arrivals-section-response start */
-
-@media (max-width: 768px) {
-
-  .new-arrivals {
-    margin: 32px auto 40px;
-  }
-  
-  .new-arrivals h1 {
-    font-size: 40px;
-    margin-bottom: 35px;
-  }
-  
-  }
-
-/* melikeaksoy-OC-12-the-new-arrivals-section-response end */ 
-
-/*Browse By Dress Stylee Section Start*/
-.browse-by-dress-background {
+.pagination {
   display: flex;
-  flex-direction: column;
-  background-color: var(--ftr-imgs-bg-clr);
-  max-width: 90%;
-  margin: 0px auto;
-  padding: 30px 10px;
-  border-radius: 40px;
-}
-
-.title-of-browse {
-  text-align: center;
-  font-family: var(--fnt-family-integral);
-  font-weight: 700; 
-  font-size: 48px;
-  line-height: 57.6px;
-  padding-bottom: 30px;
-}
-
-.browse-style-container {
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  gap: 25px;
-}
-
-.first-container {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-}
-
-.first-container a {
-  cursor: pointer;
-  text-decoration: none;
-  outline: none;
-  color: inherit;
-}
-
-.second-container a {
-  text-decoration: none;
-  outline: none;
-  color: inherit;
-  cursor: pointer;  
-}
-
-.second-container {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-}
-
-.browse-option-text {
-  font-weight: 700;
-  font-size: 36px;
-  position: absolute;
-  left: 20px;
-  top: 20px;
-}
-
-.browse-picture {
-  border-radius: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 216px;
   width: 100%;
-  object-fit: cover;
+  max-width: 925px;
 }
 
-.browse-first-form {
+.page-numbers {
   display: flex;
-  position: relative;
-  border-radius: 20px;
-  width: 407px;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border-color: rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  cursor: pointer;
+  padding: 12px;
 }
 
-.browse-second-form {
+.category-page button {
   display: flex;
-  position: relative;
-  border-radius: 20px;
-  width: 684px;
-  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  width: 110px;
+  height: 36px;
+  border-radius: 8px;
+  border-color: rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  cursor: pointer;
+  padding: 8px 14px;
 }
-/*Browse By Dress Stylee Section End*/
+.page-numbers span {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0 5px;
+}
 
-/*Browse By Dress Stylee Section Responsiveness Start*/
-@media screen and (max-width: 1196px) {
-  .first-container {
-    display: flex;
+.page-numbers button.current {
+  background-color: grey; 
+  color: white; 
+}
+
+.page-numbers button:hover {
+  background-color: lightgrey; 
+}
+
+
+@media screen and (max-width: 1150px) {
+  .category-page {
+    margin: 10px auto 80px auto;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .category-page h1 {
+    font-size: 28px;
+  }
+
+  .category-page .products {
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+  }
+
+  .pagination {
+    gap: 100px;
+  }
+
+  .category-page button {
+    width: 90px;
+    height: 32px;
+  }
+
+  .page-numbers {
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .category-page {
+    margin: 10px auto 50px auto;
+  }
+
+  .category-page h1 {
+    font-size: 22px;
+  }
+  .page-title-right,
+  .title-sort {
+    font-size: 14px;
+  }
+  .category-page h2 {
+    font-size: 16px;
+  }
+
+  .category-page .original-price {
+    font-size: 20px;
+  }
+
+  .category-page .products {
+    grid-template-columns: 1fr;
+  }
+  .pagination {
+    gap: 5px;
     flex-direction: column;
-    align-items: center;
-    gap: 25px;
   }
-  
-  .second-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-  }
-
-  .browse-first-form {
-    height: 290px;
-  }
-
-  .browse-second-form {
-    width: 407px;
-    height: 290px;
-  }  
 }
 
-@media screen and (max-width: 518px) {
-  .title-of-browse {
-    font-weight: 700;
-    font-size: 40px;
-  }
-  .browse-option-text {
-    font-weight: 700;
-    font-size: 30px;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-  }
-
-  .browse-first-form {
-    width: 300px;
-    height: 290px;
-  }
-
-  .browse-second-form {
-    width: 300px;
-    height: 290px;
-  } 
-}
-
-@media screen and (max-width: 390px) {
-  
-  .browse-first-form {
-    width: 200px;
-    height: 200px;
-  }
-
-  .browse-second-form {
-    width: 200px;
-    height: 200px;
-  } 
-}
-/*Browse By Dress Stylee Section Responsiveness End*/
+/* melikeaksoy/OC-36-Category-Products-Section end*/
 
 /* BeyzanurMete-OC-20-Implement-the-Newsletter-Section start*/
 .newsletter-section {
@@ -857,6 +595,7 @@
   border: 1px solid #ccc;
   opacity: 1;
   box-sizing: border-box;
+  margin-top: 80px;
 }
 .newsletter-title {
   font-family: var(--fnt-family-integral);
@@ -1021,7 +760,6 @@ footer {
 /* melikeaksoy/OC-23-implement-the-footer start */
 
 @media (max-width: 1300px) and (min-width: 1000px) {
-
   .footer-wrapper {
     justify-content: center;
     padding: 0 15px;
@@ -1050,7 +788,6 @@ footer {
 }
 
 @media (max-width: 1000px) {
-
   footer {
     padding: 10px;
   }
@@ -1139,9 +876,9 @@ footer {
     margin-bottom: -150px;
   }
 }
-  @media (max-width: 490px) {
-    .newsletter-section {
-      margin-bottom: -170px;
-    }
+@media (max-width: 490px) {
+  .newsletter-section {
+    margin-bottom: -170px;
   }
+}
 /* melikeaksoy/OC-23-implement-the-footer end */
