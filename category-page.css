@@ -323,28 +323,25 @@
 
 /* nursahtuncel-OC-4-Desing-the-Header-Section end*/
 
-.main-design-container{
- display: flex;
- flex-direction: column;
- width: 90%;
- margin: 0 auto;
+.main-design-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
 }
 
-.main-design{
+.main-design {
   display: flex;
-  gap: 20px; 
+  gap: 20px;
   position: relative;
   justify-content: center;
-  
-  
 }
 
 /*pages-way Start*/
 
 .pages-way {
-  display: flex;  
+  display: flex;
   padding: 20px 0px;
-  
 }
 
 .pages-way p {
@@ -418,7 +415,6 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 10px;
-
 }
 
 .cf-product-container ul li {
@@ -445,7 +441,6 @@
   border-bottom: 1px solid;
   border-color: rgba(0, 0, 0, 0.1);
   padding-bottom: 10px;
-
 }
 
 .cf-price-container h6 {
@@ -533,7 +528,7 @@
   cursor: pointer;
 }
 
-.price-input[ type="range"]::-ms-thumb {
+.price-input[type="range"]::-ms-thumb {
   -ms-progress-appearance: none;
   width: 20px;
   height: 20px;
@@ -546,19 +541,15 @@
 .price-tag {
   position: absolute;
   display: block;
-  
 }
 
 #minPrice {
-  
   transform: translateX(-18px) translateY(100%);
 }
 
 #maxPrice {
-  
   transform: translateY(-150%);
 }
-
 
 .cf-colors-container {
   display: flex;
@@ -583,7 +574,6 @@
 
 .cf-colors-img.rotate {
   transform: rotate(180deg);
-
 }
 
 .cf-colors-row {
@@ -619,39 +609,39 @@
 }
 
 #cf-color-btn-a {
-  background-color: #00C12B;
+  background-color: #00c12b;
 }
 
 #cf-color-btn-b {
-  background-color: #F50606;
+  background-color: #f50606;
 }
 
 #cf-color-btn-c {
-  background-color: #F5DD06;
+  background-color: #f5dd06;
 }
 
 #cf-color-btn-d {
-  background-color: #F57906;
+  background-color: #f57906;
 }
 
 #cf-color-btn-e {
-  background-color: #06CAF5;
+  background-color: #06caf5;
 }
 
 #cf-color-btn-f {
-  background-color: #063AF5;
+  background-color: #063af5;
 }
 
 #cf-color-btn-g {
-  background-color: #7D06F5;
+  background-color: #7d06f5;
 }
 
 #cf-color-btn-h {
-  background-color: #F506A4;
+  background-color: #f506a4;
 }
 
 #cf-color-btn-i {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 #cf-color-btn-j {
@@ -684,7 +674,6 @@
 
 .cf-sizes-img.rotate {
   transform: rotate(180deg);
-
 }
 
 .cf-sizes {
@@ -725,9 +714,8 @@
   cursor: pointer;
 }
 
-.filter-btn:hover{
+.filter-btn:hover {
   font-size: 16px;
-
 }
 
 /* Category Filter Section End*/
@@ -761,7 +749,6 @@
     display: flex;
     justify-content: end;
     padding-bottom: 0px;
-    
   }
 
   .cf-main-filter h6 {
@@ -787,7 +774,6 @@
   width: 100%;
   gap: 30px;
   font-family: var(--fnt-family-satoshi);
-  
 }
 
 .category-page h1 {
@@ -914,9 +900,24 @@
   background-color: #dad0cc;
 }
 
+.category-page .price {
+  display: flex;
+  align-items: center;
+}
+
 .category-page .original-price {
   font-weight: bold;
   font-size: 24px;
+}
+
+.category-page .discount {
+  width: 58px;
+  height: 28px;
+  padding: 6px 14px;
+  background: rgba(255, 51, 51, 0.1);
+  color: rgba(255, 51, 51, 1);
+  border-radius: 62px;
+  font-size: 12px;
 }
 
 .pagination {
@@ -924,7 +925,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  
+
   width: 100%;
   max-width: 925px;
 }
@@ -964,24 +965,18 @@
 }
 
 .page-numbers button.current {
-  background-color: grey; 
-  color: white; 
+  background-color: grey;
+  color: white;
 }
 
 .page-numbers button:hover {
-  background-color: lightgrey; 
+  background-color: lightgrey;
 }
 
-
-@media screen and (max-width: 1150px) {
-  .category-page {
-    margin: 10px auto 80px auto;
-  }
-}
-
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1260px) {
   .category-page h1 {
     font-size: 28px;
+    margin: 10px auto 80px auto;
   }
 
   .category-page .products {
@@ -1005,7 +1000,7 @@
   }
 }
 
-@media screen and (max-width: 675px) {
+@media screen and (max-width: 940px) {
   .category-page {
     margin: 10px auto 50px auto;
   }
@@ -1016,13 +1011,20 @@
   .page-title-right,
   .title-sort {
     font-size: 14px;
+    justify-content: center;
   }
   .category-page h2 {
     font-size: 16px;
   }
 
-  .category-page .original-price {
+  .category-page .original-price,
+  .category-page .current-price {
     font-size: 20px;
+  }
+
+  .category-page .discount {
+    width: 50px;
+    height: 20px;
   }
 
   .category-page .products {
@@ -1335,5 +1337,3 @@ footer {
   }
 }
 /* melikeaksoy/OC-23-implement-the-footer end */
-
-

@@ -118,6 +118,8 @@ function bsktRemoveCartItem(index) {
 }
 // emre-OC-34-dropdown end
 
+// melikeaksoy/OC-36-Category-Products-Section start
+
 let List = []
 let currentPage = 1
 const itemsPerPage = 9
@@ -226,6 +228,8 @@ const renderProducts = async () => {
   const productsToShow = List.slice(startIndex, endIndex)
 
   productsToShow.forEach((eleman) => {
+    const discountRate = 40;
+    const discountPrice = eleman.price * (1 - discountRate / 100);
     const itemHTML = `
 <div class="product">
 <div class="image-container">
@@ -243,8 +247,11 @@ const renderProducts = async () => {
          </div>
 
          <div class="price">
-         <p class="original-price">$${eleman.price}</p>
-         </div> 
+          <p class="current-price">$${discountPrice.toFixed(2)}</p>
+          <p class="original-price">$${eleman.price.toFixed(2)}</p>
+          <button class="discount">${discountRate}%</button>
+        </div>
+        
           </div>
     `
     container.innerHTML += itemHTML
@@ -289,6 +296,8 @@ const sayfayi = (direction) => {
 }
 
 getProduct()
+
+// melikeaksoy/OC-36-Category-Products-Section start
 
 //----------------------Category Filter Section Start--------------------------------------------
 
